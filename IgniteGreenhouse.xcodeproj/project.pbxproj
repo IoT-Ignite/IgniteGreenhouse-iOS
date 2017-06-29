@@ -19,7 +19,7 @@
 		8173C8F51F04F62400C0175F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8173C8F71F04F62400C0175F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8173C8FA1F04F62400C0175F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8173C8FC1F04F62400C0175F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8173C8FC1F04F62400C0175F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = IgniteGreenhouse/Assets.xcassets; sourceTree = "<group>"; };
 		8173C8FF1F04F62400C0175F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8173C9011F04F62400C0175F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,14 +54,55 @@
 		8173C8F41F04F62400C0175F /* IgniteGreenhouse */ = {
 			isa = PBXGroup;
 			children = (
-				8173C8F51F04F62400C0175F /* AppDelegate.swift */,
+				8173C9091F04F64800C0175F /* Model */,
+				8173C9081F04F63A00C0175F /* View */,
+				8173C9071F04F63100C0175F /* Controller */,
 				8173C8F71F04F62400C0175F /* ViewController.swift */,
-				8173C8F91F04F62400C0175F /* Main.storyboard */,
-				8173C8FC1F04F62400C0175F /* Assets.xcassets */,
-				8173C8FE1F04F62400C0175F /* LaunchScreen.storyboard */,
-				8173C9011F04F62400C0175F /* Info.plist */,
+				8173C90B1F04F66100C0175F /* Resources */,
+				8173C90A1F04F65300C0175F /* Other */,
 			);
 			path = IgniteGreenhouse;
+			sourceTree = "<group>";
+		};
+		8173C9071F04F63100C0175F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8173C9081F04F63A00C0175F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8173C8F91F04F62400C0175F /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8173C9091F04F64800C0175F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8173C90A1F04F65300C0175F /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8173C8F51F04F62400C0175F /* AppDelegate.swift */,
+				8173C9011F04F62400C0175F /* Info.plist */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		8173C90B1F04F66100C0175F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8173C8FC1F04F62400C0175F /* Assets.xcassets */,
+				8173C8FE1F04F62400C0175F /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +200,7 @@
 				8173C8FF1F04F62400C0175F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = IgniteGreenhouse;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
