@@ -43,7 +43,7 @@ public class IgniteAPI {
     
     }
     
-    public static func getDevice(completion: @escaping (_ response: JSON) -> ()) {
+    public static func getDevices(completion: @escaping (_ devices: [Device]) -> ()) {
         if let token = currentUser?.accessToken {
             let headers: HTTPHeaders = [
                 "Authorization": "Bearer \(token)"
@@ -51,7 +51,13 @@ public class IgniteAPI {
             Alamofire.request(endpoints.device, headers: headers).responseJSON { (response) in
                 if let data = response.data {
                     let json = JSON(data: data)
-                    completion(json)
+                    if let array = json["content"].array {
+                        var devices = [Device]()
+                        for json in array {
+                            let device = Device(json: json)
+                            devices.append(device)
+                        }; completion(devices)
+                    }
                 }
             }
         }
