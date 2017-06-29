@@ -1,17 +1,16 @@
 //
-//  ViewController.swift
+//  LoginVC.swift
 //  IgniteGreenhouse
 //
 //  Created by Doruk Gezici on 29/06/2017.
 //  Copyright © 2017 ARDIC. All rights reserved.
 //
 
-// curl -X POST -d 'grant_type=password&amp;username=USERNAME&amp;password=PASSWORD' --user ':' https://api.ardich.com/api/v3/login/oauth
-
 import UIKit
 import Alamofire
+import SwiftyJSON
 
-class ViewController: UIViewController {
+class LoginVC: UIViewController {
 
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var usernameField: UITextField!
@@ -20,12 +19,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        dismissKeyboardWhenTapped()
     }
 
     @IBAction func loginPressed(_ sender: Any) {
-        print(Alamofire.request("https://httpbin.org/get"))
+        if let username = usernameField.text, let password = passwordField.text {
+            IgniteAPI.login(username: username, password: password) { (response) in
+                self.consoleText.text = IgniteAPI.currentUser?.accessToken
+            }
+        }
     }
 
 }
-
