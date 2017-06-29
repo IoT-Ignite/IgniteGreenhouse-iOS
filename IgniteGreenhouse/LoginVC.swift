@@ -26,6 +26,7 @@ class LoginVC: UIViewController {
         if let username = usernameField.text, let password = passwordField.text {
             IgniteAPI.login(username: username, password: password) { (response) in
                 self.consoleText.text = IgniteAPI.currentUser?.accessToken
+                self.performSegue(withIdentifier: "toHome", sender: nil)
             }
         }
     }
