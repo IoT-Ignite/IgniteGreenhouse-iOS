@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmO-Rl-Bfc">
-                                <rect key="frame" x="168.5" y="371" width="38" height="30"/>
+                                <rect key="frame" x="168.5" y="321" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ai9-Oc-yJj"/>
@@ -47,22 +47,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vpk-au-qCJ">
+                                <rect key="frame" x="32" y="391" width="311" height="256"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="SmO-Rl-Bfc" firstAttribute="top" secondItem="BqH-66-hmg" secondAttribute="bottom" constant="100" id="34x-oR-xdr"/>
+                            <constraint firstItem="SmO-Rl-Bfc" firstAttribute="top" secondItem="BqH-66-hmg" secondAttribute="bottom" constant="50" id="34x-oR-xdr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vpk-au-qCJ" secondAttribute="bottom" constant="20" id="7bj-Fc-So6"/>
                             <constraint firstItem="BqH-66-hmg" firstAttribute="top" secondItem="I6W-r8-0Ie" secondAttribute="bottom" constant="30" id="Bvp-Nc-1sS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BqH-66-hmg" secondAttribute="trailing" constant="16" id="Cbd-oZ-RBV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="I6W-r8-0Ie" secondAttribute="trailing" constant="16" id="Gyh-hc-qya"/>
                             <constraint firstItem="0vy-8i-zUt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I8h-i1-NtC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vpk-au-qCJ" secondAttribute="trailing" constant="16" id="Kfb-yF-DjJ"/>
                             <constraint firstItem="I6W-r8-0Ie" firstAttribute="top" secondItem="0vy-8i-zUt" secondAttribute="bottom" constant="80" id="S2T-2t-wM5"/>
                             <constraint firstItem="I6W-r8-0Ie" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="gOW-od-nj3"/>
+                            <constraint firstItem="Vpk-au-qCJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="lRF-ia-3co"/>
                             <constraint firstItem="SmO-Rl-Bfc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lki-pM-9FO"/>
                             <constraint firstItem="BqH-66-hmg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="x10-sf-EeE"/>
+                            <constraint firstItem="Vpk-au-qCJ" firstAttribute="top" secondItem="SmO-Rl-Bfc" secondAttribute="bottom" constant="40" id="xIj-Di-tFd"/>
                             <constraint firstItem="0vy-8i-zUt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="zme-Jb-DTo"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="consoleText" destination="Vpk-au-qCJ" id="FYB-uf-pMB"/>
                         <outlet property="headerLabel" destination="0vy-8i-zUt" id="pSB-28-eHW"/>
                         <outlet property="passwordField" destination="BqH-66-hmg" id="B0S-1M-yte"/>
                         <outlet property="usernameField" destination="I6W-r8-0Ie" id="YCw-xg-SUv"/>

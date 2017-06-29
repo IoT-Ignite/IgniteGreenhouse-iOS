@@ -1,0 +1,6 @@
+framework module Pods_IgniteGreenhouse {
+  umbrella header "Pods-IgniteGreenhouse-umbrella.h"
+
+  export *
+  module * { export * }
+}

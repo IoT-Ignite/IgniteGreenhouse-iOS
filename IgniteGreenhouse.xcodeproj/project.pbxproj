@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16C996AD204E5BA78937A913 /* Pods_IgniteGreenhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB864D356C8EDA265C64178 /* Pods_IgniteGreenhouse.framework */; };
 		8173C8F61F04F62400C0175F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173C8F51F04F62400C0175F /* AppDelegate.swift */; };
 		8173C8F81F04F62400C0175F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173C8F71F04F62400C0175F /* ViewController.swift */; };
 		8173C8FB1F04F62400C0175F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8173C8F91F04F62400C0175F /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27BFCD535AB96595BDDF6569 /* Pods-IgniteGreenhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse.debug.xcconfig"; sourceTree = "<group>"; };
 		8173C8F21F04F62400C0175F /* IgniteGreenhouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IgniteGreenhouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8173C8F51F04F62400C0175F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8173C8F71F04F62400C0175F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		8173C8FC1F04F62400C0175F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = IgniteGreenhouse/Assets.xcassets; sourceTree = "<group>"; };
 		8173C8FF1F04F62400C0175F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8173C9011F04F62400C0175F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCB864D356C8EDA265C64178 /* Pods_IgniteGreenhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IgniteGreenhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8FDE3ABDC3518DABCB6223F /* Pods-IgniteGreenhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16C996AD204E5BA78937A913 /* Pods_IgniteGreenhouse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41E707AF8ED0A64399524565 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCB864D356C8EDA265C64178 /* Pods_IgniteGreenhouse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		756BD83D991255E0FA723B2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27BFCD535AB96595BDDF6569 /* Pods-IgniteGreenhouse.debug.xcconfig */,
+				F8FDE3ABDC3518DABCB6223F /* Pods-IgniteGreenhouse.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8173C8E91F04F62400C0175F = {
 			isa = PBXGroup;
 			children = (
 				8173C8F41F04F62400C0175F /* IgniteGreenhouse */,
 				8173C8F31F04F62400C0175F /* Products */,
+				756BD83D991255E0FA723B2F /* Pods */,
+				41E707AF8ED0A64399524565 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +81,6 @@
 				8173C9091F04F64800C0175F /* Model */,
 				8173C9081F04F63A00C0175F /* View */,
 				8173C9071F04F63100C0175F /* Controller */,
-				8173C8F71F04F62400C0175F /* ViewController.swift */,
 				8173C90B1F04F66100C0175F /* Resources */,
 				8173C90A1F04F65300C0175F /* Other */,
 			);
@@ -67,6 +90,7 @@
 		8173C9071F04F63100C0175F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8173C8F71F04F62400C0175F /* ViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -112,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8173C9041F04F62400C0175F /* Build configuration list for PBXNativeTarget "IgniteGreenhouse" */;
 			buildPhases = (
+				FEFA618AC755F1DE1E73E448 /* [CP] Check Pods Manifest.lock */,
 				8173C8EE1F04F62400C0175F /* Sources */,
 				8173C8EF1F04F62400C0175F /* Frameworks */,
 				8173C8F01F04F62400C0175F /* Resources */,
+				29EF86F738E8F5211EFE0E3F /* [CP] Embed Pods Frameworks */,
+				2D7FB1054D6BEEA4437328F7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,6 +199,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29EF86F738E8F5211EFE0E3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D7FB1054D6BEEA4437328F7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEFA618AC755F1DE1E73E448 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8173C8EE1F04F62400C0175F /* Sources */ = {
@@ -303,6 +378,7 @@
 		};
 		8173C9051F04F62400C0175F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27BFCD535AB96595BDDF6569 /* Pods-IgniteGreenhouse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HYE6963K2F;
@@ -316,6 +392,7 @@
 		};
 		8173C9061F04F62400C0175F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8FDE3ABDC3518DABCB6223F /* Pods-IgniteGreenhouse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HYE6963K2F;
@@ -346,6 +423,7 @@
 				8173C9061F04F62400C0175F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

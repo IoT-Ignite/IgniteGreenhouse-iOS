@@ -9,12 +9,14 @@
 // curl -X POST -d 'grant_type=password&amp;username=USERNAME&amp;password=PASSWORD' --user ':' https://api.ardich.com/api/v3/login/oauth
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var consoleText: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginPressed(_ sender: Any) {
-        
+        print(Alamofire.request("https://httpbin.org/get"))
     }
 
 }
