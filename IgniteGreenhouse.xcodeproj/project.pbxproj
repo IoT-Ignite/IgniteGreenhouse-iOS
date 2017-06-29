@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		16C996AD204E5BA78937A913 /* Pods_IgniteGreenhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB864D356C8EDA265C64178 /* Pods_IgniteGreenhouse.framework */; };
+		815A91941F0547DC0066C186 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A91931F0547DC0066C186 /* HomeVC.swift */; };
+		81663E711F051F58002F52D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81663E701F051F58002F52D3 /* Constants.swift */; };
+		81663E731F052A09002F52D3 /* IgniteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81663E721F052A09002F52D3 /* IgniteAPI.swift */; };
+		81663E751F052A4A002F52D3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81663E741F052A4A002F52D3 /* User.swift */; };
 		8173C8F61F04F62400C0175F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173C8F51F04F62400C0175F /* AppDelegate.swift */; };
-		8173C8F81F04F62400C0175F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173C8F71F04F62400C0175F /* ViewController.swift */; };
+		8173C8F81F04F62400C0175F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173C8F71F04F62400C0175F /* LoginVC.swift */; };
 		8173C8FB1F04F62400C0175F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8173C8F91F04F62400C0175F /* Main.storyboard */; };
 		8173C8FD1F04F62400C0175F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8173C8FC1F04F62400C0175F /* Assets.xcassets */; };
 		8173C9001F04F62400C0175F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8173C8FE1F04F62400C0175F /* LaunchScreen.storyboard */; };
@@ -17,9 +21,13 @@
 
 /* Begin PBXFileReference section */
 		27BFCD535AB96595BDDF6569 /* Pods-IgniteGreenhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse.debug.xcconfig"; sourceTree = "<group>"; };
+		815A91931F0547DC0066C186 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		81663E701F051F58002F52D3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = IgniteGreenhouse/Constants.swift; sourceTree = "<group>"; };
+		81663E721F052A09002F52D3 /* IgniteAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IgniteAPI.swift; sourceTree = "<group>"; };
+		81663E741F052A4A002F52D3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8173C8F21F04F62400C0175F /* IgniteGreenhouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IgniteGreenhouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8173C8F51F04F62400C0175F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8173C8F71F04F62400C0175F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8173C8F71F04F62400C0175F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8173C8FA1F04F62400C0175F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8173C8FC1F04F62400C0175F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = IgniteGreenhouse/Assets.xcassets; sourceTree = "<group>"; };
 		8173C8FF1F04F62400C0175F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,7 +98,8 @@
 		8173C9071F04F63100C0175F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8173C8F71F04F62400C0175F /* ViewController.swift */,
+				8173C8F71F04F62400C0175F /* LoginVC.swift */,
+				815A91931F0547DC0066C186 /* HomeVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -106,6 +115,8 @@
 		8173C9091F04F64800C0175F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				81663E721F052A09002F52D3 /* IgniteAPI.swift */,
+				81663E741F052A4A002F52D3 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -122,6 +133,7 @@
 		8173C90B1F04F66100C0175F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				81663E701F051F58002F52D3 /* Constants.swift */,
 				8173C8FC1F04F62400C0175F /* Assets.xcassets */,
 				8173C8FE1F04F62400C0175F /* LaunchScreen.storyboard */,
 			);
@@ -253,8 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8173C8F81F04F62400C0175F /* ViewController.swift in Sources */,
+				81663E731F052A09002F52D3 /* IgniteAPI.swift in Sources */,
+				8173C8F81F04F62400C0175F /* LoginVC.swift in Sources */,
 				8173C8F61F04F62400C0175F /* AppDelegate.swift in Sources */,
+				815A91941F0547DC0066C186 /* HomeVC.swift in Sources */,
+				81663E751F052A4A002F52D3 /* User.swift in Sources */,
+				81663E711F051F58002F52D3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
