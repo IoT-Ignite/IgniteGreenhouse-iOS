@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SideMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,12 +27,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>83E976F4793397E7D6BF4C8F9119DABD</key>
+		<key>1C0AEF90E1ACA29955884A15DB7A5A8A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>86B1239476CBF8B88636FFCC97040A5B</key>
+		<key>1D07A7C4895BA699C29370F346878041</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5713377B07AC57EC081972E96AD2CEEB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

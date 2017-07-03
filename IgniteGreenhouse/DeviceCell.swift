@@ -12,8 +12,9 @@ class DeviceCell: UITableViewCell {
 
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var deviceImage: UIImageView!
     
-    func configureCell(device: Device) {
+    func configureCell(device: IGDevice) {
         idLabel.text = device.deviceId
         statusLabel.text = device.state
     }
