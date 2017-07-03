@@ -11,7 +11,7 @@ import UIKit
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    var devices = [Device]()
+    var devices = [IGDevice]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,21 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "deviceCell", for: indexPath) as! DeviceCell
         cell.configureCell(device: devices[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let device = devices[indexPath.row]
+        IgniteAPI.currentDevice = device
+        performSegue(withIdentifier: "toDevice", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destVC = segue.destination as? DeviceVC {
+            IgniteAPI.getDeviceNodes(deviceId: IgniteAPI.currentDevice!.deviceId, pageSize: 10, completion: { (nodes) in
+                destVC.nodes = nodes
+                destVC.tableView.reloadData()
+            })
+        }
     }
 
 }

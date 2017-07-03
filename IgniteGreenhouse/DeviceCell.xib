@@ -16,36 +16,53 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="137.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DeviceId" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22i-29-irj">
-                        <rect key="frame" x="24" y="24" width="272" height="21"/>
+                        <rect key="frame" x="24" y="24" width="162" height="54"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Raspberry" translatesAutoresizingMaskIntoConstraints="NO" id="vPV-Nq-1Ad">
+                        <rect key="frame" x="216" y="20" width="96" height="96"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="96" id="XKD-hL-QbX"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-z4-1Rx">
-                        <rect key="frame" x="24" y="61" width="272" height="21"/>
+                        <rect key="frame" x="24" y="86" width="162" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="L2R-bq-Hjr"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="22i-29-irj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="21g-ED-php"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="xfF-z4-1Rx" secondAttribute="trailing" constant="16" id="35A-ok-vf9"/>
-                    <constraint firstItem="xfF-z4-1Rx" firstAttribute="top" secondItem="22i-29-irj" secondAttribute="bottom" constant="16" id="3jK-X3-zTh"/>
-                    <constraint firstItem="22i-29-irj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="LjR-nx-jjc"/>
-                    <constraint firstItem="xfF-z4-1Rx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="TN0-5r-ESJ"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="22i-29-irj" secondAttribute="trailing" constant="16" id="tEx-45-gdK"/>
+                    <constraint firstItem="vPV-Nq-1Ad" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="0Jg-aH-EQc"/>
+                    <constraint firstItem="vPV-Nq-1Ad" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="12" id="0aP-dj-x1N"/>
+                    <constraint firstItem="xfF-z4-1Rx" firstAttribute="top" secondItem="22i-29-irj" secondAttribute="bottom" constant="8" symbolic="YES" id="7fz-op-DBV"/>
+                    <constraint firstItem="vPV-Nq-1Ad" firstAttribute="leading" secondItem="22i-29-irj" secondAttribute="trailing" constant="30" id="Guz-CI-Vgo"/>
+                    <constraint firstItem="22i-29-irj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="RaH-Kf-5lU"/>
+                    <constraint firstItem="22i-29-irj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="UMz-hp-qr3"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xfF-z4-1Rx" secondAttribute="bottom" constant="22.5" id="c5Z-wn-dp2"/>
+                    <constraint firstItem="22i-29-irj" firstAttribute="trailing" secondItem="xfF-z4-1Rx" secondAttribute="trailing" id="mFh-Ri-HtW"/>
+                    <constraint firstItem="22i-29-irj" firstAttribute="leading" secondItem="xfF-z4-1Rx" secondAttribute="leading" id="mo5-bJ-O96"/>
+                    <constraint firstItem="vPV-Nq-1Ad" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="oYy-TL-3cO"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="deviceImage" destination="vPV-Nq-1Ad" id="lJK-Nl-uWu"/>
                 <outlet property="idLabel" destination="22i-29-irj" id="lRf-Jy-If2"/>
                 <outlet property="statusLabel" destination="xfF-z4-1Rx" id="hlI-i0-4aS"/>
             </connections>
             <point key="canvasLocation" x="34" y="166"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Raspberry" width="1000" height="890"/>
+    </resources>
 </document>

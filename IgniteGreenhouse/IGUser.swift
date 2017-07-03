@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  IGUser.swift
 //  IgniteGreenhouse
 //
 //  Created by Doruk Gezici on 29/06/2017.
@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-public class User {
+public class IGUser {
     
     let accessToken: String!
     let expiresIn: Int!
