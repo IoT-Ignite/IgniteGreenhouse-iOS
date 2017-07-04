@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class NodesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -22,9 +23,8 @@ class NodesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         } else {
             print("Device not yet selected.")
-            self.showAlert(title: "Alert", message: "Device not yet selected!")
+            SideMenuManager.menuLeftNavigationController?.performSegue(withIdentifier: "toDevices", sender: nil)
         }
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
