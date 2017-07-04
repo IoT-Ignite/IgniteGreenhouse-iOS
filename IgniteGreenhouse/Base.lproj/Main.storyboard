@@ -510,6 +510,7 @@
                         <segue destination="0eV-Wt-hEr" kind="show" identifier="toSensors" id="feB-Bf-peb"/>
                         <segue destination="nKw-bf-Dcq" kind="show" identifier="toHome" id="xT1-9U-Hcq"/>
                         <segue destination="jDm-Tg-YzQ" kind="show" identifier="toDevices" id="3QV-eT-ebb"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="3gO-fb-Dje"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5EA-jd-2iJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -596,8 +597,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="feB-Bf-peb"/>
+        <segue reference="3QV-eT-ebb"/>
         <segue reference="RaR-Op-xwp"/>
         <segue reference="xT1-9U-Hcq"/>
-        <segue reference="MlE-n0-t0M"/>
     </inferredMetricsTieBreakers>
 </document>

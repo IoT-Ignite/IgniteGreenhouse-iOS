@@ -24,7 +24,7 @@ class SensorsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         } else {
             print("Device or Node not yet selected.")
-            self.showAlert(title: "Alert", message: "Device or Node not yet selected!")
+            SideMenuManager.menuLeftNavigationController?.performSegue(withIdentifier: "toDevices", sender: nil)
         }
     }
     
@@ -43,10 +43,12 @@ class SensorsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        IgniteAPI.currentSensor = sensors[indexPath.row]
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
 //        let start = dateFormatter.date(from: "2017-06-29 09:00:00")!.timeIntervalSince1970
 //        let end = dateFormatter.date(from: "2017-06-29 17:00:00")!.timeIntervalSince1970
+        
         navigationController?.popToRootViewController(animated: true)
     }
     

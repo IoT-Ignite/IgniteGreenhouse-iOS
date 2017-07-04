@@ -17,9 +17,23 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSideMenu()
-        IgniteAPI.getSensorData(deviceId: "b8:27:eb:b3:68:7a@iotigniteagent", nodeId: "WeMos D1", sensorId: "LM-35 Temperature", endDate: Date().timeIntervalSince1970, pageSize: 10) { (sensorData) in
+        if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode, let sensor = IgniteAPI.currentSensor {
+            IgniteAPI.getSensorData(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, endDate: Date().timeIntervalSince1970, pageSize: 10) { (sensorData) in
                 self.sensorData = sensorData
                 self.tableView.reloadData()
+            }
+        } else {
+            print("Select Device, Node and Sensor.")
+            performSegue(withIdentifier: "toDevices", sender: nil)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode, let sensor = IgniteAPI.currentSensor {
+            IgniteAPI.getSensorData(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, endDate: Date().timeIntervalSince1970, pageSize: 10) { (sensorData) in
+                self.sensorData = sensorData
+                self.tableView.reloadData()
+            }
         }
     }
     
