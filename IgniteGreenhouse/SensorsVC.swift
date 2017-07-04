@@ -1,5 +1,5 @@
 //
-//  NodeVC.swift
+//  SensorsVC.swift
 //  IgniteGreenhouse
 //
 //  Created by Doruk Gezici on 30/06/2017.
@@ -7,14 +7,25 @@
 //
 
 import UIKit
+import SideMenu
 
-class NodeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SensorsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var sensors = [IGSensor]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        definesPresentationContext = true
+        if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode {
+            IgniteAPI.getDeviceSensors(deviceId: device.deviceId, nodeId: node.nodeId, pageSize: 10) { (sensors) in
+                self.sensors = sensors
+                self.tableView.reloadData()
+            }
+        } else {
+            print("Device or Node not yet selected.")
+            self.showAlert(title: "Alert", message: "Device or Node not yet selected!")
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,12 +45,9 @@ class NodeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let start = dateFormatter.date(from: "2017-06-29 09:00:00")!.timeIntervalSince1970
-        let end = dateFormatter.date(from: "2017-06-29 17:00:00")!.timeIntervalSince1970
-        print(start, end)
-        IgniteAPI.getSensorData(deviceCode: IgniteAPI.currentDevice!.code, nodeId: "WeMos D1", sensorId: "LM-35 Temperature", startDate: start, endDate: end, pageSize: 10) { (sensor) in
-            print(sensor)
-        }
+//        let start = dateFormatter.date(from: "2017-06-29 09:00:00")!.timeIntervalSince1970
+//        let end = dateFormatter.date(from: "2017-06-29 17:00:00")!.timeIntervalSince1970
+        navigationController?.popToRootViewController(animated: true)
     }
     
 }

@@ -1,5 +1,5 @@
 //
-//  DeviceVC.swift
+//  NodesVC.swift
 //  IgniteGreenhouse
 //
 //  Created by Doruk Gezici on 30/06/2017.
@@ -8,13 +8,23 @@
 
 import UIKit
 
-class DeviceVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NodesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var nodes = [IGNode]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let device = IgniteAPI.currentDevice {
+            IgniteAPI.getDeviceNodes(deviceId: device.deviceId, pageSize: 10) { (nodes) in
+                self.nodes = nodes
+                self.tableView.reloadData()
+            }
+        } else {
+            print("Device not yet selected.")
+            self.showAlert(title: "Alert", message: "Device not yet selected!")
+        }
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -32,17 +42,8 @@ class DeviceVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toNode", sender: nodes[indexPath.row])
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destVC = segue.destination as? NodeVC {
-            let node = sender as! IGNode
-            IgniteAPI.getDeviceSensors(deviceId: IgniteAPI.currentDevice!.deviceId, nodeId: node.nodeId, pageSize: 10, completion: { (sensors) in
-                destVC.sensors = sensors
-                destVC.tableView.reloadData()
-            })
-        }
+        IgniteAPI.currrentNode = nodes[indexPath.row]
+        performSegue(withIdentifier: "toSensors", sender: nil)
     }
 
 }

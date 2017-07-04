@@ -43,17 +43,17 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         var identifier: String!
         switch indexPath.row {
         case 0:
-            identifier = "FeedMenu"
+            identifier = "HomeMenu"
         case 1:
-            identifier = "ProfileMenu"
+            identifier = "DevicesMenu"
         case 2:
-            identifier = "HelpMenu"
+            identifier = "NodesMenu"
         case 3:
-            identifier = "SettingsMenu"
+            identifier = "SensorsMenu"
         case 4:
             identifier = "LogoutMenu"
         default:
-            identifier = "FeedMenu"
+            identifier = "HomeMenu"
         }
         if let cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? MenuCell {
             return cell
@@ -61,14 +61,22 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if (indexPath as NSIndexPath).row == 4 {
-//            do {
-//                try FIRAuth.auth()!.signOut()
-//                User.currentUser = nil
-//                print("Logged out.")
-//            } catch { print(error) }
-//            performSegue(withIdentifier: Constants.Segues.unwindToLogin, sender: self)
-//        }
+        var identifier: String!
+        switch indexPath.row {
+        case 0:
+            identifier = "toHome"
+        case 1:
+            identifier = "toDevices"
+        case 2:
+            identifier = "toNodes"
+        case 3:
+            identifier = "toSensors"
+        case 4:
+            identifier = "logout"
+        default:
+            identifier = "toHome"
+        }
+        performSegue(withIdentifier: identifier, sender: self)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

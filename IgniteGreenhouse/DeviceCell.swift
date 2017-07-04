@@ -13,10 +13,19 @@ class DeviceCell: UITableViewCell {
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var deviceImage: UIImageView!
+    @IBOutlet weak var statusImage: UIImageView!
     
     func configureCell(device: IGDevice) {
         idLabel.text = device.deviceId
         statusLabel.text = device.state
+        switch device.state {
+        case "ONLINE":
+            statusImage.image = UIImage(named: "online")
+        case "OFFLINE":
+            statusImage.image = UIImage(named: "offline")
+        default:
+            break
+        }
     }
     
 }
