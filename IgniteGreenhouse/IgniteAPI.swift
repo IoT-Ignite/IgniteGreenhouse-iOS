@@ -15,6 +15,8 @@ public class IgniteAPI {
     public static var endpoints: Endpoints = Endpoints()
     public static var currentUser: IGUser?
     public static var currentDevice: IGDevice?
+    public static var currrentNode: IGNode?
+    public static var currentSensor: IGSensor?
     
     public static func getHeaders() -> HTTPHeaders {
         let headers = [
@@ -29,7 +31,7 @@ public class IgniteAPI {
         else { return false }
     }
     
-    public static func login(username: String, password: String, completion: @escaping (_ response: JSON) -> ()) {
+    public static func login(username: String, password: String, completion: @escaping (_ user: IGUser) -> ()) {
         let parameters: Parameters = [
             "grant_type": "password",
             "username": username,
@@ -44,8 +46,8 @@ public class IgniteAPI {
             case .success:
                 if let data = response.data {
                     let json = JSON(data)
-                    currentUser = IGUser(json: json)
-                    completion(json)
+                    let user = IGUser(json: json)
+                    completion(user)
                 }
             case .failure:
                 print(response.description)
@@ -53,8 +55,23 @@ public class IgniteAPI {
         }
     }
     
-    public static func refreshToken() {
+    public static func register(appKey: String = APP_KEY, brand: String, firstName: String, lastName: String, mail: String, password: String, profileName: String, completion: @escaping (_ response: JSON) -> ()) {
+        let parameters: Parameters = [
+            "appKey": appKey,
+            "brand": brand,
+            "firstName": firstName,
+            "lastName": lastName,
+            "mail": mail,
+            "password": password,
+            "profileName": profileName
+        ]
+        Alamofire.request(endpoints.register, method: .post, parameters: parameters).responseJSON { (response) in
+            print(response.description)
+        }
+    }
     
+    public static func refreshToken() {
+        
     }
     
     public static func getDevices(completion: @escaping (_ devices: [IGDevice]) -> ()) {
@@ -117,20 +134,24 @@ public class IgniteAPI {
         }
     }
     
-    public static func getSensorData(deviceCode: String, nodeId: String, sensorId: String, startDate: TimeInterval, endDate: TimeInterval, pageSize: Int, completion: @escaping (_ sensorData: IGSensorData) -> ()) {
+    public static func getSensorData(deviceId: String, nodeId: String, sensorId: String, startDate: TimeInterval = 0.0, endDate: TimeInterval, pageSize: Int, completion: @escaping (_ sensorData: [IGSensorData]) -> ()) {
         let parameters: Parameters = [
             "nodeId": nodeId,
             "sensorId": sensorId,
-            "startDate": startDate,
-            "endDate": endDate,
+            "startDate": Int(startDate),
+            "endDate": Int(endDate),
             "pageSize": pageSize
         ]
-        Alamofire.request(endpoints.sensorData(deviceCode: deviceCode), parameters: parameters, headers: getHeaders()).responseJSON { (response) in
+        Alamofire.request(endpoints.sensorData(deviceId: deviceId), parameters: parameters, headers: getHeaders()).responseJSON { (response) in
             print(response.description)
             if let data = response.data {
-                let json = JSON(data: data)
-                let sensorData = IGSensorData(json: json)
-                completion(sensorData)
+                if let array = JSON(data: data)["list"].array {
+                    var sensorData = [IGSensorData]()
+                    for json in array {
+                        let sensor = IGSensorData(json: json)
+                        sensorData.append(sensor)
+                    }; completion(sensorData)
+                }
             }
         }
     }
@@ -139,15 +160,17 @@ public class IgniteAPI {
         
         let base: String! = API_URL
         let login: String!
+        let register: String!
         let device: String!
         let nodes: String!
         let sensors: String!
-        func sensorData(deviceCode: String) -> String {
-            return device + "/\(deviceCode)/sensor-data-history"
+        func sensorData(deviceId: String) -> String {
+            return device + "/\(deviceId)/sensor-data-history"
         }
         
         init() {
             login = base + "/login/oauth"
+            register = base + "/public/create-restricted-user"
             device = base + "/device"
             nodes = device + "/iotlabel/all-nodes/"
             sensors = device + "/iotlabel/all-sensors"

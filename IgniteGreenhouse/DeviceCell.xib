@@ -19,44 +19,51 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DeviceId" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22i-29-irj">
-                        <rect key="frame" x="24" y="24" width="162" height="54"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DeviceId" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="22i-29-irj">
+                        <rect key="frame" x="8" y="24" width="216" height="60"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Raspberry" translatesAutoresizingMaskIntoConstraints="NO" id="vPV-Nq-1Ad">
-                        <rect key="frame" x="216" y="20" width="96" height="96"/>
+                        <rect key="frame" x="232" y="28" width="80" height="80"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="96" id="XKD-hL-QbX"/>
+                            <constraint firstAttribute="width" constant="80" id="Vby-KM-kT6"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-z4-1Rx">
-                        <rect key="frame" x="24" y="86" width="162" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="L2R-bq-Hjr"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-z4-1Rx">
+                        <rect key="frame" x="38" y="92" width="134" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online" translatesAutoresizingMaskIntoConstraints="NO" id="RC6-Jw-gBy">
+                        <rect key="frame" x="180" y="95" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="cts-NN-bdS"/>
+                            <constraint firstAttribute="height" constant="15" id="qd7-E0-1k9"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="vPV-Nq-1Ad" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="0Jg-aH-EQc"/>
-                    <constraint firstItem="vPV-Nq-1Ad" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="12" id="0aP-dj-x1N"/>
-                    <constraint firstItem="xfF-z4-1Rx" firstAttribute="top" secondItem="22i-29-irj" secondAttribute="bottom" constant="8" symbolic="YES" id="7fz-op-DBV"/>
-                    <constraint firstItem="vPV-Nq-1Ad" firstAttribute="leading" secondItem="22i-29-irj" secondAttribute="trailing" constant="30" id="Guz-CI-Vgo"/>
-                    <constraint firstItem="22i-29-irj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="RaH-Kf-5lU"/>
-                    <constraint firstItem="22i-29-irj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="UMz-hp-qr3"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="xfF-z4-1Rx" secondAttribute="bottom" constant="22.5" id="c5Z-wn-dp2"/>
-                    <constraint firstItem="22i-29-irj" firstAttribute="trailing" secondItem="xfF-z4-1Rx" secondAttribute="trailing" id="mFh-Ri-HtW"/>
-                    <constraint firstItem="22i-29-irj" firstAttribute="leading" secondItem="xfF-z4-1Rx" secondAttribute="leading" id="mo5-bJ-O96"/>
-                    <constraint firstItem="vPV-Nq-1Ad" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="oYy-TL-3cO"/>
+                    <constraint firstItem="RC6-Jw-gBy" firstAttribute="top" secondItem="22i-29-irj" secondAttribute="bottom" constant="11" id="AHT-ey-5Y0"/>
+                    <constraint firstItem="22i-29-irj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="E49-zb-9lu"/>
+                    <constraint firstItem="xfF-z4-1Rx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="30" id="EVu-w3-jVz"/>
+                    <constraint firstItem="vPV-Nq-1Ad" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Fjp-v9-jBM"/>
+                    <constraint firstItem="vPV-Nq-1Ad" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="M8H-nH-32H"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xfF-z4-1Rx" secondAttribute="bottom" constant="16.5" id="R9Y-Ij-HEw"/>
+                    <constraint firstItem="vPV-Nq-1Ad" firstAttribute="leading" secondItem="22i-29-irj" secondAttribute="trailing" constant="8" symbolic="YES" id="YOW-c0-oXZ"/>
+                    <constraint firstItem="22i-29-irj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="YRy-tf-rkv"/>
+                    <constraint firstItem="vPV-Nq-1Ad" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="20" id="c5b-pZ-yDb"/>
+                    <constraint firstItem="xfF-z4-1Rx" firstAttribute="centerY" secondItem="RC6-Jw-gBy" secondAttribute="centerY" id="d9Q-bt-P8r"/>
+                    <constraint firstItem="RC6-Jw-gBy" firstAttribute="leading" secondItem="xfF-z4-1Rx" secondAttribute="trailing" constant="8" symbolic="YES" id="fe7-DM-eiD"/>
+                    <constraint firstItem="vPV-Nq-1Ad" firstAttribute="leading" secondItem="RC6-Jw-gBy" secondAttribute="trailing" constant="37" id="rUK-tf-vTZ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="deviceImage" destination="vPV-Nq-1Ad" id="lJK-Nl-uWu"/>
                 <outlet property="idLabel" destination="22i-29-irj" id="lRf-Jy-If2"/>
+                <outlet property="statusImage" destination="RC6-Jw-gBy" id="tSR-Gg-wbs"/>
                 <outlet property="statusLabel" destination="xfF-z4-1Rx" id="hlI-i0-4aS"/>
             </connections>
             <point key="canvasLocation" x="34" y="166"/>
@@ -64,5 +71,6 @@
     </objects>
     <resources>
         <image name="Raspberry" width="1000" height="890"/>
+        <image name="online" width="20" height="20"/>
     </resources>
 </document>

@@ -7,19 +7,19 @@
 //
 
 import UIKit
+import SideMenu
 
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    var devices = [IGDevice]()
+    var sensorData = [IGSensorData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nib = UINib(nibName: "DeviceCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "deviceCell")
-        IgniteAPI.getDevices { (devices) in
-            self.devices = devices
-            self.tableView.reloadData()
+        setupSideMenu()
+        IgniteAPI.getSensorData(deviceId: "b8:27:eb:b3:68:7a@iotigniteagent", nodeId: "WeMos D1", sensorId: "LM-35 Temperature", endDate: Date().timeIntervalSince1970, pageSize: 10) { (sensorData) in
+                self.sensorData = sensorData
+                self.tableView.reloadData()
         }
     }
     
@@ -28,28 +28,36 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return devices.count
+        return sensorData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "deviceCell", for: indexPath) as! DeviceCell
-        cell.configureCell(device: devices[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell", for: indexPath)
+        cell.textLabel?.text = "\(sensorData[indexPath.row].data!) Celcius"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
+        let date = Date(timeIntervalSince1970: TimeInterval(sensorData[indexPath.row].cloudDate))
+        cell.detailTextLabel?.text = dateFormatter.string(from: date)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let device = devices[indexPath.row]
-        IgniteAPI.currentDevice = device
-        performSegue(withIdentifier: "toDevice", sender: nil)
+        performSegue(withIdentifier: "toDevices", sender: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destVC = segue.destination as? DeviceVC {
-            IgniteAPI.getDeviceNodes(deviceId: IgniteAPI.currentDevice!.deviceId, pageSize: 10, completion: { (nodes) in
-                destVC.nodes = nodes
-                destVC.tableView.reloadData()
-            })
-        }
+    @IBAction func menuPressed(_ sender: Any) {
+        present(SideMenuManager.menuLeftNavigationController!, animated: true, completion: nil)
+    }
+    
+    func setupSideMenu() {
+        let menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as! UISideMenuNavigationController
+        menuLeftNavigationController.leftSide = true
+        SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
+        SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
+        SideMenuManager.menuAddPanGestureToPresent(toView: self.view)
+        SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
+        SideMenuManager.menuPresentMode = .viewSlideInOut
+        SideMenuManager.menuFadeStatusBar = false
     }
 
 }

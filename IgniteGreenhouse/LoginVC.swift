@@ -21,12 +21,13 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         dismissKeyboardWhenTapped()
     }
-
+    
     @IBAction func loginPressed(_ sender: Any) {
         if let username = usernameField.text, let password = passwordField.text {
-            IgniteAPI.login(username: username, password: password) { (response) in
-                self.consoleText.text = IgniteAPI.currentUser?.accessToken
-                self.performSegue(withIdentifier: "toHome", sender: nil)
+            IgniteAPI.login(username: username, password: password) { (user) in
+                IgniteAPI.currentUser = user
+                self.consoleText.text = user.accessToken
+                self.performSegue(withIdentifier: "login", sender: nil)
             }
         }
     }
