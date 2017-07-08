@@ -26,13 +26,12 @@ class LoginVC: UIViewController {
         if let username = usernameField.text, let password = passwordField.text {
             IgniteAPI.login(username: username, password: password) { (user) in
                 IgniteAPI.currentUser = user
-                self.consoleText.text = user.accessToken
-                self.changeVC(identifier: "HomeVC")
+                self.createMenu(withMainIdentifier: "HomeVC")
             }
         }
     }
     
-    @IBAction func forgotPassPressed(_ sender: Any) {
+    @IBAction func forgotPasswordPressed(_ sender: Any) {
         showAlert(title: "Forgot your password?", message: "We sent you a new password, check your e-mail!")
     }
     

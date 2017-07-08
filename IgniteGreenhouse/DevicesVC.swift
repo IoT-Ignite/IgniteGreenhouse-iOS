@@ -13,16 +13,29 @@ class DevicesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     var devices = [IGDevice]()
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(DevicesVC.refreshData(_:)), for: UIControlEvents.valueChanged)
+        return refreshControl
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let nib = UINib(nibName: "DeviceCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "deviceCell")
+        tableView.addSubview(refreshControl)
+        refreshData(refreshControl)
+    }
+    
+    func refreshData(_ refreshControl: UIRefreshControl) {
+        refreshControl.beginRefreshing()
         IgniteAPI.getDevices { (devices) in
             self.devices = devices
             self.tableView.reloadData()
+            refreshControl.endRefreshing()
         }
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -41,6 +54,6 @@ class DevicesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         IgniteAPI.currentDevice = devices[indexPath.row]
         performSegue(withIdentifier: "toNodes", sender: nil)
     }
-
+    
 }
 

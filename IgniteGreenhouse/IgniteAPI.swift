@@ -13,7 +13,22 @@ import SwiftyJSON
 public class IgniteAPI {
     
     public static var endpoints: Endpoints = Endpoints()
-    public static var currentUser: IGUser?
+    public static var currentUser: IGUser? {
+        get {
+            guard
+                let data = UserDefaults.standard.data(forKey: "currentUser"),
+                let user = NSKeyedUnarchiver.unarchiveObject(with: data) as? IGUser
+                else { return nil }
+            return user
+        } set {
+            if let value = newValue {
+                let data = NSKeyedArchiver.archivedData(withRootObject: value)
+                UserDefaults.standard.set(data, forKey: "currentUser")
+            } else {
+                UserDefaults.standard.set(nil, forKey: "currentUser")
+            }
+        }
+    }
     public static var currentDevice: IGDevice?
     public static var currrentNode: IGNode?
     public static var currentSensor: IGSensor?
@@ -55,18 +70,18 @@ public class IgniteAPI {
         }
     }
     
-    public static func register(appKey: String = APP_KEY, brand: String, firstName: String, lastName: String, mail: String = TENANT_MAIL, password: String, profileName: String, completion: @escaping (_ response: JSON) -> ()) {
+    public static func register(appKey: String = APP_KEY, brand: String = "DGtech", firstName: String, lastName: String, mail: String = TENANT_MAIL, password: String, profileName: String, completion: @escaping (_ response: JSON) -> ()) {
+        let resource: Parameters = [
+            "appKey": appKey,
+            "brand": brand,
+            "firstName": firstName,
+            "lastName": lastName,
+            "mail": mail,
+            "password": password,
+            "profileName": profileName
+        ]
         let parameters: Parameters = [
-            "resource":
-                [
-                    "appKey": appKey,
-                    "brand": brand,
-                    "firstName": firstName,
-                    "lastName": lastName,
-                    "mail": mail,
-                    "password": password,
-                    "profileName": profileName
-                ]
+            "resource": resource
         ]
         Alamofire.request(endpoints.register, method: .post, parameters: parameters).responseJSON { (response) in
             print(response.description)
@@ -75,6 +90,13 @@ public class IgniteAPI {
     
     public static func refreshToken() {
         
+    }
+    
+    public static func logout() {
+        currentUser = nil
+        currentDevice = nil
+        currrentNode = nil
+        currentSensor = nil
     }
     
     public static func getDevices(completion: @escaping (_ devices: [IGDevice]) -> ()) {
@@ -159,6 +181,14 @@ public class IgniteAPI {
         }
     }
     
+    public static func getDromTenantConfig(completion: @escaping (_ response: JSON) -> ()) {
+        Alamofire.request(endpoints.dromTenantConfiguration, headers: getHeaders()).responseJSON { (response) in
+            print(response.description)
+            let json = JSON("")
+            completion(json)
+        }
+    }
+    
     public struct Endpoints {
         
         let base: String! = API_URL
@@ -170,6 +200,7 @@ public class IgniteAPI {
         func sensorData(deviceId: String) -> String {
             return device + "/\(deviceId)/sensor-data-history"
         }
+        let dromTenantConfiguration: String!
         
         init() {
             login = base + "/login/oauth"
@@ -177,6 +208,7 @@ public class IgniteAPI {
             device = base + "/device"
             nodes = device + "/iotlabel/all-nodes/"
             sensors = device + "/iotlabel/all-sensors"
+            dromTenantConfiguration = base + "/drom-tenant-configuration"
         }
         
     }

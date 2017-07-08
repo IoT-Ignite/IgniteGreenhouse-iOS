@@ -18,11 +18,12 @@ class RegisterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dismissKeyboardWhenTapped()
     }
 
     @IBAction func registerPressed(_ sender: Any) {
-        if let first = firstName.text, let last = lastName.text, let profile = profileName.text, let pass = password.text, let brand = brand.text {
-            IgniteAPI.register(brand: brand, firstName: first, lastName: last, password: pass, profileName: profile, completion: { (response) in
+        if let first = firstName.text, let last = lastName.text, let profile = profileName.text, let pass = password.text {
+            IgniteAPI.register(firstName: first, lastName: last, password: pass, profileName: profile, completion: { (response) in
                 print(response)
             })
         } else {
