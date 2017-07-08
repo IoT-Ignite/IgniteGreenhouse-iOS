@@ -18,6 +18,13 @@ class DeviceCell: UITableViewCell {
     func configureCell(device: IGDevice) {
         idLabel.text = device.deviceId
         statusLabel.text = device.state
+        switch device.model {
+        case "iot_rpi3":
+            let img = UIImage(named: "Raspberry")
+            deviceImage.image = img
+        default:
+            break
+        }
         switch device.state {
         case "ONLINE":
             statusImage.image = UIImage(named: "online")

@@ -12,18 +12,30 @@ class SensorsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var sensors = [IGSensor]()
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(SensorsVC.refreshData(_:)), for: UIControlEvents.valueChanged)
+        return refreshControl
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        definesPresentationContext = true
+        tableView.addSubview(refreshControl)
+        refreshData(refreshControl)
+    }
+    
+    func refreshData(_ refreshControl: UIRefreshControl) {
+        refreshControl.beginRefreshing()
         if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode {
             IgniteAPI.getDeviceSensors(deviceId: device.deviceId, nodeId: node.nodeId, pageSize: 10) { (sensors) in
                 self.sensors = sensors
                 self.tableView.reloadData()
+                refreshControl.endRefreshing()
             }
         } else {
             print("Device or Node not yet selected.")
-            changeVC(identifier: "HomeVC")
+            changeVC(withIdentifier: "HomeVC")
         }
     }
     
@@ -43,12 +55,7 @@ class SensorsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         IgniteAPI.currentSensor = sensors[indexPath.row]
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-//        let start = dateFormatter.date(from: "2017-06-29 09:00:00")!.timeIntervalSince1970
-//        let end = dateFormatter.date(from: "2017-06-29 17:00:00")!.timeIntervalSince1970
-        
-        navigationController?.popToRootViewController(animated: true)
+        changeVC(withIdentifier: "HomeVC")
     }
     
 }

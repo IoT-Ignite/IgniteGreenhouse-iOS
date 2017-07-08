@@ -12,17 +12,30 @@ class NodesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var nodes = [IGNode]()
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(NodesVC.refreshData(_:)), for: UIControlEvents.valueChanged)
+        return refreshControl
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.addSubview(refreshControl)
+        refreshData(refreshControl)
+    }
+    
+    func refreshData(_ refreshControl: UIRefreshControl) {
+        refreshControl.beginRefreshing()
         if let device = IgniteAPI.currentDevice {
             IgniteAPI.getDeviceNodes(deviceId: device.deviceId, pageSize: 10) { (nodes) in
                 self.nodes = nodes
                 self.tableView.reloadData()
+                refreshControl.endRefreshing()
             }
         } else {
             print("Device not yet selected.")
-            changeVC(identifier: "HomeVC")
+            changeVC(withIdentifier: "HomeVC")
         }
     }
     

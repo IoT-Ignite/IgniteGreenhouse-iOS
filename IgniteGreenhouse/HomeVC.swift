@@ -25,8 +25,29 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         refreshData(refreshControl)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        refreshData(refreshControl)
+    @IBAction func menuPressed(_ sender: Any) {
+        viewDeckController?.open(.left, animated: true)
+    }
+    
+    func refreshData(_ refreshControl: UIRefreshControl) {
+        refreshControl.beginRefreshing()
+        if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode, let sensor = IgniteAPI.currentSensor {
+            IgniteAPI.getSensorData(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, endDate: Date().timeIntervalSince1970, pageSize: 10) { (sensorData) in
+                self.sensorData = sensorData
+                self.tableView.reloadData()
+                refreshControl.endRefreshing()
+            }
+        } else {
+            print("Select Device, Node and Sensor first!.")
+            let alert = UIAlertController(title: "Alert", message: "Select Device, Node and Sensor first!", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                self.performSegue(withIdentifier: "toDevices", sender: nil)
+            })
+            alert.addAction(action)
+            present(alert, animated: true, completion: {
+                refreshControl.endRefreshing()
+            })
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,30 +70,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showAlert(title: sensorData[indexPath.row].data, message: "\(sensorData[indexPath.row].deviceId!)\n\(sensorData[indexPath.row].nodeId!)\n\(sensorData[indexPath.row].sensorId!)")
-    }
-    
-    @IBAction func menuPressed(_ sender: Any) {
-        viewDeckController?.open(.left, animated: true)
-    }
-    
-    func refreshData(_ refreshControl: UIRefreshControl) {
-        if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode, let sensor = IgniteAPI.currentSensor {
-            IgniteAPI.getSensorData(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, endDate: Date().timeIntervalSince1970, pageSize: 10) { (sensorData) in
-                self.sensorData = sensorData
-                self.tableView.reloadData()
-                refreshControl.endRefreshing()
-            }
-        } else {
-            print("Select Device, Node and Sensor first!.")
-            let alert = UIAlertController(title: "Alert", message: "Select Device, Node and Sensor first!", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                self.performSegue(withIdentifier: "toDevices", sender: nil)
-            })
-            alert.addAction(action)
-//            present(alert, animated: true, completion: {
-//                refreshControl.endRefreshing()
-//            })
-        }
     }
     
 }

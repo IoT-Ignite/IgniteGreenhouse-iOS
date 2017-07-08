@@ -73,12 +73,11 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         case 3:
             identifier = "SensorsVC"
         case 4:
-            identifier = "LoginVC"
+            identifier = "Login"
         default:
             identifier = "HomeVC"
         }
-        changeVC(identifier: identifier)
-        
+        changeVC(withIdentifier: identifier)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
