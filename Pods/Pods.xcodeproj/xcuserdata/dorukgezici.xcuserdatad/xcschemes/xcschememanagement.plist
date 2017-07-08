@@ -9,12 +9,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-IgniteGreenhouse.xcscheme</key>
+		<key>Charts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SideMenu.xcscheme</key>
+		<key>Pods-IgniteGreenhouse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,25 +24,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ViewDeck.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1C0AEF90E1ACA29955884A15DB7A5A8A</key>
+		<key>02FC2DA3E63917029DEB16851D05E0FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1D07A7C4895BA699C29370F346878041</key>
+		<key>22E9CE4344BBD8DBC91456919CF958AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5713377B07AC57EC081972E96AD2CEEB</key>
+		<key>6E1F5EF09BCFA5E2C0160284417468FE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F307B842FF76B2DE6C55DB67C0885325</key>
 		<dict>
 			<key>primary</key>
 			<true/>

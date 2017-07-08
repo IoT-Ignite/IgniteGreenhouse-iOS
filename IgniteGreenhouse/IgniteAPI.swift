@@ -55,15 +55,18 @@ public class IgniteAPI {
         }
     }
     
-    public static func register(appKey: String = APP_KEY, brand: String, firstName: String, lastName: String, mail: String, password: String, profileName: String, completion: @escaping (_ response: JSON) -> ()) {
+    public static func register(appKey: String = APP_KEY, brand: String, firstName: String, lastName: String, mail: String = TENANT_MAIL, password: String, profileName: String, completion: @escaping (_ response: JSON) -> ()) {
         let parameters: Parameters = [
-            "appKey": appKey,
-            "brand": brand,
-            "firstName": firstName,
-            "lastName": lastName,
-            "mail": mail,
-            "password": password,
-            "profileName": profileName
+            "resource":
+                [
+                    "appKey": appKey,
+                    "brand": brand,
+                    "firstName": firstName,
+                    "lastName": lastName,
+                    "mail": mail,
+                    "password": password,
+                    "profileName": profileName
+                ]
         ]
         Alamofire.request(endpoints.register, method: .post, parameters: parameters).responseJSON { (response) in
             print(response.description)

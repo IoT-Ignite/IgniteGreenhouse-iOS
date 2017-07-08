@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import ViewDeck
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let mainVC = sb.instantiateViewController(withIdentifier: "LoginVC")
+        let center = UINavigationController(rootViewController: mainVC)
+        let menuVC = sb.instantiateViewController(withIdentifier: "MenuVC")
+        let left = UINavigationController(rootViewController: menuVC)
+        left.preferredContentSize = CGSize(width: window!.bounds.width * 0.75, height: window!.bounds.height)
+        let viewDeckController = IIViewDeckController(center: center, leftViewController: left)
+        window?.rootViewController = viewDeckController
+        window?.makeKeyAndVisible()
         return true
     }
 
