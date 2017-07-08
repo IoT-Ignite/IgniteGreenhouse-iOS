@@ -27,9 +27,17 @@ class LoginVC: UIViewController {
             IgniteAPI.login(username: username, password: password) { (user) in
                 IgniteAPI.currentUser = user
                 self.consoleText.text = user.accessToken
-                self.performSegue(withIdentifier: "login", sender: nil)
+                self.changeVC(identifier: "HomeVC")
             }
         }
+    }
+    
+    @IBAction func forgotPassPressed(_ sender: Any) {
+        showAlert(title: "Forgot your password?", message: "We sent you a new password, check your e-mail!")
+    }
+    
+    @IBAction func registerPressed(_ sender: Any) {
+        performSegue(withIdentifier: "register", sender: nil)
     }
 
 }

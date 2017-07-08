@@ -8,5 +8,6 @@ target 'IgniteGreenhouse' do
   # Pods for IgniteGreenhouse
   pod 'Alamofire'
   pod 'SwiftyJSON'
-  pod 'SideMenu'
+  pod 'ViewDeck'
+  pod 'Charts'
 end

@@ -17,6 +17,7 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: false)
         profileName.delegate = self
         profileName.textColor = UIColor.white
 //        userName.text = User.currentUser!.userName
@@ -64,19 +65,20 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         var identifier: String!
         switch indexPath.row {
         case 0:
-            identifier = "toHome"
+            identifier = "HomeVC"
         case 1:
-            identifier = "toDevices"
+            identifier = "DevicesVC"
         case 2:
-            identifier = "toNodes"
+            identifier = "NodesVC"
         case 3:
-            identifier = "toSensors"
+            identifier = "SensorsVC"
         case 4:
-            identifier = "logout"
+            identifier = "LoginVC"
         default:
-            identifier = "toHome"
+            identifier = "HomeVC"
         }
-        performSegue(withIdentifier: identifier, sender: self)
+        changeVC(identifier: identifier)
+        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

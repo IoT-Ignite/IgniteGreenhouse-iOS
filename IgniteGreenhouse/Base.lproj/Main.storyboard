@@ -14,7 +14,7 @@
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,54 +23,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmO-Rl-Bfc">
-                                <rect key="frame" x="168.5" y="321" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ai9-Oc-yJj"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="qOp-mI-EqK">
+                                <rect key="frame" x="87" y="321" width="201" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmO-Rl-Bfc">
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ai9-Oc-yJj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chD-9I-amB">
+                                        <rect key="frame" x="78" y="0.0" width="123" height="30"/>
+                                        <state key="normal" title="Forgot Password?"/>
+                                        <connections>
+                                            <action selector="forgotPassPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DAM-IS-sA9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dorukgezici@gmail.com" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I6W-r8-0Ie">
                                 <rect key="frame" x="32" y="181" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="q1w2e3" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BqH-66-hmg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="q1w2e3" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="BqH-66-hmg">
                                 <rect key="frame" x="32" y="241" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seratonin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vy-8i-zUt">
-                                <rect key="frame" x="124.5" y="65" width="127" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ignite Greenhouse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vy-8i-zUt">
+                                <rect key="frame" x="66.5" y="65" width="242.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vpk-au-qCJ">
-                                <rect key="frame" x="32" y="391" width="311" height="256"/>
+                                <rect key="frame" x="32" y="461" width="311" height="186"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhT-de-dO6">
+                                <rect key="frame" x="159.5" y="391" width="56" height="30"/>
+                                <state key="normal" title="SIGNUP"/>
+                                <connections>
+                                    <action selector="registerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YuJ-af-E8g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="SmO-Rl-Bfc" firstAttribute="top" secondItem="BqH-66-hmg" secondAttribute="bottom" constant="50" id="34x-oR-xdr"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vpk-au-qCJ" secondAttribute="bottom" constant="20" id="7bj-Fc-So6"/>
-                            <constraint firstItem="BqH-66-hmg" firstAttribute="top" secondItem="I6W-r8-0Ie" secondAttribute="bottom" constant="30" id="Bvp-Nc-1sS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BqH-66-hmg" secondAttribute="trailing" constant="16" id="Cbd-oZ-RBV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="I6W-r8-0Ie" secondAttribute="trailing" constant="16" id="Gyh-hc-qya"/>
-                            <constraint firstItem="0vy-8i-zUt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I8h-i1-NtC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Vpk-au-qCJ" secondAttribute="trailing" constant="16" id="Kfb-yF-DjJ"/>
-                            <constraint firstItem="I6W-r8-0Ie" firstAttribute="top" secondItem="0vy-8i-zUt" secondAttribute="bottom" constant="80" id="S2T-2t-wM5"/>
-                            <constraint firstItem="I6W-r8-0Ie" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="gOW-od-nj3"/>
-                            <constraint firstItem="Vpk-au-qCJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="lRF-ia-3co"/>
-                            <constraint firstItem="SmO-Rl-Bfc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lki-pM-9FO"/>
-                            <constraint firstItem="BqH-66-hmg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="x10-sf-EeE"/>
-                            <constraint firstItem="Vpk-au-qCJ" firstAttribute="top" secondItem="SmO-Rl-Bfc" secondAttribute="bottom" constant="40" id="xIj-Di-tFd"/>
-                            <constraint firstItem="0vy-8i-zUt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="zme-Jb-DTo"/>
+                            <constraint firstItem="0vy-8i-zUt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8HN-oQ-xIB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I6W-r8-0Ie" secondAttribute="trailing" constant="16" id="9is-cO-Fnt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BqH-66-hmg" secondAttribute="trailing" constant="16" id="DsE-8a-l5W"/>
+                            <constraint firstItem="BqH-66-hmg" firstAttribute="top" secondItem="I6W-r8-0Ie" secondAttribute="bottom" constant="30" id="HTj-7s-756"/>
+                            <constraint firstItem="I6W-r8-0Ie" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="Mag-sJ-5sU"/>
+                            <constraint firstItem="Vpk-au-qCJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="O0f-ih-4nO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vpk-au-qCJ" secondAttribute="trailing" constant="16" id="OSa-4f-wYd"/>
+                            <constraint firstItem="0vy-8i-zUt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="QcC-Sb-JnS"/>
+                            <constraint firstItem="I6W-r8-0Ie" firstAttribute="top" secondItem="0vy-8i-zUt" secondAttribute="bottom" constant="80" id="VOW-KN-piH"/>
+                            <constraint firstItem="qOp-mI-EqK" firstAttribute="top" secondItem="BqH-66-hmg" secondAttribute="bottom" constant="50" id="egh-Yh-dok"/>
+                            <constraint firstItem="qOp-mI-EqK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="huG-vm-AYN"/>
+                            <constraint firstItem="jhT-de-dO6" firstAttribute="top" secondItem="qOp-mI-EqK" secondAttribute="bottom" constant="40" id="j6q-mh-RdM"/>
+                            <constraint firstItem="BqH-66-hmg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="mjz-4Y-y1U"/>
+                            <constraint firstItem="jhT-de-dO6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="otV-hG-XRF"/>
+                            <constraint firstAttribute="bottom" secondItem="Vpk-au-qCJ" secondAttribute="bottom" constant="20" symbolic="YES" id="rKy-WQ-Vc4"/>
+                            <constraint firstItem="Vpk-au-qCJ" firstAttribute="top" secondItem="jhT-de-dO6" secondAttribute="bottom" constant="40" id="wfG-bu-kT7"/>
                         </constraints>
                     </view>
                     <connections>
@@ -78,17 +99,101 @@
                         <outlet property="headerLabel" destination="0vy-8i-zUt" id="pSB-28-eHW"/>
                         <outlet property="passwordField" destination="BqH-66-hmg" id="B0S-1M-yte"/>
                         <outlet property="usernameField" destination="I6W-r8-0Ie" id="YCw-xg-SUv"/>
-                        <segue destination="zej-49-Ics" kind="show" identifier="login" id="oqT-uv-D6V"/>
+                        <segue destination="fnD-tD-WGn" kind="show" identifier="register" id="h67-Gk-hCo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3932" y="89"/>
+            <point key="canvasLocation" x="8001" y="-703"/>
         </scene>
-        <!--HomeVC-->
+        <!--RegisterVC-->
+        <scene sceneID="9wR-Lw-Bam">
+            <objects>
+                <viewController id="fnD-tD-WGn" customClass="RegisterVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Ke-dp-tsN"/>
+                        <viewControllerLayoutGuide type="bottom" id="bn7-CM-u2q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J2E-hH-0KZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ignite Greenhouse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnh-Bc-eJc">
+                                <rect key="frame" x="66" y="60" width="242.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="N3d-Js-v0U">
+                                <rect key="frame" x="32" y="156" width="311" height="205"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Doruk" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rBf-jh-Jzr">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="17"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Gezici" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Drh-4C-0VL">
+                                        <rect key="frame" x="0.0" y="47" width="311" height="17"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dorukgezici" placeholder="Profile Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9xJ-dt-J62">
+                                        <rect key="frame" x="0.0" y="94" width="311" height="17"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ARDIC" placeholder="Brand" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NlQ-kN-Lgn">
+                                        <rect key="frame" x="0.0" y="141" width="311" height="17"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="q1w2e3" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gEN-OW-fcy">
+                                        <rect key="frame" x="0.0" y="188" width="311" height="17"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXp-C4-qBt">
+                                <rect key="frame" x="158.5" y="421" width="57" height="30"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerPressed:" destination="fnD-tD-WGn" eventType="touchUpInside" id="In0-ga-lM5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cnh-Bc-eJc" firstAttribute="centerX" secondItem="J2E-hH-0KZ" secondAttribute="centerX" id="0S5-BV-mGg"/>
+                            <constraint firstItem="N3d-Js-v0U" firstAttribute="leading" secondItem="J2E-hH-0KZ" secondAttribute="leadingMargin" constant="16" id="7hm-5H-Wo4"/>
+                            <constraint firstItem="N3d-Js-v0U" firstAttribute="top" secondItem="Cnh-Bc-eJc" secondAttribute="bottom" constant="60" id="AtY-HO-ZYa"/>
+                            <constraint firstItem="AXp-C4-qBt" firstAttribute="top" secondItem="N3d-Js-v0U" secondAttribute="bottom" constant="60" id="YOD-gv-2ji"/>
+                            <constraint firstItem="AXp-C4-qBt" firstAttribute="centerX" secondItem="J2E-hH-0KZ" secondAttribute="centerX" id="kW1-rj-KTY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N3d-Js-v0U" secondAttribute="trailing" constant="16" id="s8c-PZ-IIn"/>
+                            <constraint firstItem="Cnh-Bc-eJc" firstAttribute="top" secondItem="8Ke-dp-tsN" secondAttribute="bottom" constant="40" id="vcd-su-gNE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="brand" destination="NlQ-kN-Lgn" id="okn-ni-Ajg"/>
+                        <outlet property="firstName" destination="rBf-jh-Jzr" id="kQa-ei-Qhv"/>
+                        <outlet property="lastName" destination="Drh-4C-0VL" id="SlH-4C-acO"/>
+                        <outlet property="password" destination="gEN-OW-fcy" id="r3d-Fs-OYo"/>
+                        <outlet property="profileName" destination="9xJ-dt-J62" id="CgZ-H7-Jt7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="88q-0x-Agn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8770" y="-704"/>
+        </scene>
+        <!--IoT-Ignite-->
         <scene sceneID="DZN-q9-kbR">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="nKw-bf-Dcq" customClass="HomeVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" automaticallyAdjustsScrollViewInsets="NO" id="nKw-bf-Dcq" customClass="HomeVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Ds-hY-JRm"/>
                         <viewControllerLayoutGuide type="bottom" id="vKf-Zh-d0z"/>
@@ -134,33 +239,33 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="b2C-GV-vre" firstAttribute="top" secondItem="2Ds-hY-JRm" secondAttribute="bottom" id="0je-uu-NHY"/>
-                            <constraint firstItem="b2C-GV-vre" firstAttribute="trailing" secondItem="yRh-jU-gZB" secondAttribute="trailingMargin" id="aQ4-jM-0Le"/>
-                            <constraint firstItem="vKf-Zh-d0z" firstAttribute="top" secondItem="b2C-GV-vre" secondAttribute="bottom" id="bcb-NE-Des"/>
-                            <constraint firstItem="b2C-GV-vre" firstAttribute="leading" secondItem="yRh-jU-gZB" secondAttribute="leadingMargin" id="sCb-Wh-eXd"/>
+                            <constraint firstItem="b2C-GV-vre" firstAttribute="trailing" secondItem="yRh-jU-gZB" secondAttribute="trailingMargin" id="R8B-NY-xGN"/>
+                            <constraint firstItem="b2C-GV-vre" firstAttribute="leading" secondItem="yRh-jU-gZB" secondAttribute="leadingMargin" id="tIy-pe-AZ2"/>
+                            <constraint firstItem="b2C-GV-vre" firstAttribute="bottom" secondItem="vKf-Zh-d0z" secondAttribute="top" id="ygl-et-KFn"/>
+                            <constraint firstItem="b2C-GV-vre" firstAttribute="top" secondItem="2Ds-hY-JRm" secondAttribute="bottom" id="zjL-ZZ-kZQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kVb-aq-mfa">
-                        <barButtonItem key="leftBarButtonItem" image="menubutton" id="M3Q-uB-gRu">
+                    <navigationItem key="navigationItem" title="IoT-Ignite" id="bwc-3E-vh6">
+                        <barButtonItem key="leftBarButtonItem" image="menubutton" id="NO8-XP-tjv">
                             <connections>
-                                <action selector="menuPressed:" destination="nKw-bf-Dcq" id="yKx-Iu-kFu"/>
+                                <action selector="menuPressed:" destination="nKw-bf-Dcq" id="0dB-8Y-a0V"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="b2C-GV-vre" id="N7M-v0-hMh"/>
-                        <segue destination="jDm-Tg-YzQ" kind="show" identifier="toDevices" id="MlE-n0-t0M"/>
+                        <segue destination="jDm-Tg-YzQ" kind="show" identifier="toDevices" id="9zv-uW-rp5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22b-34-09S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5366" y="89"/>
+            <point key="canvasLocation" x="8001" y="89"/>
         </scene>
-        <!--NodesVC-->
+        <!--Nodes-->
         <scene sceneID="hMx-SI-Fh2">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="jj7-DP-vLh" customClass="NodesVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NodesVC" automaticallyAdjustsScrollViewInsets="NO" id="jj7-DP-vLh" customClass="NodesVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yu0-aA-FVE"/>
                         <viewControllerLayoutGuide type="bottom" id="VU5-9h-e0M"/>
@@ -201,10 +306,11 @@
                         <constraints>
                             <constraint firstItem="c8f-Il-ssh" firstAttribute="leading" secondItem="jRt-xL-HOV" secondAttribute="leadingMargin" id="0iM-7C-hzG"/>
                             <constraint firstItem="c8f-Il-ssh" firstAttribute="trailing" secondItem="jRt-xL-HOV" secondAttribute="trailingMargin" id="3jW-HI-akd"/>
-                            <constraint firstItem="c8f-Il-ssh" firstAttribute="top" secondItem="Yu0-aA-FVE" secondAttribute="bottom" id="59n-pK-41A"/>
+                            <constraint firstItem="c8f-Il-ssh" firstAttribute="top" secondItem="Yu0-aA-FVE" secondAttribute="bottom" id="Ks8-f9-DXl"/>
                             <constraint firstItem="VU5-9h-e0M" firstAttribute="top" secondItem="c8f-Il-ssh" secondAttribute="bottom" id="tmZ-eu-5GH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Nodes" id="eNA-2R-LvH"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="c8f-Il-ssh" id="7B3-Ir-CGn"/>
@@ -213,12 +319,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DYf-ay-W7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6745" y="89"/>
+            <point key="canvasLocation" x="9524" y="89"/>
         </scene>
-        <!--SensorsVC-->
+        <!--Sensors-->
         <scene sceneID="NR4-Ru-sX3">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0eV-Wt-hEr" customClass="SensorsVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SensorsVC" automaticallyAdjustsScrollViewInsets="NO" id="0eV-Wt-hEr" customClass="SensorsVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hU1-9V-YzI"/>
                         <viewControllerLayoutGuide type="bottom" id="CcU-zq-Lpb"/>
@@ -257,12 +363,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7cj-IY-6eK" firstAttribute="top" secondItem="hU1-9V-YzI" secondAttribute="bottom" id="9Pf-oc-BSp"/>
                             <constraint firstItem="CcU-zq-Lpb" firstAttribute="top" secondItem="7cj-IY-6eK" secondAttribute="bottom" id="B4Q-F3-FMs"/>
-                            <constraint firstItem="7cj-IY-6eK" firstAttribute="top" secondItem="hU1-9V-YzI" secondAttribute="bottom" id="W9E-Cx-byX"/>
                             <constraint firstItem="7cj-IY-6eK" firstAttribute="trailing" secondItem="QCq-86-ez0" secondAttribute="trailingMargin" id="jcV-Lw-oC6"/>
                             <constraint firstItem="7cj-IY-6eK" firstAttribute="leading" secondItem="QCq-86-ez0" secondAttribute="leadingMargin" id="tMz-ur-chD"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Sensors" id="K0f-I8-RUW"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="7cj-IY-6eK" id="kTe-gh-alx"/>
@@ -270,35 +378,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVT-tv-ypP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7450" y="89"/>
-        </scene>
-        <!--Side Menu Navigation Controller-->
-        <scene sceneID="OpH-cJ-51V">
-            <objects>
-                <navigationController storyboardIdentifier="LeftMenuNavigationController" navigationBarHidden="YES" id="baq-KC-OBo" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XWQ-Td-7Cf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="tIt-dg-Qv1">
-                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <segue destination="cNQ-ii-F9g" kind="relationship" relationship="rootViewController" id="VAG-Ux-QEm"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nNY-fE-zZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4663" y="-661"/>
+            <point key="canvasLocation" x="10290" y="89"/>
         </scene>
         <!--MenuVC-->
         <scene sceneID="p7c-8L-f4m">
             <objects>
-                <viewController id="cNQ-ii-F9g" customClass="MenuVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuVC" id="cNQ-ii-F9g" customClass="MenuVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="us7-hp-0d6"/>
                         <viewControllerLayoutGuide type="bottom" id="FII-Zl-Upd"/>
@@ -499,47 +584,24 @@
                             <constraint firstAttribute="trailing" secondItem="r0N-Ya-wyg" secondAttribute="trailing" id="pcT-fe-02F"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ayh-nY-xDh"/>
+                    <navigationItem key="navigationItem" id="DAW-Gj-Irc"/>
                     <connections>
                         <outlet property="profileImg" destination="KFH-a1-mtV" id="kFo-sT-0da"/>
                         <outlet property="profileName" destination="pcr-z4-3kE" id="aT5-2p-n46"/>
                         <outlet property="tableView" destination="r0N-Ya-wyg" id="q7F-Bf-Vsz"/>
                         <outlet property="userName" destination="eTo-94-bG6" id="pX7-DI-wjc"/>
                         <segue destination="Guc-wO-mbN" kind="unwind" identifier="unwindToLogin" unwindAction="prepareForUnwind:" id="93s-3p-GKo"/>
-                        <segue destination="jj7-DP-vLh" kind="show" identifier="toNodes" id="RaR-Op-xwp"/>
-                        <segue destination="0eV-Wt-hEr" kind="show" identifier="toSensors" id="feB-Bf-peb"/>
-                        <segue destination="nKw-bf-Dcq" kind="show" identifier="toHome" id="xT1-9U-Hcq"/>
-                        <segue destination="jDm-Tg-YzQ" kind="show" identifier="toDevices" id="3QV-eT-ebb"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="3gO-fb-Dje"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5EA-jd-2iJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Guc-wO-mbN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5366" y="-662"/>
+            <point key="canvasLocation" x="9524" y="-705"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Q3m-6O-9eW">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zej-49-Ics" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5fY-SH-TjU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="nKw-bf-Dcq" kind="relationship" relationship="rootViewController" id="hGo-h9-cJr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jyq-vZ-08J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4662" y="89"/>
-        </scene>
-        <!--DevicesVC-->
+        <!--Devices-->
         <scene sceneID="OhM-vt-TgO">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="jDm-Tg-YzQ" customClass="DevicesVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DevicesVC" automaticallyAdjustsScrollViewInsets="NO" id="jDm-Tg-YzQ" customClass="DevicesVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QJI-PJ-TJ0"/>
                         <viewControllerLayoutGuide type="bottom" id="CtY-Nc-Bab"/>
@@ -571,10 +633,12 @@
                         <constraints>
                             <constraint firstItem="3Yq-86-H3F" firstAttribute="leading" secondItem="bT6-rb-8qk" secondAttribute="leadingMargin" id="1rD-bn-8Cu"/>
                             <constraint firstItem="CtY-Nc-Bab" firstAttribute="top" secondItem="3Yq-86-H3F" secondAttribute="bottom" id="71F-y9-cC4"/>
-                            <constraint firstItem="3Yq-86-H3F" firstAttribute="top" secondItem="QJI-PJ-TJ0" secondAttribute="bottom" id="LPe-d9-mev"/>
+                            <constraint firstItem="3Yq-86-H3F" firstAttribute="top" secondItem="QJI-PJ-TJ0" secondAttribute="bottom" id="Ijl-rZ-MPx"/>
                             <constraint firstItem="3Yq-86-H3F" firstAttribute="trailing" secondItem="bT6-rb-8qk" secondAttribute="trailingMargin" id="mcf-Mf-Vei"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Devices" id="oNF-Or-W4F"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="3Yq-86-H3F" id="Um0-On-tIB"/>
@@ -583,7 +647,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lV1-rI-3HC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6066" y="89"/>
+            <point key="canvasLocation" x="8769" y="89"/>
         </scene>
     </scenes>
     <resources>
@@ -595,10 +659,4 @@
         <image name="profile" width="15" height="15"/>
         <image name="settings" width="15" height="15"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="feB-Bf-peb"/>
-        <segue reference="3QV-eT-ebb"/>
-        <segue reference="RaR-Op-xwp"/>
-        <segue reference="xT1-9U-Hcq"/>
-    </inferredMetricsTieBreakers>
 </document>

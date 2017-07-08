@@ -1,18 +1,23 @@
 PODS:
   - Alamofire (4.5.0)
-  - SideMenu (2.3.2)
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
   - SwiftyJSON (3.1.4)
+  - ViewDeck (3.1.0)
 
 DEPENDENCIES:
   - Alamofire
-  - SideMenu
+  - Charts
   - SwiftyJSON
+  - ViewDeck
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
-  SideMenu: 3fa07dd05d4bade2b6f9889fb1877e312e1ba319
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  ViewDeck: 942d90dd23c9f97cc8038be352255378167edcca
 
-PODFILE CHECKSUM: 63f3d29f69a07bf33ac87ec67757ceea1778d1f7
+PODFILE CHECKSUM: 50b6fed5d70da989475bc6362f0fc6514ee6f055
 
 COCOAPODS: 1.2.1

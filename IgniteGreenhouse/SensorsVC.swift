@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SideMenu
 
 class SensorsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -24,7 +23,7 @@ class SensorsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         } else {
             print("Device or Node not yet selected.")
-            SideMenuManager.menuLeftNavigationController?.performSegue(withIdentifier: "toDevices", sender: nil)
+            changeVC(identifier: "HomeVC")
         }
     }
     

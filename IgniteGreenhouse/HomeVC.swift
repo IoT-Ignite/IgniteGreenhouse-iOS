@@ -7,34 +7,26 @@
 //
 
 import UIKit
-import SideMenu
 
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     var sensorData = [IGSensorData]()
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(HomeVC.refreshData(_:)), for: UIControlEvents.valueChanged)
+        return refreshControl
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSideMenu()
-        if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode, let sensor = IgniteAPI.currentSensor {
-            IgniteAPI.getSensorData(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, endDate: Date().timeIntervalSince1970, pageSize: 10) { (sensorData) in
-                self.sensorData = sensorData
-                self.tableView.reloadData()
-            }
-        } else {
-            print("Select Device, Node and Sensor.")
-            performSegue(withIdentifier: "toDevices", sender: nil)
-        }
+        tableView.addSubview(refreshControl)
+        refreshData(refreshControl)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode, let sensor = IgniteAPI.currentSensor {
-            IgniteAPI.getSensorData(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, endDate: Date().timeIntervalSince1970, pageSize: 10) { (sensorData) in
-                self.sensorData = sensorData
-                self.tableView.reloadData()
-            }
-        }
+        refreshData(refreshControl)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -56,22 +48,31 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toDevices", sender: nil)
+        showAlert(title: sensorData[indexPath.row].data, message: "\(sensorData[indexPath.row].deviceId!)\n\(sensorData[indexPath.row].nodeId!)\n\(sensorData[indexPath.row].sensorId!)")
     }
     
     @IBAction func menuPressed(_ sender: Any) {
-        present(SideMenuManager.menuLeftNavigationController!, animated: true, completion: nil)
+        viewDeckController?.open(.left, animated: true)
     }
     
-    func setupSideMenu() {
-        let menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as! UISideMenuNavigationController
-        menuLeftNavigationController.leftSide = true
-        SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
-        SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        SideMenuManager.menuAddPanGestureToPresent(toView: self.view)
-        SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
-        SideMenuManager.menuPresentMode = .viewSlideInOut
-        SideMenuManager.menuFadeStatusBar = false
+    func refreshData(_ refreshControl: UIRefreshControl) {
+        if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode, let sensor = IgniteAPI.currentSensor {
+            IgniteAPI.getSensorData(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, endDate: Date().timeIntervalSince1970, pageSize: 10) { (sensorData) in
+                self.sensorData = sensorData
+                self.tableView.reloadData()
+                refreshControl.endRefreshing()
+            }
+        } else {
+            print("Select Device, Node and Sensor first!.")
+            let alert = UIAlertController(title: "Alert", message: "Select Device, Node and Sensor first!", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                self.performSegue(withIdentifier: "toDevices", sender: nil)
+            })
+            alert.addAction(action)
+//            present(alert, animated: true, completion: {
+//                refreshControl.endRefreshing()
+//            })
+        }
     }
-
+    
 }
