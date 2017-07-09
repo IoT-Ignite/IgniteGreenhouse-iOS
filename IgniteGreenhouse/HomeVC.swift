@@ -8,6 +8,7 @@
 
 import UIKit
 import Charts
+import IgniteAPI
 
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
