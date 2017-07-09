@@ -20,6 +20,20 @@
                ReferencedContainer = "container:IgniteGreenhouse.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8158BDA41F123EF300F1AEC5"
+               BuildableName = "IgniteAPI.framework"
+               BlueprintName = "IgniteAPI"
+               ReferencedContainer = "container:IgniteAPI/IgniteAPI.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

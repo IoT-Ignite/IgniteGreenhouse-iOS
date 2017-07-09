@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
+import IgniteAPI
 
 class LoginVC: UIViewController {
 
