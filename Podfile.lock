@@ -3,21 +3,34 @@ PODS:
   - Charts (3.0.2):
     - Charts/Core (= 3.0.2)
   - Charts/Core (3.0.2)
+  - ChartsRealm (3.0.2):
+    - Charts (~> 3.0.2)
+    - RealmSwift (~> 2.4)
+  - Realm (2.8.3):
+    - Realm/Headers (= 2.8.3)
+  - Realm/Headers (2.8.3)
+  - RealmSwift (2.8.3):
+    - Realm (= 2.8.3)
   - SwiftyJSON (3.1.4)
   - ViewDeck (3.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - Charts
+  - ChartsRealm
+  - RealmSwift
   - SwiftyJSON
   - ViewDeck
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  ChartsRealm: ed0332fd409298188a2b71e9548604165c987d42
+  Realm: 3601ef091c8c499a31101d8563b991e75546cdce
+  RealmSwift: 8183818515471b01a99abdd2970f8e4fd52b6f4a
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   ViewDeck: 942d90dd23c9f97cc8038be352255378167edcca
 
-PODFILE CHECKSUM: dadea60189367b4e32dbe0686f75bbbbbc8b26f2
+PODFILE CHECKSUM: 003b6e6bd8df6c7c7a06dfd76c1318d676c62ef9
 
 COCOAPODS: 1.2.1

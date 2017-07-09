@@ -14,12 +14,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ChartsRealm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-IgniteAPI.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-IgniteGreenhouse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,27 +52,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>02FC2DA3E63917029DEB16851D05E0FC</key>
+		<key>0A9A6EA56C27DC3A976742FF7719C574</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5E003155A3B09B06D5F42902AE4FC020</key>
+		<key>24A599A96B8BD47DE19ACE2D1D179ED9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E1F5EF09BCFA5E2C0160284417468FE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7A58B067FEA451C6459F25757B58C571</key>
+		<key>683FA93B40B2E388EB44CBEFF725ED29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9ABFCDF7C418030647EE23DEBE11D45D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AC63F0307DF58117A5B0347B9B87E856</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C10186F643AC0BD52AAE6B758E796AA7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC4DA12E2714E43C53C4C99DE86A1968</key>
 		<dict>
 			<key>primary</key>
 			<true/>

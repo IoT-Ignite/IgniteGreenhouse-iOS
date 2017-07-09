@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7A58B067FEA451C6459F25757B58C571"
+               BlueprintIdentifier = "0A9A6EA56C27DC3A976742FF7719C574"
                BuildableName = "Pods_IgniteAPI.framework"
                BlueprintName = "Pods-IgniteAPI"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7A58B067FEA451C6459F25757B58C571"
+            BlueprintIdentifier = "0A9A6EA56C27DC3A976742FF7719C574"
             BuildableName = "Pods_IgniteAPI.framework"
             BlueprintName = "Pods-IgniteAPI"
             ReferencedContainer = "container:Pods.xcodeproj">

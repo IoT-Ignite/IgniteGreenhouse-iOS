@@ -5,6 +5,7 @@ workspace 'IgniteGreenhouse'
 def shared_pods
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'RealmSwift'
 end
 
 target 'IgniteGreenhouse' do
@@ -14,6 +15,7 @@ target 'IgniteGreenhouse' do
   shared_pods
   pod 'ViewDeck'
   pod 'Charts'
+  pod 'ChartsRealm'
 end
 
 target 'IgniteAPI' do

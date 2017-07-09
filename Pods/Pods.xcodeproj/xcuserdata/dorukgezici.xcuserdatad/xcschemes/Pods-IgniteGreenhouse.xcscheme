@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6E1F5EF09BCFA5E2C0160284417468FE"
+               BlueprintIdentifier = "EC4DA12E2714E43C53C4C99DE86A1968"
                BuildableName = "Pods_IgniteGreenhouse.framework"
                BlueprintName = "Pods-IgniteGreenhouse"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6E1F5EF09BCFA5E2C0160284417468FE"
+            BlueprintIdentifier = "EC4DA12E2714E43C53C4C99DE86A1968"
             BuildableName = "Pods_IgniteGreenhouse.framework"
             BlueprintName = "Pods-IgniteGreenhouse"
             ReferencedContainer = "container:Pods.xcodeproj">
