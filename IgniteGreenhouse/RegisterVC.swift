@@ -25,9 +25,11 @@ class RegisterVC: UIViewController {
     @IBAction func registerPressed(_ sender: Any) {
         guard let first = firstName.text, let last = lastName.text, let profile = profileName.text, let pass = password.text else { return }
         let array = [first, last, profile, pass]
-        if array.contains("") { return }
-        else {
-            IgniteAPI.register(firstName: first, lastName: last, password: pass, profileName: profile) { (response) in
+        if array.contains("") {
+            showAlert(title: "Alert", message: "Please enter the required information first.")
+            return
+        } else {
+            IgniteAPI.createRestrictedUser(firstName: first, lastName: last, password: pass, profileName: profile) { (response) in
                 print(response)
             }
         }

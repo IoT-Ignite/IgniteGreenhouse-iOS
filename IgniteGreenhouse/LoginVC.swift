@@ -15,10 +15,20 @@ class LoginVC: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var consoleText: UITextView!
+    @IBOutlet weak var showHidePasswordButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dismissKeyboardWhenTapped()
+    }
+    
+    @IBAction func showHidePassword(_ sender: Any) {
+        passwordField.isSecureTextEntry = !passwordField.isSecureTextEntry
+        if passwordField.isSecureTextEntry {
+            showHidePasswordButton.setTitle("Show", for: .normal)
+        } else {
+            showHidePasswordButton.setTitle("Hide", for: .normal)
+        }
     }
     
     @IBAction func loginPressed(_ sender: Any) {

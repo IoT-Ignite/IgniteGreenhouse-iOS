@@ -35,7 +35,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func refreshData(_ refreshControl: UIRefreshControl) {
         refreshControl.beginRefreshing()
         if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode, let sensor = IgniteAPI.currentSensor {
-            IgniteAPI.getSensorData(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, endDate: Date().timeIntervalSince1970, pageSize: 10) { (sensorData) in
+            IgniteAPI.getSensorDataHistory(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, endDate: Date().timeIntervalSince1970, pageSize: 10) { (sensorData) in
                 self.sensorData = sensorData
                 self.tableView.reloadData()
                 self.updateChartWithData()
@@ -57,7 +57,8 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func updateChartWithData() {
         var dataEntries = [ChartDataEntry]()
         for (i, sensor) in sensorData.enumerated() {
-            let dataEntry = ChartDataEntry(x: Double(i), y: Double(sensor.data)!)
+            guard let data = Double(sensor.data) else { return }
+            let dataEntry = ChartDataEntry(x: Double(i), y: data)
             dataEntries.append(dataEntry)
         }
         let chartDataSet = LineChartDataSet(values: dataEntries, label: "Temperature")
