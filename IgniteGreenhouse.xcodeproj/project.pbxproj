@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		16C996AD204E5BA78937A913 /* Pods_IgniteGreenhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB864D356C8EDA265C64178 /* Pods_IgniteGreenhouse.framework */; };
+		81184B911F124C43008AC214 /* IgniteAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81184B901F124C43008AC214 /* IgniteAPI.framework */; };
+		81184B921F124C43008AC214 /* IgniteAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81184B901F124C43008AC214 /* IgniteAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		812DB21A1F0B83BE002A4F09 /* DevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DB2191F0B83BE002A4F09 /* DevicesVC.swift */; };
 		813BA71C1F0685F000F25EC0 /* SensorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813BA71B1F0685F000F25EC0 /* SensorsVC.swift */; };
 		815A91941F0547DC0066C186 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A91931F0547DC0066C186 /* HomeVC.swift */; };
@@ -25,8 +27,23 @@
 		81F24CB31F06323D00F09EB3 /* NodesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F24CB21F06323D00F09EB3 /* NodesVC.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		81184B8F1F124BF6008AC214 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				81184B921F124C43008AC214 /* IgniteAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		27BFCD535AB96595BDDF6569 /* Pods-IgniteGreenhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse.debug.xcconfig"; sourceTree = "<group>"; };
+		81184B901F124C43008AC214 /* IgniteAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IgniteAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		812DB2191F0B83BE002A4F09 /* DevicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesVC.swift; sourceTree = "<group>"; };
 		813BA71B1F0685F000F25EC0 /* SensorsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorsVC.swift; sourceTree = "<group>"; };
 		815A91931F0547DC0066C186 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -54,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16C996AD204E5BA78937A913 /* Pods_IgniteGreenhouse.framework in Frameworks */,
+				81184B911F124C43008AC214 /* IgniteAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +152,7 @@
 		8173C90A1F04F65300C0175F /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				81184B901F124C43008AC214 /* IgniteAPI.framework */,
 				8173C8F51F04F62400C0175F /* AppDelegate.swift */,
 				8173C8FE1F04F62400C0175F /* LaunchScreen.storyboard */,
 				8173C9011F04F62400C0175F /* Info.plist */,
@@ -164,6 +183,7 @@
 				8173C8F01F04F62400C0175F /* Resources */,
 				29EF86F738E8F5211EFE0E3F /* [CP] Embed Pods Frameworks */,
 				2D7FB1054D6BEEA4437328F7 /* [CP] Copy Pods Resources */,
+				81184B8F1F124BF6008AC214 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
