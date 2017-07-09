@@ -1,5 +1,5 @@
 //
-//  IGSensor.swift
+//  IGNode.swift
 //  IgniteGreenhouse
 //
 //  Created by Doruk Gezici on 30/06/2017.
@@ -9,24 +9,20 @@
 import Foundation
 import SwiftyJSON
 
-public class IGSensor: NSObject, NSCoding {
+public class IGNode: NSObject, NSCoding {
     
-    let nodeId: String!
-    let sensorId: String!
+    public let nodeId: String!
     
     init(json: JSON) {
         nodeId = json["nodeId"].string
-        sensorId = json["sensorId"].string
     }
     
     public required init?(coder aDecoder: NSCoder) {
         nodeId = aDecoder.decodeString(forKey: "nodeId")
-        sensorId = aDecoder.decodeString(forKey: "sensorId")
     }
-    
+
     public func encode(with aCoder: NSCoder) {
         aCoder.encode(nodeId, forKey: "nodeId")
-        aCoder.encode(sensorId, forKey: "sensorId")
     }
     
 }

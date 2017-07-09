@@ -276,18 +276,18 @@ public class IgniteAPI {
     
     public struct Endpoints {
         
-        let base: String! = API_URL
-        let login: String!
-        let register: String!
-        let forgotPassword: String!
-        let changePassword: String!
-        let device: String!
-        let nodes: String!
-        let sensors: String!
-        func sensorData(deviceId: String) -> String {
+        public let base: String! = API_URL
+        public let login: String!
+        public let register: String!
+        public let forgotPassword: String!
+        public let changePassword: String!
+        public let device: String!
+        public let nodes: String!
+        public let sensors: String!
+        public func sensorData(deviceId: String) -> String {
             return device + "/\(deviceId)/sensor-data-history"
         }
-        let dromTenantConfiguration: String!
+        public let dromTenantConfiguration: String!
         
         init() {
             login = base + "/login/oauth"

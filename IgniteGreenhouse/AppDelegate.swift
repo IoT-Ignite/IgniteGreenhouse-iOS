@@ -8,6 +8,7 @@
 
 import UIKit
 import ViewDeck
+import IgniteAPI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

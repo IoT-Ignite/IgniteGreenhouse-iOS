@@ -9,13 +9,9 @@
 /* Begin PBXBuildFile section */
 		16C996AD204E5BA78937A913 /* Pods_IgniteGreenhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB864D356C8EDA265C64178 /* Pods_IgniteGreenhouse.framework */; };
 		812DB21A1F0B83BE002A4F09 /* DevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DB2191F0B83BE002A4F09 /* DevicesVC.swift */; };
-		813BA71A1F067DCB00F25EC0 /* IGSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813BA7191F067DCB00F25EC0 /* IGSensor.swift */; };
 		813BA71C1F0685F000F25EC0 /* SensorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813BA71B1F0685F000F25EC0 /* SensorsVC.swift */; };
-		813F39DC1F0558C1008B2E84 /* IGDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813F39DB1F0558C1008B2E84 /* IGDevice.swift */; };
 		815A91941F0547DC0066C186 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A91931F0547DC0066C186 /* HomeVC.swift */; };
 		81663E711F051F58002F52D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81663E701F051F58002F52D3 /* Constants.swift */; };
-		81663E731F052A09002F52D3 /* IgniteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81663E721F052A09002F52D3 /* IgniteAPI.swift */; };
-		81663E751F052A4A002F52D3 /* IGUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81663E741F052A4A002F52D3 /* IGUser.swift */; };
 		8173C8F61F04F62400C0175F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173C8F51F04F62400C0175F /* AppDelegate.swift */; };
 		8173C8F81F04F62400C0175F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173C8F71F04F62400C0175F /* LoginVC.swift */; };
 		8173C8FB1F04F62400C0175F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8173C8F91F04F62400C0175F /* Main.storyboard */; };
@@ -26,21 +22,15 @@
 		819018EA1F105450002BB3A1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819018E91F105450002BB3A1 /* RegisterVC.swift */; };
 		81E103091F05A148003907F8 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E103071F05A148003907F8 /* DeviceCell.swift */; };
 		81E1030A1F05A148003907F8 /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E103081F05A148003907F8 /* DeviceCell.xib */; };
-		81F24CB11F062D5100F09EB3 /* IGSensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F24CB01F062D5100F09EB3 /* IGSensorData.swift */; };
 		81F24CB31F06323D00F09EB3 /* NodesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F24CB21F06323D00F09EB3 /* NodesVC.swift */; };
-		81F24CB51F063C6500F09EB3 /* IGNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F24CB41F063C6500F09EB3 /* IGNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27BFCD535AB96595BDDF6569 /* Pods-IgniteGreenhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse.debug.xcconfig"; sourceTree = "<group>"; };
 		812DB2191F0B83BE002A4F09 /* DevicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesVC.swift; sourceTree = "<group>"; };
-		813BA7191F067DCB00F25EC0 /* IGSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGSensor.swift; sourceTree = "<group>"; };
 		813BA71B1F0685F000F25EC0 /* SensorsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorsVC.swift; sourceTree = "<group>"; };
-		813F39DB1F0558C1008B2E84 /* IGDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGDevice.swift; sourceTree = "<group>"; };
 		815A91931F0547DC0066C186 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		81663E701F051F58002F52D3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = IgniteGreenhouse/Constants.swift; sourceTree = "<group>"; };
-		81663E721F052A09002F52D3 /* IgniteAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IgniteAPI.swift; sourceTree = "<group>"; };
-		81663E741F052A4A002F52D3 /* IGUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGUser.swift; sourceTree = "<group>"; };
 		8173C8F21F04F62400C0175F /* IgniteGreenhouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IgniteGreenhouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8173C8F51F04F62400C0175F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8173C8F71F04F62400C0175F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -53,9 +43,7 @@
 		819018E91F105450002BB3A1 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		81E103071F05A148003907F8 /* DeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 		81E103081F05A148003907F8 /* DeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
-		81F24CB01F062D5100F09EB3 /* IGSensorData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGSensorData.swift; sourceTree = "<group>"; };
 		81F24CB21F06323D00F09EB3 /* NodesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodesVC.swift; sourceTree = "<group>"; };
-		81F24CB41F063C6500F09EB3 /* IGNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGNode.swift; sourceTree = "<group>"; };
 		CCB864D356C8EDA265C64178 /* Pods_IgniteGreenhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IgniteGreenhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FDE3ABDC3518DABCB6223F /* Pods-IgniteGreenhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,7 +98,6 @@
 		8173C8F41F04F62400C0175F /* IgniteGreenhouse */ = {
 			isa = PBXGroup;
 			children = (
-				8173C9091F04F64800C0175F /* Model */,
 				8173C9081F04F63A00C0175F /* View */,
 				8173C9071F04F63100C0175F /* Controller */,
 				8173C90B1F04F66100C0175F /* Resources */,
@@ -142,19 +129,6 @@
 				81E103081F05A148003907F8 /* DeviceCell.xib */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		8173C9091F04F64800C0175F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				81663E721F052A09002F52D3 /* IgniteAPI.swift */,
-				81663E741F052A4A002F52D3 /* IGUser.swift */,
-				813F39DB1F0558C1008B2E84 /* IGDevice.swift */,
-				81F24CB41F063C6500F09EB3 /* IGNode.swift */,
-				813BA7191F067DCB00F25EC0 /* IGSensor.swift */,
-				81F24CB01F062D5100F09EB3 /* IGSensorData.swift */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		8173C90A1F04F65300C0175F /* Other */ = {
@@ -302,7 +276,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81663E731F052A09002F52D3 /* IgniteAPI.swift in Sources */,
 				8173C8F81F04F62400C0175F /* LoginVC.swift in Sources */,
 				813BA71C1F0685F000F25EC0 /* SensorsVC.swift in Sources */,
 				81807E481F0AE07B007F9424 /* MenuVC.swift in Sources */,
@@ -311,14 +284,9 @@
 				81E103091F05A148003907F8 /* DeviceCell.swift in Sources */,
 				812DB21A1F0B83BE002A4F09 /* DevicesVC.swift in Sources */,
 				81F24CB31F06323D00F09EB3 /* NodesVC.swift in Sources */,
-				81F24CB51F063C6500F09EB3 /* IGNode.swift in Sources */,
 				815A91941F0547DC0066C186 /* HomeVC.swift in Sources */,
-				81663E751F052A4A002F52D3 /* IGUser.swift in Sources */,
-				813F39DC1F0558C1008B2E84 /* IGDevice.swift in Sources */,
 				81807E4A1F0AE21E007F9424 /* MenuCell.swift in Sources */,
 				81663E711F051F58002F52D3 /* Constants.swift in Sources */,
-				81F24CB11F062D5100F09EB3 /* IGSensorData.swift in Sources */,
-				813BA71A1F067DCB00F25EC0 /* IGSensor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

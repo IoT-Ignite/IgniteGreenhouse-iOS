@@ -8,12 +8,7 @@
 
 import UIKit
 import ViewDeck
-
-// curl -X POST -d 'grant_type=password&amp;username=USERNAME&amp;password=PASSWORD' --user ':' https://api.ardich.com/api/v3/login/oauth
-
-let API_URL = "https://api.ardich.com/api/v3"
-let TENANT_MAIL = "dorukgezici@gmail.com"//"greenhouse@iot-ignite.com"
-let APP_KEY = "a75358a5494549f78a2e8cf12d69aaac"//"2bb69ddce24f4021a1c6b77f1ab9302c"
+import IgniteAPI
 
 extension UIViewController {
     
@@ -65,13 +60,4 @@ extension UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-}
-
-extension NSCoder {
-    func decodeString(forKey key: String) -> String {
-        return decodeObject(forKey: key) as? String ?? ""
-    }
-    func decodeData(forKey key: String) -> Data {
-        return decodeObject(forKey: key) as? Data ?? Data()
-    }
 }

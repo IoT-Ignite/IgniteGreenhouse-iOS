@@ -11,12 +11,12 @@ import SwiftyJSON
 
 public class IGSensorData {
     
-    let cloudDate: TimeInterval!
-    let createDate: TimeInterval!
-    var data: String!
-    let deviceId: String!
-    let nodeId: String!
-    let sensorId: String!
+    public let cloudDate: TimeInterval!
+    public let createDate: TimeInterval!
+    public var data: String!
+    public let deviceId: String!
+    public let nodeId: String!
+    public let sensorId: String!
     
     init(json: JSON) {
         cloudDate = TimeInterval(json["cloudDate"].intValue) / 1000

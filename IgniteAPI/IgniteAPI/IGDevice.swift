@@ -11,14 +11,14 @@ import SwiftyJSON
 
 public class IGDevice: NSObject, NSCoding {
     
-    let deviceId: String!
-    let status: String!
-    let osVersion: String!
-    let model: String!
-    let label: String!
-    var state: String!
-    var clientIp: String!
-    let code: String!
+    public let deviceId: String!
+    public let status: String!
+    public let osVersion: String!
+    public let model: String!
+    public let label: String!
+    public var state: String!
+    public var clientIp: String!
+    public let code: String!
     
     init(json: JSON) {
         deviceId = json["deviceId"].string

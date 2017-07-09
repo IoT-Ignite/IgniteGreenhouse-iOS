@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IgniteAPI
 
 class RegisterVC: UIViewController {
 
