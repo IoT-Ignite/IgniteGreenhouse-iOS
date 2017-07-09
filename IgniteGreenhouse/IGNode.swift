@@ -9,12 +9,20 @@
 import Foundation
 import SwiftyJSON
 
-public class IGNode {
+public class IGNode: NSObject, NSCoding {
     
     let nodeId: String!
     
     init(json: JSON) {
         nodeId = json["nodeId"].string
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        nodeId = aDecoder.decodeString(forKey: "nodeId")
+    }
+
+    public func encode(with aCoder: NSCoder) {
+        aCoder.encode(nodeId, forKey: "nodeId")
     }
     
 }

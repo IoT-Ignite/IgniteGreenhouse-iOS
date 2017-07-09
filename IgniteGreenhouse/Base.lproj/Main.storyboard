@@ -42,13 +42,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dorukgezici@gmail.com" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I6W-r8-0Ie">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="greenhouse@iot-ignite.com" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I6W-r8-0Ie">
                                 <rect key="frame" x="32" y="225" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="q1w2e3" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="BqH-66-hmg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="gr33nhous3" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="BqH-66-hmg">
                                 <rect key="frame" x="32" y="285" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -207,7 +207,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b2C-GV-vre">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <rect key="frame" x="16" y="280" width="343" height="387"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dataCell" textLabel="5k8-Cp-6B1" detailTextLabel="X3k-D5-3JC" style="IBUITableViewCellStyleSubtitle" id="Bk7-CM-BPf">
@@ -240,13 +240,23 @@
                                     <outlet property="delegate" destination="nKw-bf-Dcq" id="0Hu-Sl-O4Q"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WEt-ZN-5DC" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="72" width="343" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="gmW-M4-Ll7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="b2C-GV-vre" firstAttribute="trailing" secondItem="yRh-jU-gZB" secondAttribute="trailingMargin" id="R8B-NY-xGN"/>
+                            <constraint firstItem="WEt-ZN-5DC" firstAttribute="top" secondItem="2Ds-hY-JRm" secondAttribute="bottom" constant="8" id="XM9-KR-iPc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WEt-ZN-5DC" secondAttribute="trailing" id="g1i-TM-CF7"/>
+                            <constraint firstItem="b2C-GV-vre" firstAttribute="top" secondItem="WEt-ZN-5DC" secondAttribute="bottom" constant="8" id="kM6-3U-sws"/>
                             <constraint firstItem="b2C-GV-vre" firstAttribute="leading" secondItem="yRh-jU-gZB" secondAttribute="leadingMargin" id="tIy-pe-AZ2"/>
                             <constraint firstItem="b2C-GV-vre" firstAttribute="bottom" secondItem="vKf-Zh-d0z" secondAttribute="top" id="ygl-et-KFn"/>
-                            <constraint firstItem="b2C-GV-vre" firstAttribute="top" secondItem="2Ds-hY-JRm" secondAttribute="bottom" id="zjL-ZZ-kZQ"/>
+                            <constraint firstItem="WEt-ZN-5DC" firstAttribute="leading" secondItem="yRh-jU-gZB" secondAttribute="leadingMargin" id="z4S-E2-QMw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="IoT-Ignite" id="bwc-3E-vh6">
@@ -259,12 +269,13 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="b2C-GV-vre" id="N7M-v0-hMh"/>
+                        <outlet property="temperatureChart" destination="WEt-ZN-5DC" id="i8i-JU-gPw"/>
                         <segue destination="jDm-Tg-YzQ" kind="show" identifier="toDevices" id="9zv-uW-rp5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22b-34-09S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8001" y="89"/>
+            <point key="canvasLocation" x="8000.8000000000002" y="88.605697151424295"/>
         </scene>
         <!--Nodes-->
         <scene sceneID="hMx-SI-Fh2">

@@ -25,13 +25,58 @@ public class IgniteAPI {
                 let data = NSKeyedArchiver.archivedData(withRootObject: value)
                 UserDefaults.standard.set(data, forKey: "currentUser")
             } else {
-                UserDefaults.standard.set(nil, forKey: "currentUser")
+                UserDefaults.standard.removeObject(forKey: "currentUser")
             }
         }
     }
-    public static var currentDevice: IGDevice?
-    public static var currrentNode: IGNode?
-    public static var currentSensor: IGSensor?
+    public static var currentDevice: IGDevice? {
+        get {
+            guard
+                let data = UserDefaults.standard.data(forKey: "currentDevice"),
+                let device = NSKeyedUnarchiver.unarchiveObject(with: data) as? IGDevice
+                else { return nil }
+            return device
+        } set {
+            if let value = newValue {
+                let data = NSKeyedArchiver.archivedData(withRootObject: value)
+                UserDefaults.standard.set(data, forKey: "currentDevice")
+            } else {
+                UserDefaults.standard.removeObject(forKey: "currentDevice")
+            }
+        }
+    }
+    public static var currrentNode: IGNode? {
+        get {
+            guard
+                let data = UserDefaults.standard.data(forKey: "currentNode"),
+                let node = NSKeyedUnarchiver.unarchiveObject(with: data) as? IGNode
+                else { return nil }
+            return node
+        } set {
+            if let value = newValue {
+                let data = NSKeyedArchiver.archivedData(withRootObject: value)
+                UserDefaults.standard.set(data, forKey: "currentNode")
+            } else {
+                UserDefaults.standard.removeObject(forKey: "currentNode")
+            }
+        }
+    }
+    public static var currentSensor: IGSensor? {
+        get {
+            guard
+                let data = UserDefaults.standard.data(forKey: "currentSensor"),
+                let sensor = NSKeyedUnarchiver.unarchiveObject(with: data) as? IGSensor
+                else { return nil }
+            return sensor
+        } set {
+            if let value = newValue {
+                let data = NSKeyedArchiver.archivedData(withRootObject: value)
+                UserDefaults.standard.set(data, forKey: "currentSensor")
+            } else {
+                UserDefaults.standard.removeObject(forKey: "currentSensor")
+            }
+        }
+    }
     
     public static func getHeaders() -> HTTPHeaders {
         let headers = [
@@ -58,14 +103,12 @@ public class IgniteAPI {
         ]
         Alamofire.request(endpoints.login, method: .post, parameters: parameters, headers: headers).responseJSON { (response) in
             switch response.result {
-            case .success:
-                if let data = response.data {
-                    let json = JSON(data)
-                    let user = IGUser(json: json)
-                    completion(user)
-                }
-            case .failure:
-                print(response.description)
+            case .success(let value):
+                let json = JSON(value)
+                let user = IGUser(json: json)
+                completion(user)
+            case .failure(let error):
+                print(error)
             }
         }
     }
@@ -84,11 +127,41 @@ public class IgniteAPI {
             "resource": resource
         ]
         Alamofire.request(endpoints.register, method: .post, parameters: parameters).responseJSON { (response) in
-            print(response.description)
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                completion(json)
+            case .failure(let error):
+                print(error)
+            }
         }
     }
     
     public static func refreshToken() {
+        
+    }
+    
+    public static func forgotPassword(alias: String = "IoT-Ignite", mail: String, mailSender: String = "noreply@ardich.com", completion: @escaping (_ response: JSON) -> ()) {
+        let parameters: Parameters = [
+            "resource": [
+                "fromAlias": alias,
+                "mail": mail,
+                "mailSender": mailSender,
+                "url": "https://iot-ignite.com"
+            ]
+        ]
+        Alamofire.request(endpoints.forgotPassword, method: .put, parameters: parameters).responseJSON { (response) in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                completion(json)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    public static func changePassword(completion: @escaping (_ response: JSON) -> ()) {
         
     }
     
@@ -102,9 +175,9 @@ public class IgniteAPI {
     public static func getDevices(completion: @escaping (_ devices: [IGDevice]) -> ()) {
         if isLoggedIn() {
             Alamofire.request(endpoints.device, headers: getHeaders()).responseJSON { (response) in
-                print(response.description)
-                if let data = response.data {
-                    let json = JSON(data: data)
+                switch response.result {
+                case .success(let value):
+                    let json = JSON(value)
                     if let array = json["content"].array {
                         var devices = [IGDevice]()
                         for json in array {
@@ -112,6 +185,8 @@ public class IgniteAPI {
                             devices.append(device)
                         }; completion(devices)
                     }
+                case .failure(let error):
+                    print(error)
                 }
             }
         }
@@ -123,9 +198,9 @@ public class IgniteAPI {
             "pageSize": pageSize
         ]
         Alamofire.request(endpoints.nodes, parameters: parameters, headers: getHeaders()).responseJSON { (response) in
-            print(response.description)
-            if let data = response.data {
-                let json = JSON(data: data)
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
                 if let array = json["list"].array {
                     var nodes = [IGNode]()
                     for json in array {
@@ -133,7 +208,8 @@ public class IgniteAPI {
                         nodes.append(node)
                     }; completion(nodes)
                 }
-
+            case .failure(let error):
+                print(error)
             }
         }
     }
@@ -145,9 +221,9 @@ public class IgniteAPI {
             "pageSize": pageSize
         ]
         Alamofire.request(endpoints.sensors, parameters: parameters, headers: getHeaders()).responseJSON { (response) in
-            print(response.description)
-            if let data = response.data {
-                let json = JSON(data: data)
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
                 if let array = json["list"].array {
                     var sensors = [IGSensor]()
                     for json in array {
@@ -155,6 +231,8 @@ public class IgniteAPI {
                         sensors.append(sensor)
                     }; completion(sensors)
                 }
+            case .failure(let error):
+                print(error)
             }
         }
     }
@@ -168,24 +246,31 @@ public class IgniteAPI {
             "pageSize": pageSize
         ]
         Alamofire.request(endpoints.sensorData(deviceId: deviceId), parameters: parameters, headers: getHeaders()).responseJSON { (response) in
-            print(response.description)
-            if let data = response.data {
-                if let array = JSON(data: data)["list"].array {
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                if let array = json["list"].array {
                     var sensorData = [IGSensorData]()
                     for json in array {
                         let sensor = IGSensorData(json: json)
                         sensorData.append(sensor)
                     }; completion(sensorData)
                 }
+            case .failure(let error):
+                print(error)
             }
         }
     }
     
     public static func getDromTenantConfig(completion: @escaping (_ response: JSON) -> ()) {
         Alamofire.request(endpoints.dromTenantConfiguration, headers: getHeaders()).responseJSON { (response) in
-            print(response.description)
-            let json = JSON("")
-            completion(json)
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                completion(json)
+            case .failure(let error):
+                print(error)
+            }
         }
     }
     
@@ -194,6 +279,8 @@ public class IgniteAPI {
         let base: String! = API_URL
         let login: String!
         let register: String!
+        let forgotPassword: String!
+        let changePassword: String!
         let device: String!
         let nodes: String!
         let sensors: String!
@@ -205,6 +292,8 @@ public class IgniteAPI {
         init() {
             login = base + "/login/oauth"
             register = base + "/public/create-restricted-user"
+            forgotPassword = base + "/login/password/forget"
+            changePassword =  base + "/login/password/change"
             device = base + "/device"
             nodes = device + "/iotlabel/all-nodes/"
             sensors = device + "/iotlabel/all-sensors"

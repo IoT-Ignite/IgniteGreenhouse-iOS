@@ -23,16 +23,23 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginPressed(_ sender: Any) {
-        if let username = usernameField.text, let password = passwordField.text {
-            IgniteAPI.login(username: username, password: password) { (user) in
-                IgniteAPI.currentUser = user
-                self.createMenu(withMainIdentifier: "HomeVC")
-            }
+        guard let username = usernameField.text, let password = passwordField.text else { return }
+        if username == "" || password == "" { return }
+        IgniteAPI.login(username: username, password: password) { (user) in
+            IgniteAPI.currentUser = user
+            self.createMenu(withMainIdentifier: "HomeVC")
         }
     }
     
     @IBAction func forgotPasswordPressed(_ sender: Any) {
-        showAlert(title: "Forgot your password?", message: "We sent you a new password, check your e-mail!")
+        guard let mail = usernameField.text else { return }
+        if mail == "" {
+            showAlert(title: "Alert", message: "Please enter your e-mail first.")
+            return
+        }
+        IgniteAPI.forgotPassword(mail: mail) { (response) in
+            self.showAlert(title: "Forgot Password", message: "\(response)")
+        }
     }
     
     @IBAction func registerPressed(_ sender: Any) {

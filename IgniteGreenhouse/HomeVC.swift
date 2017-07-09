@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Charts
 
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var temperatureChart: LineChartView!
     var sensorData = [IGSensorData]()
     
     lazy var refreshControl: UIRefreshControl = {
@@ -35,6 +37,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             IgniteAPI.getSensorData(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, endDate: Date().timeIntervalSince1970, pageSize: 10) { (sensorData) in
                 self.sensorData = sensorData
                 self.tableView.reloadData()
+                self.updateChartWithData()
                 refreshControl.endRefreshing()
             }
         } else {
@@ -44,11 +47,24 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.performSegue(withIdentifier: "toDevices", sender: nil)
             })
             alert.addAction(action)
-            present(alert, animated: true, completion: {
+            parent?.present(alert, animated: true) {
                 refreshControl.endRefreshing()
-            })
+            }
         }
     }
+    
+    func updateChartWithData() {
+        var dataEntries = [ChartDataEntry]()
+        for (i, sensor) in sensorData.enumerated() {
+            let dataEntry = ChartDataEntry(x: Double(i), y: Double(sensor.data)!)
+            dataEntries.append(dataEntry)
+        }
+        let chartDataSet = LineChartDataSet(values: dataEntries, label: "Temperature")
+        let chartData = LineChartData(dataSet: chartDataSet)
+        temperatureChart.data = chartData
+    }
+    
+    // MARK: - Table View Delegate Methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
