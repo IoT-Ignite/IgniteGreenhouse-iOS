@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-public class IGSensor {
+public class IGSensor: NSObject, NSCoding {
     
     let nodeId: String!
     let sensorId: String!
@@ -17,6 +17,16 @@ public class IGSensor {
     init(json: JSON) {
         nodeId = json["nodeId"].string
         sensorId = json["sensorId"].string
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        nodeId = aDecoder.decodeString(forKey: "nodeId")
+        sensorId = aDecoder.decodeString(forKey: "sensorId")
+    }
+    
+    public func encode(with aCoder: NSCoder) {
+        aCoder.encode(nodeId, forKey: "nodeId")
+        aCoder.encode(sensorId, forKey: "sensorId")
     }
     
 }

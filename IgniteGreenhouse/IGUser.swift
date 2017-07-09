@@ -25,20 +25,20 @@ public class IGUser: NSObject, NSCoding {
         tokenType = json["token_type"].string
     }
     
-    required public init(coder decoder: NSCoder) {
-        self.accessToken = decoder.decodeString(forKey: "accessToken")
-        self.expiresIn = decoder.decodeString(forKey: "expiresIn")
-        self.refreshToken = decoder.decodeString(forKey: "refreshToken")
-        self.scope = decoder.decodeString(forKey: "scope")
-        self.tokenType = decoder.decodeString(forKey: "tokenType")
+    required public init(coder aDecoder: NSCoder) {
+        accessToken = aDecoder.decodeString(forKey: "accessToken")
+        expiresIn = aDecoder.decodeString(forKey: "expiresIn")
+        refreshToken = aDecoder.decodeString(forKey: "refreshToken")
+        scope = aDecoder.decodeString(forKey: "scope")
+        tokenType = aDecoder.decodeString(forKey: "tokenType")
     }
     
-    public func encode(with coder: NSCoder) {
-        coder.encode(accessToken, forKey: "accessToken")
-        coder.encode(expiresIn, forKey: "expiresIn")
-        coder.encode(refreshToken, forKey: "refreshToken")
-        coder.encode(scope, forKey: "scope")
-        coder.encode(tokenType, forKey: "tokenType")
+    public func encode(with aCoder: NSCoder) {
+        aCoder.encode(accessToken, forKey: "accessToken")
+        aCoder.encode(expiresIn, forKey: "expiresIn")
+        aCoder.encode(refreshToken, forKey: "refreshToken")
+        aCoder.encode(scope, forKey: "scope")
+        aCoder.encode(tokenType, forKey: "tokenType")
     }
     
 }

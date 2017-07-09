@@ -21,10 +21,10 @@ class DevicesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nib = UINib(nibName: "DeviceCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "deviceCell")
         tableView.addSubview(refreshControl)
         refreshData(refreshControl)
+        let nib = UINib(nibName: "DeviceCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "deviceCell")
     }
     
     func refreshData(_ refreshControl: UIRefreshControl) {

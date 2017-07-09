@@ -22,12 +22,13 @@ class RegisterVC: UIViewController {
     }
 
     @IBAction func registerPressed(_ sender: Any) {
-        if let first = firstName.text, let last = lastName.text, let profile = profileName.text, let pass = password.text {
-            IgniteAPI.register(firstName: first, lastName: last, password: pass, profileName: profile, completion: { (response) in
+        guard let first = firstName.text, let last = lastName.text, let profile = profileName.text, let pass = password.text else { return }
+        let array = [first, last, profile, pass]
+        if array.contains("") { return }
+        else {
+            IgniteAPI.register(firstName: first, lastName: last, password: pass, profileName: profile) { (response) in
                 print(response)
-            })
-        } else {
-            showAlert(title: "Alert", message: "Please fill every field.")
+            }
         }
     }
     
