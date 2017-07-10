@@ -15,6 +15,8 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var temperatureChart: LineChartView!
     var sensorData = [IGSensorData]()
+    var startDate: TimeInterval?
+    var endDate: TimeInterval?
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -28,14 +30,20 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         refreshData(refreshControl)
     }
     
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) { }
+    
+    @IBAction func optionsPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "toOptions", sender: nil)
+    }
+    
     @IBAction func menuPressed(_ sender: Any) {
         viewDeckController?.open(.left, animated: true)
     }
     
     func refreshData(_ refreshControl: UIRefreshControl) {
-        refreshControl.beginRefreshing()
         if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode, let sensor = IgniteAPI.currentSensor {
-            IgniteAPI.getSensorDataHistory(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, endDate: Date().timeIntervalSince1970, pageSize: 10) { (sensorData) in
+            refreshControl.beginRefreshing()
+            IgniteAPI.getSensorDataHistory(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, startDate: startDate, endDate: endDate, pageSize: 10) { (sensorData) in
                 self.sensorData = sensorData
                 self.tableView.reloadData()
                 self.updateChartWithData()

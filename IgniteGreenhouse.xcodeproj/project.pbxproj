@@ -22,6 +22,8 @@
 		81807E481F0AE07B007F9424 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81807E471F0AE07B007F9424 /* MenuVC.swift */; };
 		81807E4A1F0AE21E007F9424 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81807E491F0AE21E007F9424 /* MenuCell.swift */; };
 		819018EA1F105450002BB3A1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819018E91F105450002BB3A1 /* RegisterVC.swift */; };
+		81BA1BE21F13AC4B00A54321 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */; };
+		81BA1BE41F13B5E800A54321 /* QRScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */; };
 		81E103091F05A148003907F8 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E103071F05A148003907F8 /* DeviceCell.swift */; };
 		81E1030A1F05A148003907F8 /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E103081F05A148003907F8 /* DeviceCell.xib */; };
 		81F24CB31F06323D00F09EB3 /* NodesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F24CB21F06323D00F09EB3 /* NodesVC.swift */; };
@@ -58,6 +60,8 @@
 		81807E471F0AE07B007F9424 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		81807E491F0AE21E007F9424 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		819018E91F105450002BB3A1 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
+		81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerVC.swift; sourceTree = "<group>"; };
 		81E103071F05A148003907F8 /* DeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 		81E103081F05A148003907F8 /* DeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
 		81F24CB21F06323D00F09EB3 /* NodesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodesVC.swift; sourceTree = "<group>"; };
@@ -131,7 +135,9 @@
 				819018E91F105450002BB3A1 /* RegisterVC.swift */,
 				81807E471F0AE07B007F9424 /* MenuVC.swift */,
 				815A91931F0547DC0066C186 /* HomeVC.swift */,
+				81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */,
 				812DB2191F0B83BE002A4F09 /* DevicesVC.swift */,
+				81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */,
 				81F24CB21F06323D00F09EB3 /* NodesVC.swift */,
 				813BA71B1F0685F000F25EC0 /* SensorsVC.swift */,
 			);
@@ -303,6 +309,8 @@
 				8173C8F61F04F62400C0175F /* AppDelegate.swift in Sources */,
 				81E103091F05A148003907F8 /* DeviceCell.swift in Sources */,
 				812DB21A1F0B83BE002A4F09 /* DevicesVC.swift in Sources */,
+				81BA1BE41F13B5E800A54321 /* QRScannerVC.swift in Sources */,
+				81BA1BE21F13AC4B00A54321 /* OptionsVC.swift in Sources */,
 				81F24CB31F06323D00F09EB3 /* NodesVC.swift in Sources */,
 				815A91941F0547DC0066C186 /* HomeVC.swift in Sources */,
 				81807E4A1F0AE21E007F9424 /* MenuCell.swift in Sources */,

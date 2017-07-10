@@ -28,6 +28,10 @@ class DevicesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.register(nib, forCellReuseIdentifier: "deviceCell")
     }
     
+    @IBAction func addPressed(_ sender: Any) {
+        performSegue(withIdentifier: "toQRScanner", sender: nil)
+    }
+    
     func refreshData(_ refreshControl: UIRefreshControl) {
         refreshControl.beginRefreshing()
         IgniteAPI.getDevices { (devices) in

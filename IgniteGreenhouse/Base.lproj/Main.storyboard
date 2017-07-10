@@ -196,6 +196,74 @@
             </objects>
             <point key="canvasLocation" x="9524" y="-705"/>
         </scene>
+        <!--Options-->
+        <scene sceneID="aYj-CX-OTI">
+            <objects>
+                <viewController id="X2c-FF-eOv" customClass="OptionsVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fTi-JZ-qgC"/>
+                        <viewControllerLayoutGuide type="bottom" id="PVQ-OA-UJZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="44I-Eb-SPk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UN4-oW-5fW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="521383063.92860401">
+                                    <!--2017-07-10 12:37:43 +0000-->
+                                </date>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ot5-an-kal">
+                                <rect key="frame" x="0.0" y="288" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="521383063.92860401">
+                                    <!--2017-07-10 12:37:43 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tz6-aH-M5J">
+                                <rect key="frame" x="157" y="512" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Set Date"/>
+                                <connections>
+                                    <action selector="setPressed:" destination="X2c-FF-eOv" eventType="touchUpInside" id="Uzl-so-RkT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Options" id="QPw-sG-tL4"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="endDatePicker" destination="ot5-an-kal" id="kxH-g1-JfL"/>
+                        <outlet property="startDatePicker" destination="UN4-oW-5fW" id="4z5-Pb-Am9"/>
+                        <segue destination="WDb-OJ-d4i" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSegue:" id="Ena-Oo-X3J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lvW-gP-nqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="WDb-OJ-d4i" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="8001" y="882"/>
+        </scene>
+        <!--ScannerVC-->
+        <scene sceneID="cku-t7-OXa">
+            <objects>
+                <viewController id="tsp-qq-msy" customClass="QRScannerVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZqA-A7-CwI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wr0-24-Wi7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UjG-IC-09n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="McF-Kk-G0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8769" y="881"/>
+        </scene>
         <!--IoT-Ignite-->
         <scene sceneID="DZN-q9-kbR">
             <objects>
@@ -267,12 +335,18 @@
                                 <action selector="menuPressed:" destination="nKw-bf-Dcq" id="0dB-8Y-a0V"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="settings" id="Mtl-U0-XcH">
+                            <connections>
+                                <action selector="optionsPressed:" destination="nKw-bf-Dcq" id="hUz-y2-M8b"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="b2C-GV-vre" id="N7M-v0-hMh"/>
                         <outlet property="temperatureChart" destination="WEt-ZN-5DC" id="i8i-JU-gPw"/>
                         <segue destination="jDm-Tg-YzQ" kind="show" identifier="toDevices" id="9zv-uW-rp5"/>
+                        <segue destination="X2c-FF-eOv" kind="show" identifier="toOptions" action="showDetailViewController:sender:" id="gbj-Xd-ajl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22b-34-09S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -655,11 +729,18 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Devices" id="oNF-Or-W4F"/>
+                    <navigationItem key="navigationItem" title="Devices" id="oNF-Or-W4F">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="L6c-vy-hju">
+                            <connections>
+                                <action selector="addPressed:" destination="jDm-Tg-YzQ" id="o0V-s4-GxL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="3Yq-86-H3F" id="Um0-On-tIB"/>
                         <segue destination="jj7-DP-vLh" kind="show" identifier="toNodes" id="9zf-bj-0Z5"/>
+                        <segue destination="tsp-qq-msy" kind="show" identifier="toQRScanner" id="zUe-oV-O53"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lV1-rI-3HC" userLabel="First Responder" sceneMemberID="firstResponder"/>
