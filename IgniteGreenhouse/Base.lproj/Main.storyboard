@@ -72,12 +72,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vpk-au-qCJ">
-                                <rect key="frame" x="32" y="505" width="311" height="142"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhT-de-dO6">
                                 <rect key="frame" x="159.5" y="435" width="56" height="30"/>
                                 <state key="normal" title="SIGNUP"/>
@@ -93,8 +87,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="I6W-r8-0Ie" secondAttribute="trailing" constant="16" id="9is-cO-Fnt"/>
                             <constraint firstItem="I6W-r8-0Ie" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="Mag-sJ-5sU"/>
                             <constraint firstItem="SgS-aK-BGs" firstAttribute="top" secondItem="I6W-r8-0Ie" secondAttribute="bottom" constant="30" id="N8j-RS-dPT"/>
-                            <constraint firstItem="Vpk-au-qCJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="O0f-ih-4nO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Vpk-au-qCJ" secondAttribute="trailing" constant="16" id="OSa-4f-wYd"/>
                             <constraint firstItem="0vy-8i-zUt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="QcC-Sb-JnS"/>
                             <constraint firstItem="I6W-r8-0Ie" firstAttribute="top" secondItem="0vy-8i-zUt" secondAttribute="bottom" constant="80" id="VOW-KN-piH"/>
                             <constraint firstItem="qOp-mI-EqK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="huG-vm-AYN"/>
@@ -102,15 +94,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="SgS-aK-BGs" secondAttribute="trailing" constant="16" id="mAr-Ya-K1Q"/>
                             <constraint firstItem="SgS-aK-BGs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="mFm-J3-5mC"/>
                             <constraint firstItem="jhT-de-dO6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="otV-hG-XRF"/>
-                            <constraint firstAttribute="bottom" secondItem="Vpk-au-qCJ" secondAttribute="bottom" constant="20" symbolic="YES" id="rKy-WQ-Vc4"/>
-                            <constraint firstItem="Vpk-au-qCJ" firstAttribute="top" secondItem="jhT-de-dO6" secondAttribute="bottom" constant="40" id="wfG-bu-kT7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ignite Greenhouse" id="gz8-NZ-17W">
                         <barButtonItem key="backBarButtonItem" title="Back" id="0XX-oH-zQV"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="consoleText" destination="Vpk-au-qCJ" id="FYB-uf-pMB"/>
                         <outlet property="headerLabel" destination="0vy-8i-zUt" id="pSB-28-eHW"/>
                         <outlet property="passwordField" destination="BqH-66-hmg" id="B0S-1M-yte"/>
                         <outlet property="showHidePasswordButton" destination="mv2-pv-muR" id="DDz-9L-XiW"/>
@@ -155,13 +144,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dorukgezici" borderStyle="roundedRect" placeholder="Profile Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9xJ-dt-J62">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dorukgezici96@gmail.com" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CXX-ev-ORb">
                                         <rect key="frame" x="0.0" y="100" width="311" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="DGtech" borderStyle="roundedRect" placeholder="Brand" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NlQ-kN-Lgn">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="IgniteGreenhouse" borderStyle="roundedRect" placeholder="Brand" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NlQ-kN-Lgn">
                                         <rect key="frame" x="0.0" y="150" width="311" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -199,8 +188,8 @@
                         <outlet property="brand" destination="NlQ-kN-Lgn" id="okn-ni-Ajg"/>
                         <outlet property="firstName" destination="rBf-jh-Jzr" id="kQa-ei-Qhv"/>
                         <outlet property="lastName" destination="Drh-4C-0VL" id="SlH-4C-acO"/>
+                        <outlet property="mail" destination="CXX-ev-ORb" id="IbD-0d-2Yz"/>
                         <outlet property="password" destination="gEN-OW-fcy" id="r3d-Fs-OYo"/>
-                        <outlet property="profileName" destination="9xJ-dt-J62" id="CgZ-H7-Jt7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88q-0x-Agn" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-IgniteAPITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-IgniteGreenhouse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -78,6 +83,11 @@
 			<true/>
 		</dict>
 		<key>AC63F0307DF58117A5B0347B9B87E856</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB5FFCD4B44AA1FF273BA094E68B9E06</key>
 		<dict>
 			<key>primary</key>
 			<true/>

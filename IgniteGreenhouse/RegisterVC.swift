@@ -13,7 +13,7 @@ class RegisterVC: UIViewController {
 
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
-    @IBOutlet weak var profileName: UITextField!
+    @IBOutlet weak var mail: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var brand: UITextField!
     
@@ -23,14 +23,22 @@ class RegisterVC: UIViewController {
     }
 
     @IBAction func registerPressed(_ sender: Any) {
-        guard let first = firstName.text, let last = lastName.text, let profile = profileName.text, let pass = password.text else { return }
-        let array = [first, last, profile, pass]
-        if array.contains("") {
+        guard let first = firstName.text, let last = lastName.text, let mail = mail.text, let brand = brand.text, let password = password.text else { return }
+        if [first, last, mail, brand, password].contains("") {
             showAlert(title: "Alert", message: "Please enter the required information first.")
             return
         } else {
-            IgniteAPI.createRestrictedUser(firstName: first, lastName: last, password: pass, profileName: profile) { (response) in
-                print(response)
+            IgniteAPI.createRestrictedUser(firstName: first, lastName: last, mail: mail, password: password) { (newUser, error) in
+                if let user = newUser {
+                    IgniteAPI.currentUser = user
+                    self.createMenu(withMainIdentifier: "HomeVC")
+                } else {
+                    if let error = error {
+                        self.showAlert(title: "Registration Error", message: error)
+                    } else {
+                        self.showAlert(title: "Registration Error", message: UNKNOWN_ERROR)
+                    }
+                }
             }
         }
     }

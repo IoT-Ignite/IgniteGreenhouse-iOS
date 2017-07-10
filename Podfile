@@ -23,3 +23,9 @@ target 'IgniteAPI' do
   use_frameworks!
   shared_pods
 end
+
+target 'IgniteAPITests' do
+  project 'IgniteAPI/IgniteAPI.xcodeproj'
+  use_frameworks!
+  shared_pods
+end

@@ -14,7 +14,6 @@ class LoginVC: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var consoleText: UITextView!
     @IBOutlet weak var showHidePasswordButton: UIButton!
     
     override func viewDidLoad() {
@@ -33,21 +32,28 @@ class LoginVC: UIViewController {
     
     @IBAction func loginPressed(_ sender: Any) {
         guard let username = usernameField.text, let password = passwordField.text else { return }
-        if username == "" || password == "" { return }
-        IgniteAPI.login(username: username, password: password) { (user) in
-            IgniteAPI.currentUser = user
-            self.createMenu(withMainIdentifier: "HomeVC")
+        if username != "" && password != "" {
+            IgniteAPI.login(username: username, password: password) { (user) in
+                IgniteAPI.currentUser = user
+                self.createMenu(withMainIdentifier: "HomeVC")
+            }
+        } else {
+            showAlert(title: "Alert", message: "Please enter your credentials first.")
         }
     }
     
     @IBAction func forgotPasswordPressed(_ sender: Any) {
         guard let mail = usernameField.text else { return }
-        if mail == "" {
+        if mail != "" {
+            IgniteAPI.forgotPassword(mail: mail) { (status) in
+                if status.status == "OK" {
+                    self.showAlert(title: "Forgot Password", message: "An e-mail is sent to you. Open the link to reset your password.")
+                } else {
+                    self.showAlert(title: "Forgot Password", message: UNKNOWN_ERROR)
+                }
+            }
+        } else {
             showAlert(title: "Alert", message: "Please enter your e-mail first.")
-            return
-        }
-        IgniteAPI.forgotPassword(mail: mail) { (response) in
-            self.showAlert(title: "Forgot Password", message: "\(response)")
         }
     }
     

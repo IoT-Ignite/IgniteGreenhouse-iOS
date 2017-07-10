@@ -20,7 +20,6 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         navigationController?.setNavigationBarHidden(true, animated: false)
         profileName.delegate = self
         profileName.textColor = UIColor.white
-        
 //        userName.text = User.currentUser!.userName
 //        profileName.text = User.currentUser!.displayName
         profileImg.layer.cornerRadius = profileImg.frame.size.height / 2
