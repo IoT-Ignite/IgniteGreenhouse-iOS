@@ -1,1 +1,7 @@
+# Xcode
+build/
+xcuserdata
+*.ipa
+
+# OSX
 .DS_Store

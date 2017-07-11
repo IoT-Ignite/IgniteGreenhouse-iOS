@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F0F6E40CB1A9B663E4436B6CA0F452E71EAE6545",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F1CD4E3FD1E50974956A7B78DC0453FE9EF3F376" : 9223372036854775807,
+    "F0F6E40CB1A9B663E4436B6CA0F452E71EAE6545" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "75B84C53-1D13-4D8C-9123-DB53980AD8C9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F1CD4E3FD1E50974956A7B78DC0453FE9EF3F376" : "IgniteGreenhouse\/IgniteAPI\/",
+    "F0F6E40CB1A9B663E4436B6CA0F452E71EAE6545" : "IgniteGreenhouse\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "IgniteGreenhouse",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "IgniteGreenhouse.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dorukgezici\/IgniteGreenhouse.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F0F6E40CB1A9B663E4436B6CA0F452E71EAE6545"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dorukgezici\/IgniteAPI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F1CD4E3FD1E50974956A7B78DC0453FE9EF3F376"
+    }
+  ]
+}
