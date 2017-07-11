@@ -86,7 +86,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell", for: indexPath)
-        cell.textLabel?.text = "\(sensorData[indexPath.row].data!) Celcius"
+        cell.textLabel?.text = "\(sensorData[indexPath.row].data ?? "Nil")"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
         let date = Date(timeIntervalSince1970: TimeInterval(sensorData[indexPath.row].cloudDate))
@@ -95,7 +95,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showAlert(title: sensorData[indexPath.row].data, message: "\(sensorData[indexPath.row].deviceId!)\n\(sensorData[indexPath.row].nodeId!)\n\(sensorData[indexPath.row].sensorId!)")
+        showAlert(title: sensorData[indexPath.row].data ?? "", message: "\(sensorData[indexPath.row].deviceId!)\n\(sensorData[indexPath.row].nodeId!)\n\(sensorData[indexPath.row].sensorId!)")
     }
     
 }

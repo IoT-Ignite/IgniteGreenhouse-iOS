@@ -208,23 +208,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UN4-oW-5fW">
-                                <rect key="frame" x="0.0" y="64" width="375" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UN4-oW-5fW">
+                                <rect key="frame" x="16" y="64" width="343" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="521383063.92860401">
                                     <!--2017-07-10 12:37:43 +0000-->
                                 </date>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ot5-an-kal">
-                                <rect key="frame" x="0.0" y="288" width="375" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ot5-an-kal">
+                                <rect key="frame" x="16" y="280" width="343" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="521383063.92860401">
                                     <!--2017-07-10 12:37:43 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tz6-aH-M5J">
-                                <rect key="frame" x="157" y="512" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tz6-aH-M5J">
+                                <rect key="frame" x="157" y="546" width="60" height="30"/>
                                 <state key="normal" title="Set Date"/>
                                 <connections>
                                     <action selector="setPressed:" destination="X2c-FF-eOv" eventType="touchUpInside" id="Uzl-so-RkT"/>
@@ -232,6 +229,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tz6-aH-M5J" firstAttribute="centerX" secondItem="44I-Eb-SPk" secondAttribute="centerX" id="H3p-xz-kzB"/>
+                            <constraint firstItem="ot5-an-kal" firstAttribute="top" secondItem="UN4-oW-5fW" secondAttribute="bottom" id="Xba-b7-Ogo"/>
+                            <constraint firstItem="UN4-oW-5fW" firstAttribute="top" secondItem="fTi-JZ-qgC" secondAttribute="bottom" id="fzg-kr-J9n"/>
+                            <constraint firstItem="Tz6-aH-M5J" firstAttribute="top" secondItem="ot5-an-kal" secondAttribute="bottom" constant="50" id="mCJ-9h-UWO"/>
+                            <constraint firstItem="UN4-oW-5fW" firstAttribute="leading" secondItem="44I-Eb-SPk" secondAttribute="leadingMargin" id="rV6-ZB-eMN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ot5-an-kal" secondAttribute="trailing" id="rud-sa-miu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UN4-oW-5fW" secondAttribute="trailing" id="uEx-im-zU5"/>
+                            <constraint firstItem="ot5-an-kal" firstAttribute="leading" secondItem="44I-Eb-SPk" secondAttribute="leadingMargin" id="vn1-XC-S3v"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Options" id="QPw-sG-tL4"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -346,7 +353,7 @@
                         <outlet property="tableView" destination="b2C-GV-vre" id="N7M-v0-hMh"/>
                         <outlet property="temperatureChart" destination="WEt-ZN-5DC" id="i8i-JU-gPw"/>
                         <segue destination="jDm-Tg-YzQ" kind="show" identifier="toDevices" id="9zv-uW-rp5"/>
-                        <segue destination="X2c-FF-eOv" kind="show" identifier="toOptions" action="showDetailViewController:sender:" id="gbj-Xd-ajl"/>
+                        <segue destination="X2c-FF-eOv" kind="show" identifier="toOptions" id="gMa-8Z-8im"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22b-34-09S" userLabel="First Responder" sceneMemberID="firstResponder"/>

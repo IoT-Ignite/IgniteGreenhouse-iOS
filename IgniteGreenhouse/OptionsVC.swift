@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IgniteAPI
 
 class OptionsVC: UIViewController {
     
@@ -25,7 +26,6 @@ class OptionsVC: UIViewController {
         if let destVC = segue.destination as? HomeVC {
             destVC.startDate = startDatePicker.date.timeIntervalSince1970
             destVC.endDate = endDatePicker.date.timeIntervalSince1970
-            destVC.refreshData(destVC.refreshControl)
         }
     }
     
