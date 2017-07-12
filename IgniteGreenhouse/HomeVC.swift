@@ -28,6 +28,11 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.addSubview(refreshControl)
         refreshData(refreshControl)
+        IgniteAPI.getAuditor { (auditor) in
+            IgniteAPI.addDROMConfiguration(configurationName: "Deneme", auditor: auditor, completion: { (configurationId) in
+                print(configurationId)
+            })
+        }
     }
     
     @IBAction func unwindToHome(segue: UIStoryboardSegue) { }
