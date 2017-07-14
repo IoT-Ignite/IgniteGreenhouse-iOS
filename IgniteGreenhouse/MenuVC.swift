@@ -7,30 +7,45 @@
 //
 
 import UIKit
+import IgniteAPI
 
-class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var profileName: UITextField!
     @IBOutlet weak var userName: UILabel!
     
+    lazy var imagePicker: UIImagePickerController = {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+            picker.sourceType = .savedPhotosAlbum
+        } else {
+            print("Photo album not available.")
+        }; return picker
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
         profileName.delegate = self
         profileName.textColor = UIColor.white
-//        userName.text = User.currentUser!.userName
-//        profileName.text = User.currentUser!.displayName
-        profileImg.layer.cornerRadius = profileImg.frame.size.height / 2
+        profileImg.layer.cornerRadius = self.profileImg.frame.size.height / 2
+        IgniteAPI.getAuditor { (auditor) in
+            Utilities.user = User(auditor: auditor)
+            self.userName.text = Utilities.user?.email
+            self.profileName.text = Utilities.user?.fullName
+            guard let img = Utilities.user?.profileImg else { return }
+            self.profileImg.image = img
+        }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-//        if let url = User.currentUser?.photoURL {
-//            profileImg.hnk_setImageFromURL(url)
-//        }
+    @IBAction func profileImgButtonPressed(sender: UIButton) {
+        present(imagePicker, animated: true, completion: nil)
     }
+    
+    // MARK: - Table View Delegate Methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -80,13 +95,25 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         changeVC(withIdentifier: identifier)
     }
     
+    // MARK: - Text Field Delegate Methods
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
-//        User.currentUser?.displayName = textField.text
+        Utilities.user?.fullName = textField.text
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    // MARK: - Image Picker Delegate Methods
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        if let img = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            Utilities.user?.profileImg = img
+            profileImg.image = img
+        }
     }
     
 }

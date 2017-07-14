@@ -10,6 +10,8 @@
 		16C996AD204E5BA78937A913 /* Pods_IgniteGreenhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB864D356C8EDA265C64178 /* Pods_IgniteGreenhouse.framework */; };
 		81184B911F124C43008AC214 /* IgniteAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81184B901F124C43008AC214 /* IgniteAPI.framework */; };
 		81184B921F124C43008AC214 /* IgniteAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81184B901F124C43008AC214 /* IgniteAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		811B99C21F18B173001BE70B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B99C11F18B173001BE70B /* Utilities.swift */; };
+		811B99C41F18B1A0001BE70B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B99C31F18B1A0001BE70B /* User.swift */; };
 		812DB21A1F0B83BE002A4F09 /* DevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DB2191F0B83BE002A4F09 /* DevicesVC.swift */; };
 		813BA71C1F0685F000F25EC0 /* SensorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813BA71B1F0685F000F25EC0 /* SensorsVC.swift */; };
 		815A91941F0547DC0066C186 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A91931F0547DC0066C186 /* HomeVC.swift */; };
@@ -20,7 +22,7 @@
 		8173C8F81F04F62400C0175F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173C8F71F04F62400C0175F /* LoginVC.swift */; };
 		8173C8FB1F04F62400C0175F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8173C8F91F04F62400C0175F /* Main.storyboard */; };
 		8173C8FD1F04F62400C0175F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8173C8FC1F04F62400C0175F /* Assets.xcassets */; };
-		8173C9001F04F62400C0175F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8173C8FE1F04F62400C0175F /* LaunchScreen.storyboard */; };
+		8173C9001F04F62400C0175F /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8173C8FE1F04F62400C0175F /* Launch.storyboard */; };
 		81807E481F0AE07B007F9424 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81807E471F0AE07B007F9424 /* MenuVC.swift */; };
 		81807E4A1F0AE21E007F9424 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81807E491F0AE21E007F9424 /* MenuCell.swift */; };
 		819018EA1F105450002BB3A1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819018E91F105450002BB3A1 /* RegisterVC.swift */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		27BFCD535AB96595BDDF6569 /* Pods-IgniteGreenhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse.debug.xcconfig"; sourceTree = "<group>"; };
 		81184B901F124C43008AC214 /* IgniteAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IgniteAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		811B99C11F18B173001BE70B /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		811B99C31F18B1A0001BE70B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		812DB2191F0B83BE002A4F09 /* DevicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesVC.swift; sourceTree = "<group>"; };
 		813BA71B1F0685F000F25EC0 /* SensorsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorsVC.swift; sourceTree = "<group>"; };
 		815A91931F0547DC0066C186 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -59,7 +63,7 @@
 		8173C8F71F04F62400C0175F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8173C8FA1F04F62400C0175F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8173C8FC1F04F62400C0175F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8173C8FF1F04F62400C0175F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8173C8FF1F04F62400C0175F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Launch.storyboard; sourceTree = "<group>"; };
 		8173C9011F04F62400C0175F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81807E471F0AE07B007F9424 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		81807E491F0AE21E007F9424 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 		816ED1441F16444200D43718 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				811B99C31F18B1A0001BE70B /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -135,7 +140,6 @@
 				8173C9081F04F63A00C0175F /* View */,
 				8173C9071F04F63100C0175F /* Controller */,
 				8173C90A1F04F65300C0175F /* Other */,
-				81184B901F124C43008AC214 /* IgniteAPI.framework */,
 			);
 			path = IgniteGreenhouse;
 			sourceTree = "<group>";
@@ -171,12 +175,14 @@
 		8173C90A1F04F65300C0175F /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				811B99C11F18B173001BE70B /* Utilities.swift */,
 				816ED1471F1644C700D43718 /* Constants.swift */,
 				816ED1421F16440E00D43718 /* Extensions.swift */,
 				8173C8F51F04F62400C0175F /* AppDelegate.swift */,
 				8173C8FC1F04F62400C0175F /* Assets.xcassets */,
-				8173C8FE1F04F62400C0175F /* LaunchScreen.storyboard */,
+				8173C8FE1F04F62400C0175F /* Launch.storyboard */,
 				8173C9011F04F62400C0175F /* Info.plist */,
+				81184B901F124C43008AC214 /* IgniteAPI.framework */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -245,7 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8173C9001F04F62400C0175F /* LaunchScreen.storyboard in Resources */,
+				8173C9001F04F62400C0175F /* Launch.storyboard in Resources */,
 				8173C8FD1F04F62400C0175F /* Assets.xcassets in Resources */,
 				8173C8FB1F04F62400C0175F /* Main.storyboard in Resources */,
 				81E1030A1F05A148003907F8 /* DeviceCell.xib in Resources */,
@@ -313,6 +319,8 @@
 				81807E481F0AE07B007F9424 /* MenuVC.swift in Sources */,
 				819018EA1F105450002BB3A1 /* RegisterVC.swift in Sources */,
 				8173C8F61F04F62400C0175F /* AppDelegate.swift in Sources */,
+				811B99C21F18B173001BE70B /* Utilities.swift in Sources */,
+				811B99C41F18B1A0001BE70B /* User.swift in Sources */,
 				81E103091F05A148003907F8 /* DeviceCell.swift in Sources */,
 				812DB21A1F0B83BE002A4F09 /* DevicesVC.swift in Sources */,
 				81BA1BE41F13B5E800A54321 /* QRScannerVC.swift in Sources */,
@@ -336,12 +344,12 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		8173C8FE1F04F62400C0175F /* LaunchScreen.storyboard */ = {
+		8173C8FE1F04F62400C0175F /* Launch.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8173C8FF1F04F62400C0175F /* Base */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Launch.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

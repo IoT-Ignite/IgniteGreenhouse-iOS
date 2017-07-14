@@ -28,11 +28,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.addSubview(refreshControl)
         refreshData(refreshControl)
-        IgniteAPI.getAuditor { (auditor) in
-            IgniteAPI.addDROMConfiguration(configurationName: "Deneme", auditor: auditor, completion: { (configurationId) in
-                print(configurationId)
-            })
-        }
     }
     
     @IBAction func unwindToHome(segue: UIStoryboardSegue) { }
@@ -100,6 +95,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        IgniteAPI.sendSensorAgentMessage(deviceCode: IgniteAPI.currentDevice!.code, nodeId: IgniteAPI.currentSensor!.nodeId, sensorId: IgniteAPI.currentSensor!.sensorId, message: "Saat 16:40") { (response) in
+            print(response)
+        }
         showAlert(title: sensorData[indexPath.row].data ?? "", message: "\(sensorData[indexPath.row].deviceId!)\n\(sensorData[indexPath.row].nodeId!)\n\(sensorData[indexPath.row].sensorId!)")
     }
     
