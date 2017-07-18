@@ -2,18 +2,16 @@
 //  HomeVC.swift
 //  IgniteGreenhouse
 //
-//  Created by Doruk Gezici on 29/06/2017.
+//  Created by Doruk Gezici on 18/07/2017.
 //  Copyright © 2017 ARDIC. All rights reserved.
 //
 
 import UIKit
-import Charts
 import IgniteAPI
 
-class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var temperatureChart: LineChartView!
+class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     var sensorData = [IGSensorData]()
     var startDate: TimeInterval?
     var endDate: TimeInterval?
@@ -26,8 +24,19 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.addSubview(refreshControl)
-        refreshData(refreshControl)
+        registerNibs()
+        collectionView.addSubview(refreshControl)
+        IgniteAPI.refreshToken { (user) in
+            IgniteAPI.currentUser = user
+            self.refreshData(self.refreshControl)
+        }
+    }
+    
+    func registerNibs() {
+        let nib = UINib(nibName: "GraphCell", bundle: nil)
+        let nib2 = UINib(nibName: "TableCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "graphCell")
+        collectionView.register(nib2, forCellWithReuseIdentifier: "tableCell")
     }
     
     @IBAction func unwindToHome(segue: UIStoryboardSegue) { }
@@ -45,8 +54,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             refreshControl.beginRefreshing()
             IgniteAPI.getSensorDataHistory(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, startDate: startDate, endDate: endDate, pageSize: 10) { (sensorData) in
                 self.sensorData = sensorData
-                self.tableView.reloadData()
-                self.updateChartWithData()
+                self.collectionView.reloadData()
                 refreshControl.endRefreshing()
             }
         } else {
@@ -62,43 +70,47 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func updateChartWithData() {
-        var dataEntries = [ChartDataEntry]()
-        for (i, sensor) in sensorData.enumerated() {
-            guard let data = Double(sensor.data) else { return }
-            let dataEntry = ChartDataEntry(x: Double(i), y: data)
-            dataEntries.append(dataEntry)
+    // MARK: - Collection View Delegate Methods
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            return 1
+        default:
+            return 0
         }
-        let chartDataSet = LineChartDataSet(values: dataEntries, label: "Temperature")
-        let chartData = LineChartData(dataSet: chartDataSet)
-        temperatureChart.data = chartData
     }
     
-    // MARK: - Table View Delegate Methods
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch indexPath.section {
+        case 0:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "graphCell", for: indexPath) as! GraphCell
+            cell.configureCell(sensorData: sensorData)
+            return cell
+        case 1:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tableCell", for: indexPath) as! TableCell
+            cell.configureCell(sensorData: sensorData)
+            return cell
+        default:
+            break
+        }; return UICollectionViewCell()
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sensorData.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell", for: indexPath)
-        cell.textLabel?.text = "\(sensorData[indexPath.row].data ?? "Nil")"
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
-        let date = Date(timeIntervalSince1970: TimeInterval(sensorData[indexPath.row].cloudDate))
-        cell.detailTextLabel?.text = dateFormatter.string(from: date)
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        IgniteAPI.sendSensorAgentMessage(deviceCode: IgniteAPI.currentDevice!.code, nodeId: IgniteAPI.currentSensor!.nodeId, sensorId: IgniteAPI.currentSensor!.sensorId, message: "Saat 16:40") { (response) in
-            print(response)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch indexPath.section {
+        case 0:
+            return CGSize(width: 300, height: 180)
+        case 1:
+            return CGSize(width: 300, height: 300)
+        default:
+            return collectionViewLayout.collectionViewContentSize
         }
-        showAlert(title: sensorData[indexPath.row].data ?? "", message: "\(sensorData[indexPath.row].deviceId!)\n\(sensorData[indexPath.row].nodeId!)\n\(sensorData[indexPath.row].sensorId!)")
     }
     
 }

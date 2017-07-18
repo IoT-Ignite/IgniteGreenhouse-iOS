@@ -27,9 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let viewDeckController = IIViewDeckController(center: center, leftViewController: left)
 //        window.rootViewController = viewDeckController
 //        window.makeKeyAndVisible()
-//        IgniteAPI.refreshToken { (user) in
-//            IgniteAPI.currentUser = user
-//        }
         return true
     }
 

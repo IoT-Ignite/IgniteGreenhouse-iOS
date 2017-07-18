@@ -8,13 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		16C996AD204E5BA78937A913 /* Pods_IgniteGreenhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB864D356C8EDA265C64178 /* Pods_IgniteGreenhouse.framework */; };
+		1B4FA585C50390D238131C6E /* Pods_IgniteGreenhouseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED618F7EDAD18439E476786 /* Pods_IgniteGreenhouseTests.framework */; };
+		8115FB0F1F19358B003FE91D /* AddNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8115FB0E1F19358B003FE91D /* AddNodeVC.swift */; };
 		81184B911F124C43008AC214 /* IgniteAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81184B901F124C43008AC214 /* IgniteAPI.framework */; };
 		81184B921F124C43008AC214 /* IgniteAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81184B901F124C43008AC214 /* IgniteAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		811B99C21F18B173001BE70B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B99C11F18B173001BE70B /* Utilities.swift */; };
 		811B99C41F18B1A0001BE70B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B99C31F18B1A0001BE70B /* User.swift */; };
 		812DB21A1F0B83BE002A4F09 /* DevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DB2191F0B83BE002A4F09 /* DevicesVC.swift */; };
+		812F6C221F1E244C00540F61 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F6C211F1E244C00540F61 /* HomeVC.swift */; };
+		812F6C231F1E244C00540F61 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F6C211F1E244C00540F61 /* HomeVC.swift */; };
+		812F6C261F1E25F600540F61 /* GraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F6C241F1E25F600540F61 /* GraphCell.swift */; };
+		812F6C271F1E25F600540F61 /* GraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F6C241F1E25F600540F61 /* GraphCell.swift */; };
+		812F6C281F1E25F600540F61 /* GraphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812F6C251F1E25F600540F61 /* GraphCell.xib */; };
+		812F6C291F1E25F600540F61 /* GraphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812F6C251F1E25F600540F61 /* GraphCell.xib */; };
+		812F6C2C1F1E2A7000540F61 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F6C2A1F1E2A7000540F61 /* TableCell.swift */; };
+		812F6C2D1F1E2A7000540F61 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F6C2A1F1E2A7000540F61 /* TableCell.swift */; };
+		812F6C2E1F1E2A7000540F61 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812F6C2B1F1E2A7000540F61 /* TableCell.xib */; };
+		812F6C2F1F1E2A7000540F61 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812F6C2B1F1E2A7000540F61 /* TableCell.xib */; };
 		813BA71C1F0685F000F25EC0 /* SensorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813BA71B1F0685F000F25EC0 /* SensorsVC.swift */; };
-		815A91941F0547DC0066C186 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A91931F0547DC0066C186 /* HomeVC.swift */; };
 		816ED1431F16440E00D43718 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816ED1421F16440E00D43718 /* Extensions.swift */; };
 		816ED1481F1644C700D43718 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816ED1471F1644C700D43718 /* Constants.swift */; };
 		816ED14A1F1644F000D43718 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816ED1491F1644F000D43718 /* RoundedButton.swift */; };
@@ -23,8 +34,16 @@
 		8173C8FB1F04F62400C0175F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8173C8F91F04F62400C0175F /* Main.storyboard */; };
 		8173C8FD1F04F62400C0175F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8173C8FC1F04F62400C0175F /* Assets.xcassets */; };
 		8173C9001F04F62400C0175F /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8173C8FE1F04F62400C0175F /* Launch.storyboard */; };
+		817D79D01F190F120040EF88 /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D79CF1F190F120040EF88 /* Thing.swift */; };
+		817D79D21F1910A00040EF88 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D79D11F1910A00040EF88 /* Node.swift */; };
+		817D79DA1F1913DA0040EF88 /* IgniteGreenhouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D79D91F1913DA0040EF88 /* IgniteGreenhouseTests.swift */; };
+		817D79E11F19182C0040EF88 /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D79CF1F190F120040EF88 /* Thing.swift */; };
+		817D79E21F19182F0040EF88 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D79D11F1910A00040EF88 /* Node.swift */; };
+		817D79E31F1918320040EF88 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8182DE7E1F18F72E00821899 /* Message.swift */; };
+		817D79E41F1918370040EF88 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B99C31F18B1A0001BE70B /* User.swift */; };
 		81807E481F0AE07B007F9424 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81807E471F0AE07B007F9424 /* MenuVC.swift */; };
 		81807E4A1F0AE21E007F9424 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81807E491F0AE21E007F9424 /* MenuCell.swift */; };
+		8182DE7F1F18F72E00821899 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8182DE7E1F18F72E00821899 /* Message.swift */; };
 		819018EA1F105450002BB3A1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819018E91F105450002BB3A1 /* RegisterVC.swift */; };
 		81BA1BE21F13AC4B00A54321 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */; };
 		81BA1BE41F13B5E800A54321 /* QRScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */; };
@@ -32,6 +51,16 @@
 		81E1030A1F05A148003907F8 /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E103081F05A148003907F8 /* DeviceCell.xib */; };
 		81F24CB31F06323D00F09EB3 /* NodesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F24CB21F06323D00F09EB3 /* NodesVC.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		817D79DC1F1913DA0040EF88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8173C8EA1F04F62400C0175F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8173C8F11F04F62400C0175F;
+			remoteInfo = IgniteGreenhouse;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		81184B8F1F124BF6008AC214 /* Embed Frameworks */ = {
@@ -48,13 +77,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1DF0098CE138728B1C17931A /* Pods-IgniteGreenhouseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouseTests/Pods-IgniteGreenhouseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		27BFCD535AB96595BDDF6569 /* Pods-IgniteGreenhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse.debug.xcconfig"; sourceTree = "<group>"; };
+		8115FB0E1F19358B003FE91D /* AddNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNodeVC.swift; sourceTree = "<group>"; };
 		81184B901F124C43008AC214 /* IgniteAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IgniteAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		811B99C11F18B173001BE70B /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		811B99C31F18B1A0001BE70B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		812DB2191F0B83BE002A4F09 /* DevicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesVC.swift; sourceTree = "<group>"; };
+		812F6C211F1E244C00540F61 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		812F6C241F1E25F600540F61 /* GraphCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCell.swift; sourceTree = "<group>"; };
+		812F6C251F1E25F600540F61 /* GraphCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraphCell.xib; sourceTree = "<group>"; };
+		812F6C2A1F1E2A7000540F61 /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		812F6C2B1F1E2A7000540F61 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		813BA71B1F0685F000F25EC0 /* SensorsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorsVC.swift; sourceTree = "<group>"; };
-		815A91931F0547DC0066C186 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		816ED1421F16440E00D43718 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		816ED1471F1644C700D43718 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		816ED1491F1644F000D43718 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -65,8 +100,14 @@
 		8173C8FC1F04F62400C0175F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8173C8FF1F04F62400C0175F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Launch.storyboard; sourceTree = "<group>"; };
 		8173C9011F04F62400C0175F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		817D79CF1F190F120040EF88 /* Thing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thing.swift; sourceTree = "<group>"; };
+		817D79D11F1910A00040EF88 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		817D79D71F1913DA0040EF88 /* IgniteGreenhouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IgniteGreenhouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		817D79D91F1913DA0040EF88 /* IgniteGreenhouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgniteGreenhouseTests.swift; sourceTree = "<group>"; };
+		817D79DB1F1913DA0040EF88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81807E471F0AE07B007F9424 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		81807E491F0AE21E007F9424 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		8182DE7E1F18F72E00821899 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		819018E91F105450002BB3A1 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerVC.swift; sourceTree = "<group>"; };
@@ -74,7 +115,9 @@
 		81E103081F05A148003907F8 /* DeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
 		81F24CB21F06323D00F09EB3 /* NodesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodesVC.swift; sourceTree = "<group>"; };
 		CCB864D356C8EDA265C64178 /* Pods_IgniteGreenhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IgniteGreenhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF3289E11893D377304B7E1D /* Pods-IgniteGreenhouseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouseTests/Pods-IgniteGreenhouseTests.release.xcconfig"; sourceTree = "<group>"; };
 		F8FDE3ABDC3518DABCB6223F /* Pods-IgniteGreenhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse.release.xcconfig"; sourceTree = "<group>"; };
+		FED618F7EDAD18439E476786 /* Pods_IgniteGreenhouseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IgniteGreenhouseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,13 +130,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		817D79D41F1913DA0040EF88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B4FA585C50390D238131C6E /* Pods_IgniteGreenhouseTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		41E707AF8ED0A64399524565 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81184B901F124C43008AC214 /* IgniteAPI.framework */,
 				CCB864D356C8EDA265C64178 /* Pods_IgniteGreenhouse.framework */,
+				FED618F7EDAD18439E476786 /* Pods_IgniteGreenhouseTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -103,6 +156,8 @@
 			children = (
 				27BFCD535AB96595BDDF6569 /* Pods-IgniteGreenhouse.debug.xcconfig */,
 				F8FDE3ABDC3518DABCB6223F /* Pods-IgniteGreenhouse.release.xcconfig */,
+				1DF0098CE138728B1C17931A /* Pods-IgniteGreenhouseTests.debug.xcconfig */,
+				CF3289E11893D377304B7E1D /* Pods-IgniteGreenhouseTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -111,6 +166,9 @@
 			isa = PBXGroup;
 			children = (
 				811B99C31F18B1A0001BE70B /* User.swift */,
+				817D79CF1F190F120040EF88 /* Thing.swift */,
+				817D79D11F1910A00040EF88 /* Node.swift */,
+				8182DE7E1F18F72E00821899 /* Message.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -119,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				8173C8F41F04F62400C0175F /* IgniteGreenhouse */,
+				817D79D81F1913DA0040EF88 /* IgniteGreenhouseTests */,
 				8173C8F31F04F62400C0175F /* Products */,
 				756BD83D991255E0FA723B2F /* Pods */,
 				41E707AF8ED0A64399524565 /* Frameworks */,
@@ -129,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				8173C8F21F04F62400C0175F /* IgniteGreenhouse.app */,
+				817D79D71F1913DA0040EF88 /* IgniteGreenhouseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,10 +210,11 @@
 				8173C8F71F04F62400C0175F /* LoginVC.swift */,
 				819018E91F105450002BB3A1 /* RegisterVC.swift */,
 				81807E471F0AE07B007F9424 /* MenuVC.swift */,
-				815A91931F0547DC0066C186 /* HomeVC.swift */,
+				812F6C211F1E244C00540F61 /* HomeVC.swift */,
 				81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */,
 				812DB2191F0B83BE002A4F09 /* DevicesVC.swift */,
 				81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */,
+				8115FB0E1F19358B003FE91D /* AddNodeVC.swift */,
 				81F24CB21F06323D00F09EB3 /* NodesVC.swift */,
 				813BA71B1F0685F000F25EC0 /* SensorsVC.swift */,
 			);
@@ -168,6 +229,10 @@
 				81E103071F05A148003907F8 /* DeviceCell.swift */,
 				81E103081F05A148003907F8 /* DeviceCell.xib */,
 				816ED1491F1644F000D43718 /* RoundedButton.swift */,
+				812F6C241F1E25F600540F61 /* GraphCell.swift */,
+				812F6C251F1E25F600540F61 /* GraphCell.xib */,
+				812F6C2A1F1E2A7000540F61 /* TableCell.swift */,
+				812F6C2B1F1E2A7000540F61 /* TableCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -182,9 +247,17 @@
 				8173C8FC1F04F62400C0175F /* Assets.xcassets */,
 				8173C8FE1F04F62400C0175F /* Launch.storyboard */,
 				8173C9011F04F62400C0175F /* Info.plist */,
-				81184B901F124C43008AC214 /* IgniteAPI.framework */,
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		817D79D81F1913DA0040EF88 /* IgniteGreenhouseTests */ = {
+			isa = PBXGroup;
+			children = (
+				817D79D91F1913DA0040EF88 /* IgniteGreenhouseTests.swift */,
+				817D79DB1F1913DA0040EF88 /* Info.plist */,
+			);
+			path = IgniteGreenhouseTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +284,27 @@
 			productReference = 8173C8F21F04F62400C0175F /* IgniteGreenhouse.app */;
 			productType = "com.apple.product-type.application";
 		};
+		817D79D61F1913DA0040EF88 /* IgniteGreenhouseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 817D79DE1F1913DA0040EF88 /* Build configuration list for PBXNativeTarget "IgniteGreenhouseTests" */;
+			buildPhases = (
+				9B88FCF6CD5555C9DDAB1AA7 /* [CP] Check Pods Manifest.lock */,
+				817D79D31F1913DA0040EF88 /* Sources */,
+				817D79D41F1913DA0040EF88 /* Frameworks */,
+				817D79D51F1913DA0040EF88 /* Resources */,
+				DA63F87CB8AD3AF2C04B3FB9 /* [CP] Embed Pods Frameworks */,
+				0CE03441DAFEA2967C9037C2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				817D79DD1F1913DA0040EF88 /* PBXTargetDependency */,
+			);
+			name = IgniteGreenhouseTests;
+			productName = IgniteGreenhouseTests;
+			productReference = 817D79D71F1913DA0040EF88 /* IgniteGreenhouseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -223,8 +317,14 @@
 				TargetAttributes = {
 					8173C8F11F04F62400C0175F = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = F8A449TUXU;
+						ProvisioningStyle = Automatic;
+					};
+					817D79D61F1913DA0040EF88 = {
+						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = HYE6963K2F;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 8173C8F11F04F62400C0175F;
 					};
 				};
 			};
@@ -242,6 +342,7 @@
 			projectRoot = "";
 			targets = (
 				8173C8F11F04F62400C0175F /* IgniteGreenhouse */,
+				817D79D61F1913DA0040EF88 /* IgniteGreenhouseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -254,13 +355,39 @@
 				8173C9001F04F62400C0175F /* Launch.storyboard in Resources */,
 				8173C8FD1F04F62400C0175F /* Assets.xcassets in Resources */,
 				8173C8FB1F04F62400C0175F /* Main.storyboard in Resources */,
+				812F6C281F1E25F600540F61 /* GraphCell.xib in Resources */,
+				812F6C2E1F1E2A7000540F61 /* TableCell.xib in Resources */,
 				81E1030A1F05A148003907F8 /* DeviceCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		817D79D51F1913DA0040EF88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				812F6C2F1F1E2A7000540F61 /* TableCell.xib in Resources */,
+				812F6C291F1E25F600540F61 /* GraphCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0CE03441DAFEA2967C9037C2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IgniteGreenhouseTests/Pods-IgniteGreenhouseTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		29EF86F738E8F5211EFE0E3F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,6 +418,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9B88FCF6CD5555C9DDAB1AA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA63F87CB8AD3AF2C04B3FB9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IgniteGreenhouseTests/Pods-IgniteGreenhouseTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FEFA618AC755F1DE1E73E448 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,27 +470,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817D79D01F190F120040EF88 /* Thing.swift in Sources */,
+				8115FB0F1F19358B003FE91D /* AddNodeVC.swift in Sources */,
 				8173C8F81F04F62400C0175F /* LoginVC.swift in Sources */,
 				816ED14A1F1644F000D43718 /* RoundedButton.swift in Sources */,
 				813BA71C1F0685F000F25EC0 /* SensorsVC.swift in Sources */,
+				8182DE7F1F18F72E00821899 /* Message.swift in Sources */,
 				81807E481F0AE07B007F9424 /* MenuVC.swift in Sources */,
 				819018EA1F105450002BB3A1 /* RegisterVC.swift in Sources */,
 				8173C8F61F04F62400C0175F /* AppDelegate.swift in Sources */,
 				811B99C21F18B173001BE70B /* Utilities.swift in Sources */,
 				811B99C41F18B1A0001BE70B /* User.swift in Sources */,
 				81E103091F05A148003907F8 /* DeviceCell.swift in Sources */,
+				817D79D21F1910A00040EF88 /* Node.swift in Sources */,
 				812DB21A1F0B83BE002A4F09 /* DevicesVC.swift in Sources */,
 				81BA1BE41F13B5E800A54321 /* QRScannerVC.swift in Sources */,
 				81BA1BE21F13AC4B00A54321 /* OptionsVC.swift in Sources */,
 				81F24CB31F06323D00F09EB3 /* NodesVC.swift in Sources */,
-				815A91941F0547DC0066C186 /* HomeVC.swift in Sources */,
+				812F6C2C1F1E2A7000540F61 /* TableCell.swift in Sources */,
+				812F6C261F1E25F600540F61 /* GraphCell.swift in Sources */,
 				816ED1481F1644C700D43718 /* Constants.swift in Sources */,
+				812F6C221F1E244C00540F61 /* HomeVC.swift in Sources */,
 				81807E4A1F0AE21E007F9424 /* MenuCell.swift in Sources */,
 				816ED1431F16440E00D43718 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		817D79D31F1913DA0040EF88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				812F6C271F1E25F600540F61 /* GraphCell.swift in Sources */,
+				817D79E21F19182F0040EF88 /* Node.swift in Sources */,
+				812F6C2D1F1E2A7000540F61 /* TableCell.swift in Sources */,
+				817D79E31F1918320040EF88 /* Message.swift in Sources */,
+				817D79E11F19182C0040EF88 /* Thing.swift in Sources */,
+				817D79E41F1918370040EF88 /* User.swift in Sources */,
+				817D79DA1F1913DA0040EF88 /* IgniteGreenhouseTests.swift in Sources */,
+				812F6C231F1E244C00540F61 /* HomeVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		817D79DD1F1913DA0040EF88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8173C8F11F04F62400C0175F /* IgniteGreenhouse */;
+			targetProxy = 817D79DC1F1913DA0040EF88 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8173C8F91F04F62400C0175F /* Main.storyboard */ = {
@@ -455,7 +641,7 @@
 			baseConfigurationReference = 27BFCD535AB96595BDDF6569 /* Pods-IgniteGreenhouse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HYE6963K2F;
+				DEVELOPMENT_TEAM = F8A449TUXU;
 				INFOPLIST_FILE = IgniteGreenhouse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ardic.ios.IgniteGreenhouse;
@@ -469,12 +655,42 @@
 			baseConfigurationReference = F8FDE3ABDC3518DABCB6223F /* Pods-IgniteGreenhouse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HYE6963K2F;
+				DEVELOPMENT_TEAM = F8A449TUXU;
 				INFOPLIST_FILE = IgniteGreenhouse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ardic.ios.IgniteGreenhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		817D79DF1F1913DA0040EF88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DF0098CE138728B1C17931A /* Pods-IgniteGreenhouseTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = HYE6963K2F;
+				INFOPLIST_FILE = IgniteGreenhouseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ardic.ios.IgniteGreenhouseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IgniteGreenhouse.app/IgniteGreenhouse";
+			};
+			name = Debug;
+		};
+		817D79E01F1913DA0040EF88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF3289E11893D377304B7E1D /* Pods-IgniteGreenhouseTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = HYE6963K2F;
+				INFOPLIST_FILE = IgniteGreenhouseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ardic.ios.IgniteGreenhouseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IgniteGreenhouse.app/IgniteGreenhouse";
 			};
 			name = Release;
 		};
@@ -495,6 +711,15 @@
 			buildConfigurations = (
 				8173C9051F04F62400C0175F /* Debug */,
 				8173C9061F04F62400C0175F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		817D79DE1F1913DA0040EF88 /* Build configuration list for PBXNativeTarget "IgniteGreenhouseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				817D79DF1F1913DA0040EF88 /* Debug */,
+				817D79E01F1913DA0040EF88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

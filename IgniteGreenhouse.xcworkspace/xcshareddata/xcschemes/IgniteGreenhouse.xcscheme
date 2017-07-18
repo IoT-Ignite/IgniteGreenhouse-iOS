@@ -38,6 +38,16 @@
                ReferencedContainer = "container:IgniteAPI/IgniteAPI.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "817D79D61F1913DA0040EF88"
+               BuildableName = "IgniteGreenhouseTests.xctest"
+               BlueprintName = "IgniteGreenhouseTests"
+               ReferencedContainer = "container:IgniteGreenhouse.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

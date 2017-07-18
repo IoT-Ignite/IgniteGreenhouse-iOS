@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tableCell" id="FNm-rj-mvT" customClass="TableCell" customModule="IgniteGreenhouse" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="165" height="320"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="165" height="320"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sof-sE-hMo">
+                        <rect key="frame" x="0.0" y="22" width="165" height="298"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="FNm-rj-mvT" id="RTp-UK-wn1"/>
+                            <outlet property="delegate" destination="FNm-rj-mvT" id="90c-zk-1wr"/>
+                        </connections>
+                    </tableView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensor Data History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKJ-uK-Idl">
+                        <rect key="frame" x="0.0" y="0.0" width="165" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="15r-YA-0xN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.0" green="0.1472256482" blue="0.34682643410000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="TKJ-uK-Idl" secondAttribute="trailing" id="EGi-Ec-pGh"/>
+                <constraint firstItem="sof-sE-hMo" firstAttribute="top" secondItem="TKJ-uK-Idl" secondAttribute="bottom" id="EWa-KF-q0o"/>
+                <constraint firstAttribute="trailing" secondItem="sof-sE-hMo" secondAttribute="trailing" id="Tf4-rS-agG"/>
+                <constraint firstItem="TKJ-uK-Idl" firstAttribute="top" secondItem="FNm-rj-mvT" secondAttribute="top" id="Xww-9I-6VH"/>
+                <constraint firstItem="sof-sE-hMo" firstAttribute="leading" secondItem="FNm-rj-mvT" secondAttribute="leading" id="Y8g-Af-m6R"/>
+                <constraint firstAttribute="bottom" secondItem="sof-sE-hMo" secondAttribute="bottom" id="c31-Xc-2v1"/>
+                <constraint firstItem="TKJ-uK-Idl" firstAttribute="leading" secondItem="FNm-rj-mvT" secondAttribute="leading" id="wXa-5l-sRn"/>
+            </constraints>
+            <connections>
+                <outlet property="label" destination="TKJ-uK-Idl" id="guc-tm-3jd"/>
+                <outlet property="tableView" destination="sof-sE-hMo" id="vfF-Ig-JsN"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="54"/>
+        </collectionViewCell>
+    </objects>
+</document>

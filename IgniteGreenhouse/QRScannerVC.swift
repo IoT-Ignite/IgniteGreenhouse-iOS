@@ -12,20 +12,22 @@ import AVFoundation
 
 class QRScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
+    enum Mode {
+        case device
+        case node
+    }
+    
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView: UIView?
+    var mode = Mode.device
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
-        let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         
+        let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         do {
-            // Get an instance of the AVCaptureDeviceInput class using the previous device object.
             let input = try AVCaptureDeviceInput(device: captureDevice)
-            
-            // Initialize the captureSession object.
             captureSession = AVCaptureSession()
             
             // Set the input device on the capture session.
@@ -58,7 +60,6 @@ class QRScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                 view.bringSubview(toFront: qrCodeFrameView)
             }
         } catch {
-            // If any error occurs, simply print it out and don't continue any more.
             print(error)
             return
         }
@@ -82,9 +83,24 @@ class QRScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                showAlert(title: "Found", message: metadataObj.stringValue)
+                connection.isEnabled = false
+                let alert = UIAlertController(title: "Found", message: metadataObj.stringValue, preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    self.performSegue(withIdentifier: "toAddNode", sender: nil)
+                })
+                alert.addAction(action)
+                present(alert, animated: true, completion: nil)
                 //messageLabel.text = metadataObj.stringValue
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destVC = segue.destination as? AddNodeVC {
+            let thing = Thing(thingCode: "f4030687", thingId: "Deneme")
+            let node = Node(nodeId: "Doruk", things: [thing])
+            let message = Message(nodes: [node])
+            destVC.message = message
         }
     }
 

@@ -18,6 +18,11 @@ target 'IgniteGreenhouse' do
   #pod 'ChartsRealm'
 end
 
+target 'IgniteGreenhouseTests' do
+  use_frameworks!
+  pod 'SwiftyJSON'
+end
+
 target 'IgniteAPI' do
   project 'IgniteAPI/IgniteAPI.xcodeproj'
   use_frameworks!

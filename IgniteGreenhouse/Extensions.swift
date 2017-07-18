@@ -61,3 +61,30 @@ extension UIViewController {
     }
     
 }
+
+extension UICollectionViewCell {
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+    }
+    
+}
+
+extension UIColor {
+    
+    static func flatBlue() -> UIColor {
+        return UIColor(hue: 0.62, saturation: 0.5, brightness: 0.63, alpha: 1)
+    }
+    
+    static func flatWhite() -> UIColor {
+        return UIColor(hue: 0.53, saturation: 0.02, brightness: 0.95, alpha: 1)
+    }
+    
+    static func flatRed() -> UIColor {
+        return UIColor(hue: 0.02, saturation: 0.74, brightness: 0.91, alpha: 1)
+    }
+    
+}
