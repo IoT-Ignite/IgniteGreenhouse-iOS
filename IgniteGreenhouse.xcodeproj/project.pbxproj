@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		16C996AD204E5BA78937A913 /* Pods_IgniteGreenhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB864D356C8EDA265C64178 /* Pods_IgniteGreenhouse.framework */; };
 		1B4FA585C50390D238131C6E /* Pods_IgniteGreenhouseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED618F7EDAD18439E476786 /* Pods_IgniteGreenhouseTests.framework */; };
+		8111A3D71F1F49C900B41DF7 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E103071F05A148003907F8 /* DeviceCell.swift */; };
+		8111A3D81F1F49CE00B41DF7 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81807E491F0AE21E007F9424 /* MenuCell.swift */; };
+		8111A3D91F1F49D600B41DF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8173C8F91F04F62400C0175F /* Main.storyboard */; };
 		8115FB0F1F19358B003FE91D /* AddNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8115FB0E1F19358B003FE91D /* AddNodeVC.swift */; };
 		81184B911F124C43008AC214 /* IgniteAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81184B901F124C43008AC214 /* IgniteAPI.framework */; };
 		81184B921F124C43008AC214 /* IgniteAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81184B901F124C43008AC214 /* IgniteAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -365,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8111A3D91F1F49D600B41DF7 /* Main.storyboard in Resources */,
 				812F6C2F1F1E2A7000540F61 /* TableCell.xib in Resources */,
 				812F6C291F1E25F600540F61 /* GraphCell.xib in Resources */,
 			);
@@ -505,6 +509,8 @@
 				812F6C2D1F1E2A7000540F61 /* TableCell.swift in Sources */,
 				817D79E31F1918320040EF88 /* Message.swift in Sources */,
 				817D79E11F19182C0040EF88 /* Thing.swift in Sources */,
+				8111A3D71F1F49C900B41DF7 /* DeviceCell.swift in Sources */,
+				8111A3D81F1F49CE00B41DF7 /* MenuCell.swift in Sources */,
 				817D79E41F1918370040EF88 /* User.swift in Sources */,
 				817D79DA1F1913DA0040EF88 /* IgniteGreenhouseTests.swift in Sources */,
 				812F6C231F1E244C00540F61 /* HomeVC.swift in Sources */,

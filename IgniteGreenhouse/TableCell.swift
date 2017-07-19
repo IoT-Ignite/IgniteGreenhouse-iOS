@@ -17,10 +17,11 @@ class TableCell: UICollectionViewCell, UITableViewDelegate, UITableViewDataSourc
     var sensorData: [IGSensorData]?
     
     func configureCell(sensorData: [IGSensorData]) {
-        backgroundColor = UIColor.flatBlue()
+        backgroundColor = UIColor.flatBlue
         layer.cornerRadius = 20
         self.sensorData = sensorData
         tableView.reloadData()
+        self.isHidden = false
     }
     
     // MARK: - Table View Delegate Methods
@@ -36,12 +37,21 @@ class TableCell: UICollectionViewCell, UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let sensorData = sensorData else { return UITableViewCell() }
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") {
-            cell.textLabel?.text = sensorData?[indexPath.row].data
+            cell.textLabel?.text = sensorData[indexPath.row].data
             return cell
         } else {
-            let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-            cell.textLabel?.text = sensorData?[indexPath.row].data
+            let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+            cell.backgroundColor = UIColor.clear
+            cell.textLabel?.textColor = UIColor.flatWhite
+            cell.detailTextLabel?.textColor = UIColor.flatWhite
+            cell.selectionStyle = .none
+            cell.textLabel?.text = sensorData[indexPath.row].data
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
+            let date = Date(timeIntervalSince1970: TimeInterval(sensorData[indexPath.row].cloudDate))
+            cell.detailTextLabel?.text = dateFormatter.string(from: date)
             return cell
         }
     }

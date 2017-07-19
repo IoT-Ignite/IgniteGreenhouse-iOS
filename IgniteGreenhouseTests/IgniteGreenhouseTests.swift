@@ -43,17 +43,19 @@ class IgniteGreenhouseTests: XCTestCase {
     }
     
     func testMessageModel() {
-        let thing = Thing(thingCode: "f4030687", thingId: "Temperature")
-        let thing2 = Thing(thingCode: "10020001", thingId: "Zaaadsdf")
-        let node = Node(nodeId: "Vililili", things: [thing, thing2])
-        let message = Message(nodes: [node])
+        let thing = Thing(thingCode: "10010001", thingId: "Temperature")
+        let thing2 = Thing(thingCode: "10020001", thingId: "Humidity")
+        let node = Node(nodeId: "Greenhouse1", things: [thing, thing2])
+        let thing3 = Thing(thingCode: "12010001", thingId: "Temperature")
+        let thing4 = Thing(thingCode: "12020001", thingId: "Humidity")
+        let node2 = Node(nodeId: "Greenhouse2", things: [thing3, thing4])
+        let message = Message(nodes: [node, node2])
         let ex = expectation(description: "Sending action message.")
-        IgniteAPI.sendSensorAgentMessage(deviceCode: "d38619e1f1824b2d840d52b3d35123f3", nodeId: "Configurator", sensorId: "Configurator Thing", message: message.json.description) { (messageId) in
+        IgniteAPI.sendSensorAgentMessage(deviceCode: "d49ffa4e10f1457996d0ae5826fe3cb9", nodeId: "Configurator", sensorId: "Configurator Thing", message: message.json.description) { (messageId) in
             print(messageId)
             ex.fulfill()
         }
         waitForExpectations(timeout: 10, handler: nil)
-
     }
     
 }

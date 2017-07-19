@@ -57,6 +57,7 @@ class DevicesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         IgniteAPI.currentDevice = devices[indexPath.row]
+        print(devices[indexPath.row].code)
         performSegue(withIdentifier: "toNodes", sender: nil)
     }
     

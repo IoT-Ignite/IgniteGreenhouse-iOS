@@ -19,15 +19,6 @@ class LoginVC: UIViewController {
         dismissKeyboardWhenTapped()
     }
     
-//    @IBAction func showHidePassword(_ sender: Any) {
-//        passwordField.isSecureTextEntry = !passwordField.isSecureTextEntry
-//        if passwordField.isSecureTextEntry {
-//            showHidePasswordButton.setTitle("Show", for: .normal)
-//        } else {
-//            showHidePasswordButton.setTitle("Hide", for: .normal)
-//        }
-//    }
-    
     @IBAction func loginPressed(_ sender: Any) {
         guard let username = usernameField.text, let password = passwordField.text else { return }
         if username != "" && password != "" {

@@ -77,6 +77,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if sensorData.count == 0 { return 0 }
         switch section {
         case 0:
             return 1
@@ -91,10 +92,12 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         switch indexPath.section {
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "graphCell", for: indexPath) as! GraphCell
-            cell.configureCell(sensorData: sensorData)
+            cell.isHidden = true
+            cell.configureCell(title: IgniteAPI.currentSensor?.sensorId, sensorData: sensorData)
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tableCell", for: indexPath) as! TableCell
+            cell.isHidden = true
             cell.configureCell(sensorData: sensorData)
             return cell
         default:
@@ -105,9 +108,9 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case 0:
-            return CGSize(width: 300, height: 180)
+            return CGSize(width: collectionView.bounds.width, height: 220)
         case 1:
-            return CGSize(width: 300, height: 300)
+            return CGSize(width: collectionView.bounds.width, height: 340)
         default:
             return collectionViewLayout.collectionViewContentSize
         }

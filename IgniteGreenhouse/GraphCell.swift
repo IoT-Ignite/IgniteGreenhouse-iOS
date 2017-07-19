@@ -13,16 +13,20 @@ import Charts
 class GraphCell: UICollectionViewCell, ChartViewDelegate {
 
     @IBOutlet weak var lineChart: LineChartView!
+    @IBOutlet weak var label: UILabel!
     
-    func configureCell(sensorData: [IGSensorData]) {
-        lineChart.delegate = self
-        backgroundColor = UIColor.flatBlue()
+    func configureCell(title: String?, sensorData: [IGSensorData]) {
+        label.text = title
         layer.cornerRadius = 20
-        lineChart.backgroundColor = UIColor.flatBlue()
-        lineChart.tintColor = UIColor.flatWhite()
+        backgroundColor = UIColor.flatBlue
+        lineChart.delegate = self
+        lineChart.backgroundColor = UIColor.flatBlue
+        lineChart.tintColor = UIColor.flatWhite
         lineChart.chartDescription?.enabled = false
         lineChart.legend.enabled = false
-        tintColor = UIColor.flatWhite()
+        lineChart.xAxis.enabled = false
+        lineChart.rightAxis.enabled = false
+        lineChart.leftAxis.labelTextColor = UIColor.flatWhite
         var dataEntries = [ChartDataEntry]()
         for (i, sensor) in sensorData.enumerated() {
             guard let data = Double(sensor.data) else { return }
@@ -30,10 +34,13 @@ class GraphCell: UICollectionViewCell, ChartViewDelegate {
             dataEntries.append(dataEntry)
         }
         let chartDataSet = LineChartDataSet(values: dataEntries, label: "Temperature")
-        chartDataSet.setColor(UIColor.flatRed())
+        chartDataSet.setColor(UIColor.flatWhite)
+        chartDataSet.drawValuesEnabled = false
+        chartDataSet.drawFilledEnabled = true
+        chartDataSet.fillColor = UIColor.flatWhite
         let chartData = LineChartData(dataSet: chartDataSet)
         lineChart.data = chartData
-        lineChart.isHidden = false
+        self.isHidden = false
     }
 
 }
