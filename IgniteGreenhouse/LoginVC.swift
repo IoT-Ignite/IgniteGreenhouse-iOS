@@ -22,9 +22,18 @@ class LoginVC: UIViewController {
     @IBAction func loginPressed(_ sender: Any) {
         guard let username = usernameField.text, let password = passwordField.text else { return }
         if username != "" && password != "" {
-            IgniteAPI.login(username: username, password: password) { (user) in
+            IgniteAPI.login(username: username, password: password) { (user, error) in
+                guard let user = user else { self.showAlert(title: "Error", message: error ?? "Error logging in."); return }
                 IgniteAPI.currentUser = user
-                self.createMenu(withMainIdentifier: "HomeVC")
+                print(IgniteAPI.currentUser.debugDescription)
+                IgniteAPI.getEndusers(mail: username) { (endusers, error) in
+                    guard let enduser = endusers?.first else { print("LOL"); return }
+                    IgniteAPI.currentEnduser = enduser
+                    IgniteAPI.getAuditor { (auditor) in
+                        IgniteAPI.currentAuditor = auditor
+                        self.createMenu(withMainIdentifier: "HomeVC")
+                    }
+                }
             }
         } else {
             showAlert(title: "Alert", message: "Please enter your credentials first.")

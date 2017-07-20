@@ -52,7 +52,7 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -67,6 +67,8 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         case 3:
             identifier = "SensorsMenu"
         case 4:
+            identifier = "AddMenu"
+        case 5:
             identifier = "LogoutMenu"
         default:
             identifier = "HomeMenu"
@@ -88,6 +90,8 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         case 3:
             identifier = "SensorsVC"
         case 4:
+            identifier = "QRScannerVC"
+        case 5:
             identifier = "Login"
         default:
             identifier = "HomeVC"
@@ -113,6 +117,15 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         if let img = info[UIImagePickerControllerOriginalImage] as? UIImage {
             Utilities.user?.profileImg = img
             profileImg.image = img
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destVC = segue.destination as? QRScannerVC {
+            IgniteAPI.login(username: MASTER_MAIL, password: MASTER_PASS) { (master, error) in
+                Utilities.masterUser = master
+                destVC.mode = .node
+            }
         }
     }
     

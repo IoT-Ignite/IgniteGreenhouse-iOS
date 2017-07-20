@@ -9,6 +9,7 @@
 
 import UIKit
 import AVFoundation
+import IgniteAPI
 
 class QRScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
@@ -20,7 +21,9 @@ class QRScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView: UIView?
-    var mode = Mode.device
+    var mode = Mode.node
+    var thingCode: String?
+    var deviceCode: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,24 +86,48 @@ class QRScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
+                let str = metadataObj.stringValue
                 connection.isEnabled = false
-                let alert = UIAlertController(title: "Found", message: metadataObj.stringValue, preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    self.performSegue(withIdentifier: "toAddNode", sender: nil)
-                })
-                alert.addAction(action)
-                present(alert, animated: true, completion: nil)
+                switch mode {
+                case .device:
+                    deviceCode = str
+                    guard let enduser = IgniteAPI.currentEnduser else { return }
+                    let config = IGDROMConfiguration(appKey: APP_KEY, enduser: enduser)
+                    IgniteAPI.addDROMConfiguration(configuration: config, configurationName: enduser.mail, tenantDomain: TENANT_DOMAIN, completion: { (configurationId, error) in
+                        print(configurationId ?? "Hata var", error ?? "Hata yok")
+                        if let id = configurationId {
+                            IgniteAPI.addDROMDeviceConfiguration(configurationId: id, deviceId: self.deviceCode!, tenantDomain: TENANT_DOMAIN, completion: { (response) in
+                                IgniteAPI.pushDROMDeviceConfiguration(deviceId: self.deviceCode!, completion: { (response) in
+                                    let alert = UIAlertController(title: "DROM", message: response.description, preferredStyle: .actionSheet)
+                                    let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                                        self.navigationController?.popToRootViewController(animated: true)
+                                    })
+                                    alert.addAction(action)
+                                    self.present(alert, animated: true, completion: nil)
+                                })
+                            })
+                        } else {
+                            print(error!)
+                        }
+                    })
+                case .node:
+                    thingCode = str
+                    let alert = UIAlertController(title: "Found", message: str, preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                        self.performSegue(withIdentifier: "toAdd", sender: nil)
+                    })
+                    alert.addAction(action)
+                    present(alert, animated: true, completion: nil)
+                }
                 //messageLabel.text = metadataObj.stringValue
             }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destVC = segue.destination as? AddNodeVC {
-            let thing = Thing(thingCode: "f4030687", thingId: "Deneme")
-            let node = Node(nodeId: "Doruk", things: [thing])
-            let message = Message(nodes: [node])
-            destVC.message = message
+        if let destVC = segue.destination as? AddVC {
+            guard let code = thingCode else { print("Code not picked."); return }
+            destVC.thingCode = code
         }
     }
 

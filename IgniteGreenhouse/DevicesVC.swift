@@ -29,7 +29,10 @@ class DevicesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     @IBAction func addPressed(_ sender: Any) {
-        performSegue(withIdentifier: "toQRScanner", sender: nil)
+        IgniteAPI.login(username: MASTER_MAIL, password: MASTER_PASS, completion: { (master, error) in
+            Utilities.masterUser = master
+            self.performSegue(withIdentifier: "toQRScanner", sender: nil)
+        })
     }
     
     func refreshData(_ refreshControl: UIRefreshControl) {
@@ -40,6 +43,8 @@ class DevicesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             refreshControl.endRefreshing()
         }
     }
+    
+    // MARK: - Table View Delegate Methods
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -59,6 +64,12 @@ class DevicesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         IgniteAPI.currentDevice = devices[indexPath.row]
         print(devices[indexPath.row].code)
         performSegue(withIdentifier: "toNodes", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destVC = segue.destination as? QRScannerVC {
+            destVC.mode = .device
+        }
     }
     
 }

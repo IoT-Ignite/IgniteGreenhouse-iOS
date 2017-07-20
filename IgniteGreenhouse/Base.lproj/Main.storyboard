@@ -169,7 +169,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dorukgezici96@gmail.com" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="CXX-ev-ORb">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dg@gmail.com" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="CXX-ev-ORb">
                                         <rect key="frame" x="0.0" y="80" width="311" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -181,7 +181,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="q1w2e3" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="gEN-OW-fcy">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test123" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="gEN-OW-fcy">
                                         <rect key="frame" x="0.0" y="160" width="311" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -326,7 +326,7 @@
         <!--QR Scanner-->
         <scene sceneID="cku-t7-OXa">
             <objects>
-                <viewController id="tsp-qq-msy" customClass="QRScannerVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRScannerVC" id="tsp-qq-msy" customClass="QRScannerVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZqA-A7-CwI"/>
                         <viewControllerLayoutGuide type="bottom" id="Wr0-24-Wi7"/>
@@ -349,43 +349,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="QR Scanner" id="xPp-4f-9Wg"/>
                     <connections>
-                        <segue destination="iSX-qK-eC8" kind="show" identifier="toAddNode" id="HgN-b2-T2q"/>
+                        <segue destination="XBN-xM-6n3" kind="show" identifier="toAdd" id="hde-vS-z8U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="McF-Kk-G0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8769" y="881"/>
-        </scene>
-        <!--Add Node-->
-        <scene sceneID="UPb-gb-QWF">
-            <objects>
-                <viewController storyboardIdentifier="AddNodeVC" id="iSX-qK-eC8" customClass="AddNodeVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tsv-2c-Qc9"/>
-                        <viewControllerLayoutGuide type="bottom" id="Lcf-nU-x0h"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KgP-fS-eGk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="2SK-dF-txT">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Lcf-nU-x0h" firstAttribute="top" secondItem="2SK-dF-txT" secondAttribute="bottom" id="18I-5T-UfS"/>
-                            <constraint firstItem="2SK-dF-txT" firstAttribute="leading" secondItem="KgP-fS-eGk" secondAttribute="leading" id="3qE-rv-nNR"/>
-                            <constraint firstItem="2SK-dF-txT" firstAttribute="top" secondItem="KgP-fS-eGk" secondAttribute="top" id="duE-LU-7WS"/>
-                            <constraint firstAttribute="trailing" secondItem="2SK-dF-txT" secondAttribute="trailing" id="wuc-6F-JYq"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Add Node" id="Te6-1w-Nya"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sx6-L4-sCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="9524" y="880.20989505247383"/>
+            <point key="canvasLocation" x="9135" y="879"/>
         </scene>
         <!--IoT-Ignite-->
         <scene sceneID="DZN-q9-kbR">
@@ -780,18 +749,18 @@
                                             <outlet property="Lbl" destination="91G-BO-Pgm" id="jFh-pP-cG6"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LogoutMenu" rowHeight="46" id="Egw-Nq-kkg" customClass="MenuCell" customModule="IgniteGreenhouse" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddMenu" rowHeight="46" id="Egw-Nq-kkg" customClass="MenuCell" customModule="IgniteGreenhouse" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="212" width="375" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Egw-Nq-kkg" id="hG5-jL-8ZK">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logout" translatesAutoresizingMaskIntoConstraints="NO" id="eeo-1y-aKg">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="eeo-1y-aKg">
                                                     <rect key="frame" x="30" y="15" width="15" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGOUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0GW-Em-j4H">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADD SENSOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0GW-Em-j4H">
                                                     <rect key="frame" x="53" y="12" width="160" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
@@ -804,6 +773,32 @@
                                         <connections>
                                             <outlet property="Img" destination="eeo-1y-aKg" id="i2m-EM-z7s"/>
                                             <outlet property="Lbl" destination="0GW-Em-j4H" id="shi-rd-9AS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LogoutMenu" rowHeight="46" id="neQ-zz-zs6" customClass="MenuCell" customModule="IgniteGreenhouse" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="258" width="375" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="neQ-zz-zs6" id="huC-59-x0P">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logout" translatesAutoresizingMaskIntoConstraints="NO" id="GW9-Nr-5tS">
+                                                    <rect key="frame" x="30" y="15" width="15" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGOUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="y8W-fq-l5C">
+                                                    <rect key="frame" x="53" y="12" width="160" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.14901960780000001" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="Img" destination="GW9-Nr-5tS" id="hz2-KC-nDj"/>
+                                            <outlet property="Lbl" destination="y8W-fq-l5C" id="4jF-Jg-S2E"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -923,6 +918,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etC-0i-ygF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8001" y="-705"/>
+        </scene>
+        <!--Add Sensors-->
+        <scene sceneID="yPS-8n-9kU">
+            <objects>
+                <viewController storyboardIdentifier="AddVC" id="XBN-xM-6n3" customClass="AddVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6w3-I9-V14"/>
+                        <viewControllerLayoutGuide type="bottom" id="e6g-zv-z96"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7nW-Ug-y0e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="cY3-QW-qX8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5G-pZ-VW1">
+                                <rect key="frame" x="16" y="145" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1E1-2g-eOz">
+                                <rect key="frame" x="16" y="236" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Node Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpb-Fv-GIN">
+                                <rect key="frame" x="142" y="104" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZE-pq-EjL" customClass="RoundedButton" customModule="IgniteGreenhouse" customModuleProvider="target">
+                                <rect key="frame" x="123" y="296" width="128" height="38"/>
+                                <color key="backgroundColor" red="0.20505201819999999" green="0.30099825860000001" blue="0.68478322030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="50" minY="10" maxX="50" maxY="10"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addPressed:" destination="XBN-xM-6n3" eventType="touchUpInside" id="Aam-Cp-3mg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzN-XT-qbV">
+                                <rect key="frame" x="136" y="195" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7ZE-pq-EjL" firstAttribute="centerX" secondItem="7nW-Ug-y0e" secondAttribute="centerX" id="0Ar-0e-hAZ"/>
+                            <constraint firstItem="y5G-pZ-VW1" firstAttribute="trailing" secondItem="7nW-Ug-y0e" secondAttribute="trailingMargin" id="D8r-Mt-76d"/>
+                            <constraint firstAttribute="trailing" secondItem="cY3-QW-qX8" secondAttribute="trailing" id="KhO-LU-ALN"/>
+                            <constraint firstItem="1E1-2g-eOz" firstAttribute="leading" secondItem="7nW-Ug-y0e" secondAttribute="leadingMargin" id="OkB-SF-D9T"/>
+                            <constraint firstItem="1E1-2g-eOz" firstAttribute="top" secondItem="HzN-XT-qbV" secondAttribute="bottom" constant="20" id="PRO-1E-YYo"/>
+                            <constraint firstItem="y5G-pZ-VW1" firstAttribute="top" secondItem="Lpb-Fv-GIN" secondAttribute="bottom" constant="20" id="Py5-fX-cOg"/>
+                            <constraint firstItem="cY3-QW-qX8" firstAttribute="top" secondItem="7nW-Ug-y0e" secondAttribute="top" id="Rc4-9y-s4b"/>
+                            <constraint firstItem="Lpb-Fv-GIN" firstAttribute="top" secondItem="6w3-I9-V14" secondAttribute="bottom" constant="40" id="UVP-CE-HnQ"/>
+                            <constraint firstItem="7ZE-pq-EjL" firstAttribute="top" secondItem="1E1-2g-eOz" secondAttribute="bottom" constant="30" id="ZCr-bD-RCG"/>
+                            <constraint firstItem="Lpb-Fv-GIN" firstAttribute="centerX" secondItem="7nW-Ug-y0e" secondAttribute="centerX" id="cM1-Kd-YIE"/>
+                            <constraint firstItem="e6g-zv-z96" firstAttribute="top" secondItem="cY3-QW-qX8" secondAttribute="bottom" id="fpm-3w-ikJ"/>
+                            <constraint firstItem="1E1-2g-eOz" firstAttribute="trailing" secondItem="7nW-Ug-y0e" secondAttribute="trailingMargin" id="iHV-uw-91z"/>
+                            <constraint firstItem="y5G-pZ-VW1" firstAttribute="leading" secondItem="7nW-Ug-y0e" secondAttribute="leadingMargin" id="kf9-bg-Owj"/>
+                            <constraint firstItem="HzN-XT-qbV" firstAttribute="centerX" secondItem="7nW-Ug-y0e" secondAttribute="centerX" id="oTS-Pb-6xj"/>
+                            <constraint firstItem="HzN-XT-qbV" firstAttribute="top" secondItem="y5G-pZ-VW1" secondAttribute="bottom" constant="20" id="pB8-FE-2kT"/>
+                            <constraint firstItem="cY3-QW-qX8" firstAttribute="leading" secondItem="7nW-Ug-y0e" secondAttribute="leading" id="sqz-5X-I3p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Sensors" id="6Cl-cZ-j9o"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="nodeName" destination="y5G-pZ-VW1" id="zMg-y3-MvI"/>
+                        <outlet property="sensorName" destination="1E1-2g-eOz" id="iRh-qN-zac"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CaP-pj-ICN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10289" y="878"/>
         </scene>
     </scenes>
     <resources>

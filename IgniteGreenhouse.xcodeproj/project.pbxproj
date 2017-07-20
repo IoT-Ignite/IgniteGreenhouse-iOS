@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		16C996AD204E5BA78937A913 /* Pods_IgniteGreenhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB864D356C8EDA265C64178 /* Pods_IgniteGreenhouse.framework */; };
 		1B4FA585C50390D238131C6E /* Pods_IgniteGreenhouseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED618F7EDAD18439E476786 /* Pods_IgniteGreenhouseTests.framework */; };
-		8111A3D71F1F49C900B41DF7 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E103071F05A148003907F8 /* DeviceCell.swift */; };
-		8111A3D81F1F49CE00B41DF7 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81807E491F0AE21E007F9424 /* MenuCell.swift */; };
-		8111A3D91F1F49D600B41DF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8173C8F91F04F62400C0175F /* Main.storyboard */; };
 		8115FB0F1F19358B003FE91D /* AddNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8115FB0E1F19358B003FE91D /* AddNodeVC.swift */; };
 		81184B911F124C43008AC214 /* IgniteAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81184B901F124C43008AC214 /* IgniteAPI.framework */; };
 		81184B921F124C43008AC214 /* IgniteAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81184B901F124C43008AC214 /* IgniteAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -19,15 +16,10 @@
 		811B99C41F18B1A0001BE70B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B99C31F18B1A0001BE70B /* User.swift */; };
 		812DB21A1F0B83BE002A4F09 /* DevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DB2191F0B83BE002A4F09 /* DevicesVC.swift */; };
 		812F6C221F1E244C00540F61 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F6C211F1E244C00540F61 /* HomeVC.swift */; };
-		812F6C231F1E244C00540F61 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F6C211F1E244C00540F61 /* HomeVC.swift */; };
 		812F6C261F1E25F600540F61 /* GraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F6C241F1E25F600540F61 /* GraphCell.swift */; };
-		812F6C271F1E25F600540F61 /* GraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F6C241F1E25F600540F61 /* GraphCell.swift */; };
 		812F6C281F1E25F600540F61 /* GraphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812F6C251F1E25F600540F61 /* GraphCell.xib */; };
-		812F6C291F1E25F600540F61 /* GraphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812F6C251F1E25F600540F61 /* GraphCell.xib */; };
 		812F6C2C1F1E2A7000540F61 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F6C2A1F1E2A7000540F61 /* TableCell.swift */; };
-		812F6C2D1F1E2A7000540F61 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F6C2A1F1E2A7000540F61 /* TableCell.swift */; };
 		812F6C2E1F1E2A7000540F61 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812F6C2B1F1E2A7000540F61 /* TableCell.xib */; };
-		812F6C2F1F1E2A7000540F61 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812F6C2B1F1E2A7000540F61 /* TableCell.xib */; };
 		813BA71C1F0685F000F25EC0 /* SensorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813BA71B1F0685F000F25EC0 /* SensorsVC.swift */; };
 		816ED1431F16440E00D43718 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816ED1421F16440E00D43718 /* Extensions.swift */; };
 		816ED1481F1644C700D43718 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816ED1471F1644C700D43718 /* Constants.swift */; };
@@ -50,6 +42,7 @@
 		819018EA1F105450002BB3A1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819018E91F105450002BB3A1 /* RegisterVC.swift */; };
 		81BA1BE21F13AC4B00A54321 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */; };
 		81BA1BE41F13B5E800A54321 /* QRScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */; };
+		81D8BF141F1F506C004F016B /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8BF131F1F506C004F016B /* AddVC.swift */; };
 		81E103091F05A148003907F8 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E103071F05A148003907F8 /* DeviceCell.swift */; };
 		81E1030A1F05A148003907F8 /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E103081F05A148003907F8 /* DeviceCell.xib */; };
 		81F24CB31F06323D00F09EB3 /* NodesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F24CB21F06323D00F09EB3 /* NodesVC.swift */; };
@@ -114,6 +107,7 @@
 		819018E91F105450002BB3A1 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerVC.swift; sourceTree = "<group>"; };
+		81D8BF131F1F506C004F016B /* AddVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
 		81E103071F05A148003907F8 /* DeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 		81E103081F05A148003907F8 /* DeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
 		81F24CB21F06323D00F09EB3 /* NodesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodesVC.swift; sourceTree = "<group>"; };
@@ -217,6 +211,7 @@
 				81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */,
 				812DB2191F0B83BE002A4F09 /* DevicesVC.swift */,
 				81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */,
+				81D8BF131F1F506C004F016B /* AddVC.swift */,
 				8115FB0E1F19358B003FE91D /* AddNodeVC.swift */,
 				81F24CB21F06323D00F09EB3 /* NodesVC.swift */,
 				813BA71B1F0685F000F25EC0 /* SensorsVC.swift */,
@@ -368,9 +363,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8111A3D91F1F49D600B41DF7 /* Main.storyboard in Resources */,
-				812F6C2F1F1E2A7000540F61 /* TableCell.xib in Resources */,
-				812F6C291F1E25F600540F61 /* GraphCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D8BF141F1F506C004F016B /* AddVC.swift in Sources */,
 				817D79D01F190F120040EF88 /* Thing.swift in Sources */,
 				8115FB0F1F19358B003FE91D /* AddNodeVC.swift in Sources */,
 				8173C8F81F04F62400C0175F /* LoginVC.swift in Sources */,
@@ -504,16 +497,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				812F6C271F1E25F600540F61 /* GraphCell.swift in Sources */,
 				817D79E21F19182F0040EF88 /* Node.swift in Sources */,
-				812F6C2D1F1E2A7000540F61 /* TableCell.swift in Sources */,
 				817D79E31F1918320040EF88 /* Message.swift in Sources */,
 				817D79E11F19182C0040EF88 /* Thing.swift in Sources */,
-				8111A3D71F1F49C900B41DF7 /* DeviceCell.swift in Sources */,
-				8111A3D81F1F49CE00B41DF7 /* MenuCell.swift in Sources */,
 				817D79E41F1918370040EF88 /* User.swift in Sources */,
 				817D79DA1F1913DA0040EF88 /* IgniteGreenhouseTests.swift in Sources */,
-				812F6C231F1E244C00540F61 /* HomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

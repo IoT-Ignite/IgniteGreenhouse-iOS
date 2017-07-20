@@ -12,6 +12,7 @@ import IgniteAPI
 class Utilities {
     
     static var user: User?
+    static var masterUser: IGUser?
     
     static func createActivityIndicator(view: UIView) -> UIActivityIndicatorView {
         
