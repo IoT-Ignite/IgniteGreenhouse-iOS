@@ -26,7 +26,7 @@ class SensorsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         refreshData(refreshControl)
     }
     
-    func refreshData(_ refreshControl: UIRefreshControl) {
+    @objc func refreshData(_ refreshControl: UIRefreshControl) {
         refreshControl.beginRefreshing()
         if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode {
             IgniteAPI.getDeviceSensors(deviceId: device.deviceId, nodeId: node.nodeId, pageSize: 10) { (sensors) in

@@ -26,7 +26,7 @@ class NodesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         refreshData(refreshControl)
     }
     
-    func refreshData(_ refreshControl: UIRefreshControl) {
+    @objc func refreshData(_ refreshControl: UIRefreshControl) {
         refreshControl.beginRefreshing()
         if let device = IgniteAPI.currentDevice {
             IgniteAPI.getDeviceNodes(deviceId: device.deviceId, pageSize: 10) { (nodes) in

@@ -49,7 +49,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         viewDeckController?.open(.left, animated: true)
     }
     
-    func refreshData(_ refreshControl: UIRefreshControl) {
+    @objc func refreshData(_ refreshControl: UIRefreshControl) {
         if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode, let sensor = IgniteAPI.currentSensor {
             refreshControl.beginRefreshing()
             IgniteAPI.getSensorDataHistory(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, startDate: startDate, endDate: endDate, pageSize: 10) { (sensorData) in

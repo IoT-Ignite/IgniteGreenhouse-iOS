@@ -35,7 +35,7 @@ class DevicesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         })
     }
     
-    func refreshData(_ refreshControl: UIRefreshControl) {
+    @objc func refreshData(_ refreshControl: UIRefreshControl) {
         refreshControl.beginRefreshing()
         IgniteAPI.getDevices { (devices) in
             self.devices = devices

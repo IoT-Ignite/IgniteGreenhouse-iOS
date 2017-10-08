@@ -40,7 +40,7 @@ extension UIViewController {
         window.makeKeyAndVisible()
     }
     
-    func showMenu() {
+    @objc func showMenu() {
         viewDeckController?.open(.left, animated: true)
     }
     
@@ -49,7 +49,7 @@ extension UIViewController {
         view.addGestureRecognizer(tap)
     }
     
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
     
