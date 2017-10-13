@@ -13,10 +13,27 @@ class LoginVC: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var showPassButton: UIButton!
+    @IBOutlet weak var rememberSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let username = UserDefaults.standard.string(forKey: "username"),
+            let pass = UserDefaults.standard.string(forKey: "password") {
+            usernameField.text = username
+            passwordField.text = pass
+        }
         dismissKeyboardWhenTapped()
+    }
+    
+    @IBAction func showPassPressed(_ sender: Any) {
+        if passwordField.isSecureTextEntry {
+            passwordField.isSecureTextEntry = false
+            showPassButton.setTitle("Hide", for: .normal)
+        } else {
+            passwordField.isSecureTextEntry = true
+            showPassButton.setTitle("Show", for: .normal)
+        }
     }
     
     @IBAction func loginPressed(_ sender: Any) {
@@ -27,10 +44,17 @@ class LoginVC: UIViewController {
                 IgniteAPI.currentUser = user
                 print(IgniteAPI.currentUser.debugDescription)
                 IgniteAPI.getEndusers(mail: username) { (endusers, error) in
-                    guard let enduser = endusers?.first else { print("LOL"); return }
+                    guard let enduser = endusers?.first else { print("Couldn't get enduser."); return }
                     IgniteAPI.currentEnduser = enduser
                     IgniteAPI.getAuditor { (auditor) in
                         IgniteAPI.currentAuditor = auditor
+                        if self.rememberSwitch.isOn {
+                            UserDefaults.standard.set(username, forKey: "username")
+                            UserDefaults.standard.set(password, forKey: "password")
+                        } else {
+                            UserDefaults.standard.removeObject(forKey: "username")
+                            UserDefaults.standard.removeObject(forKey: "password")
+                        }
                         self.createMenu(withMainIdentifier: "HomeVC")
                     }
                 }

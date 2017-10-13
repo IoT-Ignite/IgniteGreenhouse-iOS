@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8cO-Yd-22r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8cO-Yd-22r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Ignite Greenhouse-->
         <scene sceneID="tne-QT-ifu">
@@ -27,7 +32,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="qOp-mI-EqK">
-                                <rect key="frame" x="98.5" y="436" width="178" height="38"/>
+                                <rect key="frame" x="98.5" y="437" width="178" height="38"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmO-Rl-Bfc" customClass="RoundedButton" customModule="IgniteGreenhouse" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="178" height="38"/>
@@ -47,21 +52,31 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mert@aceltest.com" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="I6W-r8-0Ie">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="I6W-r8-0Ie">
                                 <rect key="frame" x="32" y="296" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="SgS-aK-BGs">
-                                <rect key="frame" x="32" y="356" width="311" height="30"/>
+                                <rect key="frame" x="32" y="356" width="311" height="31"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mert12345" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="BqH-66-hmg">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="BqH-66-hmg">
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="31"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" secureTextEntry="YES"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYc-on-vCH">
+                                        <rect key="frame" x="174" y="0.0" width="60" height="31"/>
+                                        <state key="normal" title="Show"/>
+                                        <connections>
+                                            <action selector="showPassPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nhO-Me-bmi"/>
+                                        </connections>
+                                    </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yd6-XS-Qqa" userLabel="Remember">
+                                        <rect key="frame" x="234" y="0.0" width="79" height="31"/>
+                                    </switch>
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenhouse-logo" translatesAutoresizingMaskIntoConstraints="NO" id="b0C-uq-zFu">
@@ -72,7 +87,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ozH-6E-3dQ">
-                                <rect key="frame" x="84.5" y="514" width="206" height="62"/>
+                                <rect key="frame" x="84.5" y="515" width="206" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhT-de-dO6">
                                         <rect key="frame" x="0.0" y="0.0" width="206" height="26"/>
@@ -124,6 +139,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="passwordField" destination="BqH-66-hmg" id="B0S-1M-yte"/>
+                        <outlet property="rememberSwitch" destination="yd6-XS-Qqa" id="Yae-yF-dEx"/>
+                        <outlet property="showPassButton" destination="nYc-on-vCH" id="uCt-mY-mwR"/>
                         <outlet property="usernameField" destination="I6W-r8-0Ie" id="YCw-xg-SUv"/>
                         <segue destination="fnD-tD-WGn" kind="show" identifier="register" id="h67-Gk-hCo"/>
                     </connections>
@@ -144,18 +161,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="1Zn-BZ-l4T">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenhouse-logo" translatesAutoresizingMaskIntoConstraints="NO" id="owA-7g-PP3">
-                                <rect key="frame" x="97.5" y="90" width="180" height="180"/>
+                                <rect key="frame" x="97.5" y="110" width="180" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="Erc-Nk-qXU"/>
                                     <constraint firstAttribute="width" secondItem="owA-7g-PP3" secondAttribute="height" multiplier="1:1" id="tLl-CK-w04"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="N3d-Js-v0U">
-                                <rect key="frame" x="32" y="296" width="311" height="190"/>
+                                <rect key="frame" x="32" y="316" width="311" height="840"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Doruk" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="rBf-jh-Jzr">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="30"/>
@@ -169,20 +183,23 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="1Zn-BZ-l4T">
+                                        <rect key="frame" x="0.0" y="80" width="311" height="640"/>
+                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dg@gmail.com" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="CXX-ev-ORb">
-                                        <rect key="frame" x="0.0" y="80" width="311" height="30"/>
+                                        <rect key="frame" x="0.0" y="730" width="311" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="IgniteGreenhouse" borderStyle="roundedRect" placeholder="Brand" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="NlQ-kN-Lgn">
-                                        <rect key="frame" x="0.0" y="120" width="311" height="30"/>
+                                        <rect key="frame" x="0.0" y="770" width="311" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test123" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="gEN-OW-fcy">
-                                        <rect key="frame" x="0.0" y="160" width="311" height="30"/>
+                                        <rect key="frame" x="0.0" y="810" width="311" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -190,7 +207,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXp-C4-qBt" customClass="RoundedButton" customModule="IgniteGreenhouse" customModuleProvider="target">
-                                <rect key="frame" x="89" y="536" width="197" height="38"/>
+                                <rect key="frame" x="89" y="1206" width="197" height="38"/>
                                 <color key="backgroundColor" red="0.20505201819999999" green="0.30198770759999999" blue="0.68478322030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="70" minY="10" maxX="70" maxY="10"/>
                                 <state key="normal" title="Register">
@@ -212,13 +229,9 @@
                             <constraint firstItem="owA-7g-PP3" firstAttribute="centerX" secondItem="J2E-hH-0KZ" secondAttribute="centerX" id="Buv-48-iZO"/>
                             <constraint firstItem="AXp-C4-qBt" firstAttribute="top" secondItem="N3d-Js-v0U" secondAttribute="bottom" constant="50" id="YOD-gv-2ji"/>
                             <constraint firstItem="N3d-Js-v0U" firstAttribute="top" secondItem="owA-7g-PP3" secondAttribute="bottom" constant="26" id="dCZ-a2-VrA"/>
-                            <constraint firstItem="1Zn-BZ-l4T" firstAttribute="leading" secondItem="J2E-hH-0KZ" secondAttribute="leading" id="e8e-uy-rX2"/>
                             <constraint firstItem="AXp-C4-qBt" firstAttribute="centerX" secondItem="J2E-hH-0KZ" secondAttribute="centerX" id="kW1-rj-KTY"/>
-                            <constraint firstItem="1Zn-BZ-l4T" firstAttribute="top" secondItem="J2E-hH-0KZ" secondAttribute="top" id="mk6-8x-VzZ"/>
                             <constraint firstItem="owA-7g-PP3" firstAttribute="top" secondItem="8Ke-dp-tsN" secondAttribute="bottom" constant="26" id="qcf-ZD-vf0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="N3d-Js-v0U" secondAttribute="trailing" constant="16" id="s8c-PZ-IIn"/>
-                            <constraint firstAttribute="trailing" secondItem="1Zn-BZ-l4T" secondAttribute="trailing" id="z6X-yT-3Zo"/>
-                            <constraint firstItem="bn7-CM-u2q" firstAttribute="top" secondItem="1Zn-BZ-l4T" secondAttribute="bottom" id="zog-PG-icY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ignite Greenhouse" id="Lxb-Qk-qTy"/>
@@ -278,13 +291,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVt-5V-nLf">
-                                <rect key="frame" x="139" y="80" width="98.5" height="26.5"/>
+                                <rect key="frame" x="140.5" y="80" width="95.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feF-G1-m6V">
-                                <rect key="frame" x="143" y="338.5" width="89.5" height="27"/>
+                                <rect key="frame" x="144.5" y="338.5" width="87" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -907,7 +920,7 @@
                 <navigationController storyboardIdentifier="Login" automaticallyAdjustsScrollViewInsets="NO" id="8cO-Yd-22r" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hgu-mq-Ps7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
