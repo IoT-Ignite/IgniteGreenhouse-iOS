@@ -16,6 +16,7 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var mail: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var brand: UITextField!
+    @IBOutlet weak var termsSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,10 @@ class RegisterVC: UIViewController {
     }
 
     @IBAction func registerPressed(_ sender: Any) {
+        if !termsSwitch.isOn {
+            showAlert(title: "ERROR", message: "You need to accept the terms of usage!")
+            return
+        }
         guard let first = firstName.text, let last = lastName.text, let mail = mail.text, let brand = brand.text, let password = password.text else { return }
         if [first, last, mail, brand, password].contains("") {
             showAlert(title: "Alert", message: "Please enter the required information first.")

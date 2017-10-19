@@ -9,16 +9,28 @@
 import UIKit
 import IgniteAPI
 
-class DeviceCell: UITableViewCell {
+class DeviceCell: UICollectionViewCell {
 
     @IBOutlet weak var idLabel: UILabel!
-    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var deviceImage: UIImageView!
     @IBOutlet weak var statusImage: UIImageView!
+    var device: IGDevice!
+    var vc: DevicesVC!
     
-    func configureCell(device: IGDevice) {
+    func configureCell(device: IGDevice, vc: DevicesVC) {
+        clipsToBounds = false
+        layer.cornerRadius = 6
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderWidth = 1
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.8
+        layer.shadowRadius = 3
+        layer.shadowOffset = CGSize(width: 1, height: 1)
+        self.device = device
+        self.vc = vc
         idLabel.text = device.deviceId
-        statusLabel.text = device.state
+        nameLabel.text = device.label
         switch device.model {
         case "iot_rpi3":
             let img = UIImage(named: "Raspberry")
@@ -28,12 +40,18 @@ class DeviceCell: UITableViewCell {
         }
         switch device.state {
         case "ONLINE":
-            statusImage.image = UIImage(named: "online")
+            statusImage.image = UIImage(named: "wireless-signal")
         case "OFFLINE":
-            statusImage.image = UIImage(named: "offline")
+            statusImage.image = UIImage(named: "wireless_error")
         default:
             break
         }
+    }
+    
+    @IBAction func infoPressed(sender: UIButton) {
+        vc.selectedDevice = device
+        print("Çalış köpek")
+        vc.performSegue(withIdentifier: "toGateway", sender: self)
     }
     
 }
