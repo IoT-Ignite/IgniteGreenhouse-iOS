@@ -53,4 +53,16 @@ class RegisterVC: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        switch identifier {
+        case "unwindToLogin":
+            if let destVC = segue.destination as? LoginVC {
+                destVC.viewDidLoad()
+            }
+        default:
+            break
+        }
+    }
+    
 }

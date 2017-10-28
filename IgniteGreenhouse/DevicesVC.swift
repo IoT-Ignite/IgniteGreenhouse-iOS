@@ -8,8 +8,9 @@
 
 import UIKit
 import IgniteAPI
+import NVActivityIndicatorView
 
-class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIPopoverPresentationControllerDelegate, UIAdaptivePresentationControllerDelegate {
+class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIPopoverPresentationControllerDelegate, UIAdaptivePresentationControllerDelegate, NVActivityIndicatorViewable {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var devices = [IGDevice]()
@@ -62,8 +63,18 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        startAnimating(message: "Loading sensors...", type: NVActivityIndicatorType.ballTrianglePath)
         IgniteAPI.currentDevice = devices[indexPath.row]
-        performSegue(withIdentifier: "toSensors", sender: nil)
+        IgniteAPI.getDeviceNodes(deviceId: IgniteAPI.currentDevice!.deviceId, pageSize: 1) { (nodes) in
+            self.stopAnimating()
+            let i = nodes.index { $0.nodeId == "IgniteGreenhouse" }
+            if let i = i {
+                IgniteAPI.currrentNode = nodes[i]
+                self.performSegue(withIdentifier: "toSensors", sender: nil)
+            } else {
+                self.showAlert(title: "Error", message: "This device doesn't have an IgniteGreenhouse node. Please contact support.")
+            }
+        }
         //performSegue(withIdentifier: "toNodes", sender: nil)
     }
     
