@@ -8,13 +8,15 @@
 
 import UIKit
 import IgniteAPI
+import NVActivityIndicatorView
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, NVActivityIndicatorViewable {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var showPassButton: UIButton!
     @IBOutlet weak var rememberSwitch: UISwitch!
+    @IBAction func unwindToLogin(segue: UIStoryboardSegue) { }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +40,14 @@ class LoginVC: UIViewController {
     
     @IBAction func loginPressed(_ sender: Any) {
         guard let username = usernameField.text, let password = passwordField.text else { return }
+        self.startAnimating(message: "Logging in...", type: NVActivityIndicatorType.ballTrianglePath)
         if username != "" && password != "" {
             IgniteAPI.login(username: username, password: password) { (user, error) in
-                guard let user = user else { self.showAlert(title: "Error", message: error ?? "Error logging in."); return }
+                guard let user = user else {
+                        self.stopAnimating()
+                        self.showAlert(title: "Error", message: error ?? "Error logging in.")
+                        return
+                }
                 IgniteAPI.currentUser = user
                 print(IgniteAPI.currentUser.debugDescription)
                 IgniteAPI.getEndusers(mail: username) { (endusers, error) in
@@ -55,11 +62,13 @@ class LoginVC: UIViewController {
                             UserDefaults.standard.removeObject(forKey: "username")
                             UserDefaults.standard.removeObject(forKey: "password")
                         }
+                        self.stopAnimating()
                         self.createMenu(withMainIdentifier: "HomeVC")
                     }
                 }
             }
         } else {
+            self.stopAnimating()
             showAlert(title: "Alert", message: "Please enter your credentials first.")
         }
     }

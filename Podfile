@@ -15,6 +15,7 @@ target 'IgniteGreenhouse' do
   shared_pods
   pod 'ViewDeck'
   pod 'Charts'
+  pod 'NVActivityIndicatorView'
   #pod 'ChartsRealm'
 end
 

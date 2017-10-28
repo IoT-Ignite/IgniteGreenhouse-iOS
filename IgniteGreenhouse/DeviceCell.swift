@@ -40,7 +40,7 @@ class DeviceCell: UICollectionViewCell {
         }
         switch device.state {
         case "ONLINE":
-            statusImage.image = UIImage(named: "wireless-signal")
+            statusImage.image = UIImage(named: "wireless_signal")
         case "OFFLINE":
             statusImage.image = UIImage(named: "wireless_error")
         default:

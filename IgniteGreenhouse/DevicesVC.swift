@@ -63,7 +63,6 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         IgniteAPI.currentDevice = devices[indexPath.row]
-        print(devices[indexPath.row].code)
         performSegue(withIdentifier: "toSensors", sender: nil)
         //performSegue(withIdentifier: "toNodes", sender: nil)
     }

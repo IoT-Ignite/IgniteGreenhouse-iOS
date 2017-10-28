@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,20 +32,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenhouse-logo" translatesAutoresizingMaskIntoConstraints="NO" id="b0C-uq-zFu">
-                                <rect key="frame" x="97" y="110" width="180" height="180"/>
+                                <rect key="frame" x="97" y="90" width="180" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="Ph7-wy-fcC"/>
                                     <constraint firstAttribute="width" secondItem="b0C-uq-zFu" secondAttribute="height" multiplier="1:1" id="Xz5-kv-m3c"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="I6W-r8-0Ie">
-                                <rect key="frame" x="32" y="316" width="311" height="30"/>
+                                <rect key="frame" x="32" y="296" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="SgS-aK-BGs" userLabel="Password">
-                                <rect key="frame" x="32" y="376" width="311" height="31"/>
+                                <rect key="frame" x="32" y="356" width="311" height="31"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="BqH-66-hmg">
                                         <rect key="frame" x="0.0" y="0.0" width="174" height="31"/>
@@ -66,7 +66,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="qOp-mI-EqK" userLabel="Login">
-                                <rect key="frame" x="98.5" y="457" width="178" height="38"/>
+                                <rect key="frame" x="98.5" y="437" width="178" height="38"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmO-Rl-Bfc" customClass="RoundedButton" customModule="IgniteGreenhouse" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="178" height="38"/>
@@ -87,7 +87,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ozH-6E-3dQ" userLabel="Register">
-                                <rect key="frame" x="84" y="535" width="206" height="62"/>
+                                <rect key="frame" x="84" y="515" width="206" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhT-de-dO6">
                                         <rect key="frame" x="0.0" y="0.0" width="206" height="26"/>
@@ -257,9 +257,11 @@
                         <outlet property="mail" destination="CXX-ev-ORb" id="IbD-0d-2Yz"/>
                         <outlet property="password" destination="gEN-OW-fcy" id="r3d-Fs-OYo"/>
                         <outlet property="termsSwitch" destination="lwa-kz-eY6" id="fHP-Rv-bU8"/>
+                        <segue destination="EPl-jD-gIJ" kind="unwind" identifier="unwindToLogin" unwindAction="unwindToLoginWithSegue:" id="a4B-lc-36J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88q-0x-Agn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="EPl-jD-gIJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="9524" y="-705.69715142428788"/>
         </scene>

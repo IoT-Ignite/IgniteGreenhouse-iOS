@@ -8,8 +8,9 @@
 
 import UIKit
 import IgniteAPI
+import NVActivityIndicatorView
 
-class RegisterVC: UIViewController {
+class RegisterVC: UIViewController, NVActivityIndicatorViewable {
 
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
@@ -25,7 +26,7 @@ class RegisterVC: UIViewController {
 
     @IBAction func registerPressed(_ sender: Any) {
         if !termsSwitch.isOn {
-            showAlert(title: "ERROR", message: "You need to accept the terms of usage!")
+            showAlert(title: "Terms of Use", message: "You need to accept the terms of use in order to register.")
             return
         }
         guard let first = firstName.text, let last = lastName.text, let mail = mail.text, let brand = brand.text, let password = password.text else { return }
@@ -33,10 +34,14 @@ class RegisterVC: UIViewController {
             showAlert(title: "Alert", message: "Please enter the required information first.")
             return
         } else {
+            self.startAnimating(message: "Registering...", type: NVActivityIndicatorType.ballTrianglePath)
             IgniteAPI.createRestrictedUser(firstName: first, lastName: last, mail: mail, password: password) { (newUser, error) in
+                self.stopAnimating()
                 if let user = newUser {
                     IgniteAPI.currentUser = user
-                    self.createMenu(withMainIdentifier: "HomeVC")
+                    UserDefaults.standard.set(mail, forKey: "username")
+                    UserDefaults.standard.set(password, forKey: "password")
+                    self.performSegue(withIdentifier: "unwindToLogin", sender: nil)
                 } else {
                     if let error = error {
                         self.showAlert(title: "Registration Error", message: error)
