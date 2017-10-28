@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8cO-Yd-22r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JSf-PL-JKH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1105,11 +1105,54 @@
             </objects>
             <point key="canvasLocation" x="10289" y="878"/>
         </scene>
+        <!--SplashVC-->
+        <scene sceneID="GyO-E7-9vQ">
+            <objects>
+                <viewController id="JSf-PL-JKH" customClass="SplashVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sE8-4E-eVh"/>
+                        <viewControllerLayoutGuide type="bottom" id="fhF-j2-e5i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ddD-8X-03Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animated_19" translatesAutoresizingMaskIntoConstraints="NO" id="dld-Ju-zBp">
+                                <rect key="frame" x="32" y="70" width="311" height="311"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dld-Ju-zBp" secondAttribute="height" multiplier="1:1" id="tK9-J4-GWQ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iot_logo_4" translatesAutoresizingMaskIntoConstraints="NO" id="aiI-mw-jiP">
+                                <rect key="frame" x="32" y="416" width="311" height="138"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dld-Ju-zBp" firstAttribute="top" secondItem="sE8-4E-eVh" secondAttribute="bottom" constant="50" id="TZt-lw-5Hj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dld-Ju-zBp" secondAttribute="trailing" constant="16" id="b1L-Xn-WHn"/>
+                            <constraint firstItem="aiI-mw-jiP" firstAttribute="top" secondItem="dld-Ju-zBp" secondAttribute="bottom" constant="35" id="hLZ-Xh-4I8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aiI-mw-jiP" secondAttribute="trailing" constant="16" id="llN-OV-FBe"/>
+                            <constraint firstItem="aiI-mw-jiP" firstAttribute="leading" secondItem="ddD-8X-03Z" secondAttribute="leadingMargin" constant="16" id="wS6-xN-wyF"/>
+                            <constraint firstItem="dld-Ju-zBp" firstAttribute="leading" secondItem="ddD-8X-03Z" secondAttribute="leadingMargin" constant="16" id="wbh-JD-b3l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="igniteGreenhouseAnimation" destination="dld-Ju-zBp" id="bWz-kq-Qs0"/>
+                        <outlet property="iotIgniteAnimation" destination="aiI-mw-jiP" id="qaU-gk-ivy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcg-g8-jX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8001" y="-1462"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="animated_19" width="512" height="512"/>
         <image name="farm_bg" width="455" height="640"/>
         <image name="greenhouse-logo" width="512" height="512"/>
         <image name="help" width="15" height="18"/>
+        <image name="iot_logo_4" width="300" height="138"/>
         <image name="logout" width="15" height="15"/>
         <image name="menubutton" width="15" height="17"/>
         <image name="notifications" width="15" height="18"/>

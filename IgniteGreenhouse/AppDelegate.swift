@@ -17,16 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        guard let _ = IgniteAPI.currentUser, let window = window else { return true }
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        let mainVC = sb.instantiateViewController(withIdentifier: "HomeVC")
-//        let center = UINavigationController(rootViewController: mainVC)
-//        let menuVC = sb.instantiateViewController(withIdentifier: "MenuVC")
-//        let left = UINavigationController(rootViewController: menuVC)
-//        left.preferredContentSize = CGSize(width: window.bounds.width * 0.75, height: window.bounds.height)
-//        let viewDeckController = IIViewDeckController(center: center, leftViewController: left)
-//        window.rootViewController = viewDeckController
-//        window.makeKeyAndVisible()
+        guard let _ = IgniteAPI.currentUser, let window = window else { return true }
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let loginVC = sb.instantiateViewController(withIdentifier: "LoginVC")
+        window.rootViewController = loginVC
+        window.makeKeyAndVisible()
         return true
     }
 
