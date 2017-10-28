@@ -18,7 +18,7 @@ class IgniteGreenhouseTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         let ex = expectation(description: "Logging in")
-        IgniteAPI.login(username: "greenhouse@iot-ignite.com", password: "gr33nhous3") { (user) in
+        IgniteAPI.login(username: "greenhouse@iot-ignite.com", password: "gr33nhous3") { (user, arg)  in
             IgniteAPI.currentUser = user
             IgniteAPI.getDevices { (devices) in
                 guard let device = devices.first else { return }

@@ -32,9 +32,11 @@ class LoginVC: UIViewController, NVActivityIndicatorViewable {
         if passwordField.isSecureTextEntry {
             passwordField.isSecureTextEntry = false
             showPassButton.setTitle("Hide", for: .normal)
+            showPassButton.setImage(UIImage(named: "hide_password"), for: .normal)
         } else {
             passwordField.isSecureTextEntry = true
             showPassButton.setTitle("Show", for: .normal)
+            showPassButton.setImage(UIImage(named: "show_password"), for: .normal)
         }
     }
     
@@ -49,7 +51,6 @@ class LoginVC: UIViewController, NVActivityIndicatorViewable {
                         return
                 }
                 IgniteAPI.currentUser = user
-                print(IgniteAPI.currentUser.debugDescription)
                 IgniteAPI.getEndusers(mail: username) { (endusers, error) in
                     guard let enduser = endusers?.first else { print("Couldn't get enduser."); return }
                     IgniteAPI.currentEnduser = enduser
@@ -63,7 +64,11 @@ class LoginVC: UIViewController, NVActivityIndicatorViewable {
                             UserDefaults.standard.removeObject(forKey: "password")
                         }
                         self.stopAnimating()
-                        self.createMenu(withMainIdentifier: "HomeVC")
+                        if let _ = IgniteAPI.currentDevice {
+                            self.createMenu(withMainIdentifier: "HomeVC")
+                        } else {
+                            self.createMenu(withMainIdentifier: "DevicesVC")
+                        }
                     }
                 }
             }

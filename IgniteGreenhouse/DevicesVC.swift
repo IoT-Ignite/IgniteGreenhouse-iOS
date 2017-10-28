@@ -30,6 +30,10 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         collectionView.register(nib, forCellWithReuseIdentifier: "deviceCell")
     }
     
+    @IBAction func menuPressed(_ sender: Any) {
+        viewDeckController?.open(.left, animated: true)
+    }
+    
     @IBAction func addPressed(_ sender: Any) {
         IgniteAPI.login(username: MASTER_MAIL, password: MASTER_PASS, completion: { (master, error) in
             Utilities.masterUser = master
@@ -38,10 +42,12 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     }
     
     @objc func refreshData(_ refreshControl: UIRefreshControl) {
+        startAnimating(message: "Loading devices...", type: NVActivityIndicatorType.ballTrianglePath)
         refreshControl.beginRefreshing()
         IgniteAPI.getDevices { (devices) in
             self.devices = devices
             self.collectionView.reloadData()
+            self.stopAnimating()
             refreshControl.endRefreshing()
         }
     }

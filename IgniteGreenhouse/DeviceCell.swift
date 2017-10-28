@@ -50,7 +50,6 @@ class DeviceCell: UICollectionViewCell {
     
     @IBAction func infoPressed(sender: UIButton) {
         vc.selectedDevice = device
-        print("Çalış köpek")
         vc.performSegue(withIdentifier: "toGateway", sender: self)
     }
     

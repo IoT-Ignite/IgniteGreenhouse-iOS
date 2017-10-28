@@ -8,8 +8,9 @@
 
 import UIKit
 import IgniteAPI
+import NVActivityIndicatorView
 
-class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, NVActivityIndicatorViewable {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var sensorData = [IGSensorData]()
@@ -52,9 +53,11 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     @objc func refreshData(_ refreshControl: UIRefreshControl) {
         if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode, let sensor = IgniteAPI.currentSensor {
             refreshControl.beginRefreshing()
+            startAnimating(message: "Loading...", type: NVActivityIndicatorType.ballTrianglePath)
             IgniteAPI.getSensorDataHistory(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, startDate: startDate, endDate: endDate, pageSize: 10) { (sensorData) in
                 self.sensorData = sensorData
                 self.collectionView.reloadData()
+                self.stopAnimating()
                 refreshControl.endRefreshing()
             }
         } else {
@@ -65,6 +68,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             })
             alert.addAction(action)
             parent?.present(alert, animated: true) {
+                self.stopAnimating()
                 refreshControl.endRefreshing()
             }
         }

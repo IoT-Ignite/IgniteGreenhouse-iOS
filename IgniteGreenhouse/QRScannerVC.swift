@@ -94,7 +94,6 @@ class QRScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                     guard let enduser = IgniteAPI.currentEnduser else { return }
                     let config = IGDROMConfiguration(appKey: APP_KEY, enduser: enduser)
                     IgniteAPI.addDROMConfiguration(configuration: config, configurationName: enduser.mail, tenantDomain: TENANT_DOMAIN, completion: { (configurationId, error) in
-                        print(configurationId ?? "Hata var", error ?? "Hata yok")
                         if let id = configurationId {
                             IgniteAPI.addDROMDeviceConfiguration(configurationId: id, deviceId: self.deviceCode!, tenantDomain: TENANT_DOMAIN, completion: { (response) in
                                 IgniteAPI.pushDROMDeviceConfiguration(deviceId: self.deviceCode!, completion: { (response) in
