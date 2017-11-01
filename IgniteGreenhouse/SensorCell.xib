@@ -73,15 +73,26 @@
                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MhU-il-CUH" userLabel="Images">
                         <rect key="frame" x="16" y="80" width="308" height="102"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raspberry_pi_online" translatesAutoresizingMaskIntoConstraints="NO" id="NlV-2d-Abs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="NlV-2d-Abs">
                                 <rect key="frame" x="6" y="10" width="148" height="82"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIP-uq-qdb">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MKx-uY-1WM">
                                 <rect key="frame" x="154" y="10" width="148" height="82"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r79-4u-Ko7">
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="67.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIP-uq-qdb">
+                                        <rect key="frame" x="0.0" y="67.5" width="148" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <edgeInsets key="layoutMargins" top="10" left="6" bottom="10" right="6"/>
                     </stackView>
@@ -103,6 +114,7 @@
             <viewLayoutGuide key="safeArea" id="0QC-yK-LIV"/>
             <size key="customSize" width="340" height="182"/>
             <connections>
+                <outlet property="dataLabel" destination="r79-4u-Ko7" id="Hj5-Kw-FLk"/>
                 <outlet property="dateLabel" destination="mIP-uq-qdb" id="zX9-Mp-W5V"/>
                 <outlet property="deviceImage" destination="NlV-2d-Abs" id="y3F-XA-6L1"/>
                 <outlet property="nameLabel" destination="LCY-yA-9Cv" id="6zg-1f-u1y"/>
@@ -113,6 +125,6 @@
     </objects>
     <resources>
         <image name="info" width="256" height="256"/>
-        <image name="raspberry_pi_online" width="810" height="1024"/>
+        <image name="thermometer" width="256" height="256"/>
     </resources>
 </document>

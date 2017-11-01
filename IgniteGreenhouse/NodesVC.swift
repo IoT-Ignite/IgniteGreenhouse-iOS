@@ -40,6 +40,8 @@ class NodesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    // MARK: - Table View Delegate Methods
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
