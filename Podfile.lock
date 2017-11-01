@@ -3,6 +3,9 @@ PODS:
   - Charts (3.0.4):
     - Charts/Core (= 3.0.4)
   - Charts/Core (3.0.4)
+  - IgniteAPI (0.5.0):
+    - Alamofire
+    - SwiftyJSON
   - NVActivityIndicatorView (4.0.0):
     - NVActivityIndicatorView/Presenter (= 4.0.0)
   - NVActivityIndicatorView/Presenter (4.0.0)
@@ -10,19 +13,19 @@ PODS:
   - ViewDeck (3.1.0)
 
 DEPENDENCIES:
-  - Alamofire
   - Charts
+  - IgniteAPI
   - NVActivityIndicatorView
-  - SwiftyJSON
   - ViewDeck
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Charts: 0705898046257443f0afbbc3179f4b67507b6e48
+  IgniteAPI: 5ad5f67e4af602a27be760ec1df633e72d2597d9
   NVActivityIndicatorView: 54c9b93b6f25a4f467512680c0c90c09a1095cf2
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   ViewDeck: 942d90dd23c9f97cc8038be352255378167edcca
 
-PODFILE CHECKSUM: b4703eadbed2b1e2ecb586d2a5deb213d085374a
+PODFILE CHECKSUM: d3e70bea86b07706b75c551c1d51118c15cf18be
 
 COCOAPODS: 1.3.1
