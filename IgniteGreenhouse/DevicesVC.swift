@@ -81,7 +81,6 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                 self.showAlert(title: "Error", message: "This device doesn't have an IgniteGreenhouse node. Please contact support.")
             }
         }
-        //performSegue(withIdentifier: "toNodes", sender: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -112,6 +111,8 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
             destVC.mode = .device
         case "toGateway":
             guard let destVC = segue.destination as? GatewayVC else { return }
+            guard let maskView = sender as? UIView else { return }
+            destVC.maskView = maskView
             destVC.device = selectedDevice
             destVC.popoverPresentationController!.delegate = self
             destVC.popoverPresentationController?.sourceView = view

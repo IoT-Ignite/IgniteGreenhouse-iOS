@@ -14,10 +14,15 @@ class GatewayVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     weak var device: IGDevice!
     var keys = [String]()
+    weak var maskView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         keys = ["Model", "OS Version", "Agent Version", "Network Type", "Public IP", "Local IP"]
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        maskView.removeFromSuperview()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,6 +54,14 @@ class GatewayVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Gateway Specifications"
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
     }
 
 }

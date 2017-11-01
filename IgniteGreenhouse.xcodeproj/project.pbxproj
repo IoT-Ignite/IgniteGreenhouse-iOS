@@ -41,6 +41,8 @@
 		81807E4A1F0AE21E007F9424 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81807E491F0AE21E007F9424 /* MenuCell.swift */; };
 		8182DE7F1F18F72E00821899 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8182DE7E1F18F72E00821899 /* Message.swift */; };
 		819018EA1F105450002BB3A1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819018E91F105450002BB3A1 /* RegisterVC.swift */; };
+		81A0148C1FA9DBDD005F37FB /* SensorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0148A1FA9DBDD005F37FB /* SensorCell.swift */; };
+		81A0148D1FA9DBDD005F37FB /* SensorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A0148B1FA9DBDD005F37FB /* SensorCell.xib */; };
 		81BA1BE21F13AC4B00A54321 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */; };
 		81BA1BE41F13B5E800A54321 /* QRScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */; };
 		81CCBB481F91825E00F0B7EE /* GatewayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CCBB471F91825E00F0B7EE /* GatewayVC.swift */; };
@@ -108,6 +110,8 @@
 		81807E491F0AE21E007F9424 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		8182DE7E1F18F72E00821899 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		819018E91F105450002BB3A1 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		81A0148A1FA9DBDD005F37FB /* SensorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorCell.swift; sourceTree = "<group>"; };
+		81A0148B1FA9DBDD005F37FB /* SensorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SensorCell.xib; sourceTree = "<group>"; };
 		81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerVC.swift; sourceTree = "<group>"; };
 		81CCBB471F91825E00F0B7EE /* GatewayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayVC.swift; sourceTree = "<group>"; };
@@ -232,6 +236,8 @@
 				81807E491F0AE21E007F9424 /* MenuCell.swift */,
 				81E103071F05A148003907F8 /* DeviceCell.swift */,
 				81E103081F05A148003907F8 /* DeviceCell.xib */,
+				81A0148A1FA9DBDD005F37FB /* SensorCell.swift */,
+				81A0148B1FA9DBDD005F37FB /* SensorCell.xib */,
 				816ED1491F1644F000D43718 /* RoundedButton.swift */,
 				812F6C241F1E25F600540F61 /* GraphCell.swift */,
 				812F6C251F1E25F600540F61 /* GraphCell.xib */,
@@ -360,6 +366,7 @@
 			files = (
 				8173C9001F04F62400C0175F /* Launch.storyboard in Resources */,
 				8173C8FD1F04F62400C0175F /* Assets.xcassets in Resources */,
+				81A0148D1FA9DBDD005F37FB /* SensorCell.xib in Resources */,
 				8173C8FB1F04F62400C0175F /* Main.storyboard in Resources */,
 				812F6C281F1E25F600540F61 /* GraphCell.xib in Resources */,
 				812F6C2E1F1E2A7000540F61 /* TableCell.xib in Resources */,
@@ -499,6 +506,7 @@
 				8115FB0F1F19358B003FE91D /* AddNodeVC.swift in Sources */,
 				8173C8F81F04F62400C0175F /* LoginVC.swift in Sources */,
 				816ED14A1F1644F000D43718 /* RoundedButton.swift in Sources */,
+				81A0148C1FA9DBDD005F37FB /* SensorCell.swift in Sources */,
 				813BA71C1F0685F000F25EC0 /* SensorsVC.swift in Sources */,
 				8182DE7F1F18F72E00821899 /* Message.swift in Sources */,
 				81807E481F0AE07B007F9424 /* MenuVC.swift in Sources */,

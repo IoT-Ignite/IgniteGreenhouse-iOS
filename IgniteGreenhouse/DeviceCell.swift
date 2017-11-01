@@ -50,7 +50,10 @@ class DeviceCell: UICollectionViewCell {
     
     @IBAction func infoPressed(sender: UIButton) {
         vc.selectedDevice = device
-        vc.performSegue(withIdentifier: "toGateway", sender: self)
+        let maskView = UIView(frame: vc.view.frame)
+        maskView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        vc.view.addSubview(maskView)
+        vc.performSegue(withIdentifier: "toGateway", sender: maskView)
     }
     
 }
