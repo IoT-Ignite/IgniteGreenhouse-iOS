@@ -41,6 +41,9 @@ class RegisterVC: UIViewController, NVActivityIndicatorViewable {
             return
         } else {
             self.startAnimating(message: "Registering...", type: NVActivityIndicatorType.ballTrianglePath)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+                self.stopAnimating()
+            }
             IgniteAPI.createRestrictedUser(firstName: first, lastName: last, mail: mail, password: password) { (newUser, error) in
                 self.stopAnimating()
                 if let user = newUser {

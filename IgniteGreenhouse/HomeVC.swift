@@ -55,6 +55,9 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode, let sensor = IgniteAPI.currentSensor {
             //refreshControl.beginRefreshing()
             startAnimating(message: "Loading...", type: NVActivityIndicatorType.ballTrianglePath)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+                self.stopAnimating()
+            }
             IgniteAPI.getSensorDataHistory(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, startDate: startDate, endDate: endDate, pageSize: 10) { (sensorData) in
                 self.sensorData = sensorData
                 self.collectionView.reloadData()

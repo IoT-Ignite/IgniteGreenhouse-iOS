@@ -33,6 +33,9 @@ class SensorsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         refreshControl.endRefreshing()
         //refreshControl.beginRefreshing()
         startAnimating(message: "Loading sensors...", type: NVActivityIndicatorType.ballTrianglePath)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+            self.stopAnimating()
+        }
         if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode {
             IgniteAPI.getDeviceSensors(deviceId: device.deviceId, nodeId: node.nodeId, pageSize: 10) { (sensors) in
                 self.sensors = sensors

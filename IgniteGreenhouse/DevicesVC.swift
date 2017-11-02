@@ -44,6 +44,9 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     @objc func refreshData(_ refreshControl: UIRefreshControl) {
         refreshControl.endRefreshing()
         startAnimating(message: "Loading devices...", type: NVActivityIndicatorType.ballTrianglePath)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+            self.stopAnimating()
+        }
         //refreshControl.beginRefreshing()
         IgniteAPI.getDevices { (devices) in
             self.devices = devices
@@ -71,13 +74,17 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         startAnimating(message: "Loading sensors...", type: NVActivityIndicatorType.ballTrianglePath)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+            self.stopAnimating()
+        }
         IgniteAPI.currentDevice = devices[indexPath.row]
         IgniteAPI.getDeviceNodes(deviceId: IgniteAPI.currentDevice!.deviceId, pageSize: 1) { (nodes) in
             self.stopAnimating()
             let i = nodes.index { $0.nodeId == "IgniteGreenhouse" }
             if let i = i {
                 IgniteAPI.currrentNode = nodes[i]
-                self.performSegue(withIdentifier: "toSensors", sender: nil)
+                self.changeVC(withIdentifier: "SensorsVC")
+                //self.performSegue(withIdentifier: "toSensors", sender: nil)
             } else {
                 self.showAlert(title: "Error", message: "This device doesn't have an IgniteGreenhouse node. Please contact support.")
             }

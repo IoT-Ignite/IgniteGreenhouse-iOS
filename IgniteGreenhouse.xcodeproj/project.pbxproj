@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1604AC361A8846C76C800BCE /* Pods_IgniteGreenhouseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED618F7EDAD18439E476786 /* Pods_IgniteGreenhouseTests.framework */; };
 		16C996AD204E5BA78937A913 /* Pods_IgniteGreenhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB864D356C8EDA265C64178 /* Pods_IgniteGreenhouse.framework */; };
 		8115FB0F1F19358B003FE91D /* AddNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8115FB0E1F19358B003FE91D /* AddNodeVC.swift */; };
 		81184B911F124C43008AC214 /* IgniteAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81184B901F124C43008AC214 /* IgniteAPI.framework */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		27BFCD535AB96595BDDF6569 /* Pods-IgniteGreenhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse.debug.xcconfig"; sourceTree = "<group>"; };
+		2DC4AE99631850CE4373944F /* Pods-IgniteGreenhouseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouseTests/Pods-IgniteGreenhouseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8115FB0E1F19358B003FE91D /* AddNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNodeVC.swift; sourceTree = "<group>"; };
 		81184B901F124C43008AC214 /* IgniteAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IgniteAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		811B99C11F18B173001BE70B /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		81E103071F05A148003907F8 /* DeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 		81E103081F05A148003907F8 /* DeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
 		81F24CB21F06323D00F09EB3 /* NodesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodesVC.swift; sourceTree = "<group>"; };
+		879E0AA500993136C9EB127E /* Pods-IgniteGreenhouseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouseTests/Pods-IgniteGreenhouseTests.release.xcconfig"; sourceTree = "<group>"; };
 		CCB864D356C8EDA265C64178 /* Pods_IgniteGreenhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IgniteGreenhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FDE3ABDC3518DABCB6223F /* Pods-IgniteGreenhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse.release.xcconfig"; sourceTree = "<group>"; };
 		FED618F7EDAD18439E476786 /* Pods_IgniteGreenhouseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IgniteGreenhouseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1604AC361A8846C76C800BCE /* Pods_IgniteGreenhouseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +146,8 @@
 			children = (
 				27BFCD535AB96595BDDF6569 /* Pods-IgniteGreenhouse.debug.xcconfig */,
 				F8FDE3ABDC3518DABCB6223F /* Pods-IgniteGreenhouse.release.xcconfig */,
+				2DC4AE99631850CE4373944F /* Pods-IgniteGreenhouseTests.debug.xcconfig */,
+				879E0AA500993136C9EB127E /* Pods-IgniteGreenhouseTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -276,9 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 817D79DE1F1913DA0040EF88 /* Build configuration list for PBXNativeTarget "IgniteGreenhouseTests" */;
 			buildPhases = (
+				563CFBA850A4E63ABBAEAAC7 /* [CP] Check Pods Manifest.lock */,
 				817D79D31F1913DA0040EF88 /* Sources */,
 				817D79D41F1913DA0040EF88 /* Frameworks */,
 				817D79D51F1913DA0040EF88 /* Resources */,
+				A113C73506DEFE738395F1F2 /* [CP] Embed Pods Frameworks */,
+				4A8A587ECBA51DEF272BF045 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -400,6 +409,61 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A8A587ECBA51DEF272BF045 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IgniteGreenhouseTests/Pods-IgniteGreenhouseTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		563CFBA850A4E63ABBAEAAC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IgniteGreenhouseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A113C73506DEFE738395F1F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IgniteGreenhouseTests/Pods-IgniteGreenhouseTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IgniteAPI/IgniteAPI.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IgniteAPI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IgniteGreenhouseTests/Pods-IgniteGreenhouseTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FEFA618AC755F1DE1E73E448 /* [CP] Check Pods Manifest.lock */ = {
@@ -638,6 +702,7 @@
 		};
 		817D79DF1F1913DA0040EF88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DC4AE99631850CE4373944F /* Pods-IgniteGreenhouseTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = HYE6963K2F;
@@ -652,6 +717,7 @@
 		};
 		817D79E01F1913DA0040EF88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 879E0AA500993136C9EB127E /* Pods-IgniteGreenhouseTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = HYE6963K2F;

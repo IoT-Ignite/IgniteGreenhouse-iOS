@@ -22,6 +22,9 @@ class SensorCell: UICollectionViewCell {
     
     func configureCell(sensor: IGSensor, vc: SensorsVC) {
         vc.startAnimating(message: "Loading...", type: NVActivityIndicatorType.ballTrianglePath)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+            vc.stopAnimating()
+        }
         dataLabel.text = ""
         dateLabel.text = ""
         clipsToBounds = false
