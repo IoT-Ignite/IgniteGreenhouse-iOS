@@ -27,12 +27,13 @@ class NodesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     @objc func refreshData(_ refreshControl: UIRefreshControl) {
-        refreshControl.beginRefreshing()
+        refreshControl.endRefreshing()
+        //refreshControl.beginRefreshing()
         if let device = IgniteAPI.currentDevice {
             IgniteAPI.getDeviceNodes(deviceId: device.deviceId, pageSize: 10) { (nodes) in
                 self.nodes = nodes
                 self.tableView.reloadData()
-                refreshControl.endRefreshing()
+                //refreshControl.endRefreshing()
             }
         } else {
             print("Device not yet selected.")

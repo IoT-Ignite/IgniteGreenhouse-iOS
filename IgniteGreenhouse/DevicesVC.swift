@@ -42,13 +42,14 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     }
     
     @objc func refreshData(_ refreshControl: UIRefreshControl) {
+        refreshControl.endRefreshing()
         startAnimating(message: "Loading devices...", type: NVActivityIndicatorType.ballTrianglePath)
-        refreshControl.beginRefreshing()
+        //refreshControl.beginRefreshing()
         IgniteAPI.getDevices { (devices) in
             self.devices = devices
             self.collectionView.reloadData()
             self.stopAnimating()
-            refreshControl.endRefreshing()
+            //refreshControl.endRefreshing()
         }
     }
     

@@ -12,8 +12,6 @@ import IgniteAPI
 
 extension UIViewController {
     
-    //var activityIndicator = NVActivityIndicatorView(type: .)
-    
     func changeVC(withIdentifier: String) {
         if withIdentifier == "Login" {
             IgniteAPI.logout()

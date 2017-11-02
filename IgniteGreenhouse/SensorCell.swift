@@ -8,6 +8,7 @@
 
 import UIKit
 import IgniteAPI
+import NVActivityIndicatorView
 
 class SensorCell: UICollectionViewCell {
 
@@ -20,6 +21,7 @@ class SensorCell: UICollectionViewCell {
     var vc: SensorsVC!
     
     func configureCell(sensor: IGSensor, vc: SensorsVC) {
+        vc.startAnimating(message: "Loading...", type: NVActivityIndicatorType.ballTrianglePath)
         dataLabel.text = ""
         dateLabel.text = ""
         clipsToBounds = false
@@ -43,6 +45,7 @@ class SensorCell: UICollectionViewCell {
             break
         }
         IgniteAPI.getSensorData(deviceId: IgniteAPI.currentDevice!.deviceId, nodeId: "IgniteGreenhouse", sensorId: sensor.sensorId) { (data) in
+            vc.stopAnimating()
             self.dataLabel.text = data.data
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"

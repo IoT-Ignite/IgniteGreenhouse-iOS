@@ -9,6 +9,7 @@
 import UIKit
 import ViewDeck
 import IgniteAPI
+import NVActivityIndicatorView
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        NVActivityIndicatorView.DEFAULT_TYPE = NVActivityIndicatorType.ballTrianglePath
+        NVActivityIndicatorView.DEFAULT_BLOCKER_MESSAGE = "Loading..."
         guard let _ = IgniteAPI.currentUser, let window = window else { return true }
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let loginVC = sb.instantiateViewController(withIdentifier: "LoginVC")

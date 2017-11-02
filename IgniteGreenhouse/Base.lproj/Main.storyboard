@@ -32,20 +32,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenhouse-logo" translatesAutoresizingMaskIntoConstraints="NO" id="b0C-uq-zFu">
-                                <rect key="frame" x="97" y="90" width="180" height="180"/>
+                                <rect key="frame" x="97" y="46" width="180" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="Ph7-wy-fcC"/>
                                     <constraint firstAttribute="width" secondItem="b0C-uq-zFu" secondAttribute="height" multiplier="1:1" id="Xz5-kv-m3c"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="I6W-r8-0Ie">
-                                <rect key="frame" x="32" y="296" width="311" height="30"/>
+                                <rect key="frame" x="32" y="252" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SgS-aK-BGs" userLabel="Password">
-                                <rect key="frame" x="32" y="356" width="311" height="30"/>
+                                <rect key="frame" x="32" y="312" width="311" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="BqH-66-hmg">
                                         <rect key="frame" x="0.0" y="0.0" width="246" height="30"/>
@@ -71,7 +71,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="07o-Ea-YTa" userLabel="Remember">
-                                <rect key="frame" x="111" y="402" width="153.5" height="31"/>
+                                <rect key="frame" x="111" y="358" width="153.5" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember me?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xO-Uj-clt">
                                         <rect key="frame" x="0.0" y="0.0" width="94.5" height="31"/>
@@ -86,7 +86,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="qOp-mI-EqK" userLabel="Login">
-                                <rect key="frame" x="98.5" y="468" width="178" height="38"/>
+                                <rect key="frame" x="98.5" y="424" width="178" height="38"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmO-Rl-Bfc" customClass="RoundedButton" customModule="IgniteGreenhouse" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="178" height="38"/>
@@ -107,7 +107,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ozH-6E-3dQ" userLabel="Register">
-                                <rect key="frame" x="84" y="546" width="206" height="62"/>
+                                <rect key="frame" x="84" y="502" width="206" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhT-de-dO6">
                                         <rect key="frame" x="0.0" y="0.0" width="206" height="26"/>
@@ -159,6 +159,7 @@
                     <navigationItem key="navigationItem" title="Ignite Greenhouse" id="gz8-NZ-17W">
                         <barButtonItem key="backBarButtonItem" title="Back" id="0XX-oH-zQV"/>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="passwordField" destination="BqH-66-hmg" id="B0S-1M-yte"/>
                         <outlet property="rememberSwitch" destination="yd6-XS-Qqa" id="Yae-yF-dEx"/>
@@ -188,14 +189,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenhouse-logo" translatesAutoresizingMaskIntoConstraints="NO" id="owA-7g-PP3">
-                                <rect key="frame" x="97.5" y="84" width="180" height="180"/>
+                                <rect key="frame" x="97.5" y="70" width="180" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="Erc-Nk-qXU"/>
                                     <constraint firstAttribute="width" secondItem="owA-7g-PP3" secondAttribute="height" multiplier="1:1" id="tLl-CK-w04"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="N3d-Js-v0U">
-                                <rect key="frame" x="32" y="290" width="311" height="175"/>
+                                <rect key="frame" x="32" y="276" width="311" height="175"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="rBf-jh-Jzr">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="19"/>
@@ -230,7 +231,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aX6-Kr-iOU" userLabel="Terms of Use">
-                                <rect key="frame" x="112.5" y="495" width="150" height="31"/>
+                                <rect key="frame" x="112.5" y="481" width="150" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkV-Mo-jMz">
                                         <rect key="frame" x="0.0" y="0.0" width="81" height="31"/>
@@ -246,7 +247,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXp-C4-qBt" customClass="RoundedButton" customModule="IgniteGreenhouse" customModuleProvider="target">
-                                <rect key="frame" x="89" y="546" width="197" height="38"/>
+                                <rect key="frame" x="89" y="532" width="197" height="38"/>
                                 <color key="backgroundColor" red="0.20505201819999999" green="0.30198770759999999" blue="0.68478322030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="70" minY="10" maxX="70" maxY="10"/>
                                 <state key="normal" title="Register">
@@ -261,16 +262,30 @@
                                     <action selector="registerPressed:" destination="fnD-tD-WGn" eventType="touchUpInside" id="In0-ga-lM5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhn-7x-CEk">
+                                <rect key="frame" x="24" y="36" width="60" height="60"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="2dV-Fs-d1e"/>
+                                    <constraint firstAttribute="height" constant="60" id="Roe-ZJ-eVx"/>
+                                </constraints>
+                                <state key="normal" image="back_btn"/>
+                                <connections>
+                                    <action selector="dismissPressed:" destination="fnD-tD-WGn" eventType="touchUpInside" id="PBG-Nb-HE4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="N3d-Js-v0U" firstAttribute="leading" secondItem="J2E-hH-0KZ" secondAttribute="leadingMargin" constant="16" id="7hm-5H-Wo4"/>
+                            <constraint firstItem="mhn-7x-CEk" firstAttribute="leading" secondItem="J2E-hH-0KZ" secondAttribute="leadingMargin" constant="8" id="7kD-sG-fTs"/>
                             <constraint firstItem="owA-7g-PP3" firstAttribute="centerX" secondItem="J2E-hH-0KZ" secondAttribute="centerX" id="Buv-48-iZO"/>
                             <constraint firstItem="aX6-Kr-iOU" firstAttribute="top" secondItem="N3d-Js-v0U" secondAttribute="bottom" constant="30" id="GuM-Yw-Nmf"/>
                             <constraint firstItem="AXp-C4-qBt" firstAttribute="top" secondItem="aX6-Kr-iOU" secondAttribute="bottom" constant="20" id="KU1-Dp-QNO"/>
                             <constraint firstItem="N3d-Js-v0U" firstAttribute="top" secondItem="owA-7g-PP3" secondAttribute="bottom" constant="26" id="dCZ-a2-VrA"/>
                             <constraint firstItem="AXp-C4-qBt" firstAttribute="centerX" secondItem="J2E-hH-0KZ" secondAttribute="centerX" id="kW1-rj-KTY"/>
-                            <constraint firstItem="owA-7g-PP3" firstAttribute="top" secondItem="8Ke-dp-tsN" secondAttribute="bottom" constant="20" id="qcf-ZD-vf0"/>
+                            <constraint firstItem="mhn-7x-CEk" firstAttribute="top" secondItem="8Ke-dp-tsN" secondAttribute="bottom" constant="16" id="mae-Ya-gDf"/>
+                            <constraint firstItem="owA-7g-PP3" firstAttribute="top" secondItem="8Ke-dp-tsN" secondAttribute="bottom" constant="50" id="qcf-ZD-vf0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="N3d-Js-v0U" secondAttribute="trailing" constant="16" id="s8c-PZ-IIn"/>
                             <constraint firstItem="aX6-Kr-iOU" firstAttribute="centerX" secondItem="J2E-hH-0KZ" secondAttribute="centerX" id="xEt-mP-lHW"/>
                         </constraints>
@@ -278,6 +293,7 @@
                     <navigationItem key="navigationItem" title="Ignite Greenhouse" id="Lxb-Qk-qTy"/>
                     <connections>
                         <outlet property="brand" destination="NlQ-kN-Lgn" id="okn-ni-Ajg"/>
+                        <outlet property="dismissButton" destination="mhn-7x-CEk" id="it2-bq-Vpf"/>
                         <outlet property="firstName" destination="rBf-jh-Jzr" id="kQa-ei-Qhv"/>
                         <outlet property="lastName" destination="Drh-4C-0VL" id="SlH-4C-acO"/>
                         <outlet property="mail" destination="CXX-ev-ORb" id="IbD-0d-2Yz"/>
@@ -1177,6 +1193,7 @@
     </scenes>
     <resources>
         <image name="animated_19" width="512" height="512"/>
+        <image name="back_btn" width="13" height="21"/>
         <image name="farm_bg" width="455" height="640"/>
         <image name="greenhouse-logo" width="512" height="512"/>
         <image name="help" width="15" height="18"/>

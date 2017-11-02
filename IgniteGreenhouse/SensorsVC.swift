@@ -30,19 +30,20 @@ class SensorsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     }
     
     @objc func refreshData(_ refreshControl: UIRefreshControl) {
-        refreshControl.beginRefreshing()
+        refreshControl.endRefreshing()
+        //refreshControl.beginRefreshing()
         startAnimating(message: "Loading sensors...", type: NVActivityIndicatorType.ballTrianglePath)
         if let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode {
             IgniteAPI.getDeviceSensors(deviceId: device.deviceId, nodeId: node.nodeId, pageSize: 10) { (sensors) in
                 self.sensors = sensors
                 self.collectionView.reloadData()
                 self.stopAnimating()
-                refreshControl.endRefreshing()
+                //refreshControl.endRefreshing()
             }
         } else {
             print("Device or Node not yet selected.")
             self.stopAnimating()
-            refreshControl.endRefreshing()
+            //refreshControl.endRefreshing()
             changeVC(withIdentifier: "HomeVC")
         }
     }

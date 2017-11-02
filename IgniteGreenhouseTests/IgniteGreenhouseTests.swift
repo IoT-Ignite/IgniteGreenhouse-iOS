@@ -12,8 +12,6 @@ import IgniteAPI
 
 class IgniteGreenhouseTests: XCTestCase {
     
-    let APP_KEY = "2bb69ddce24f4021a1c6b77f1ab9302c"
-    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
