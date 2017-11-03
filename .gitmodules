@@ -1,4 +1,0 @@
-[submodule "IgniteAPI"]
-	path = IgniteAPI
-	url = git@github.com:dorukgezici/IgniteAPI.git
-	branch = master
