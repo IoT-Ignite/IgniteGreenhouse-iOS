@@ -124,7 +124,7 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         if let destVC = segue.destination as? QRScannerVC {
             IgniteAPI.login(username: MASTER_MAIL, password: MASTER_PASS) { (master, error) in
                 Utilities.masterUser = master
-                destVC.mode = .node
+                destVC.mode = .sensor
             }
         }
     }

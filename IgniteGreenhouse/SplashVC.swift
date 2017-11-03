@@ -17,7 +17,7 @@ class SplashVC: UIViewController {
         super.viewDidLoad()
         igniteGreenhouseAnimation.animationImages = [UIImage]()
         for i in 0..<19 { igniteGreenhouseAnimation.animationImages!.append(UIImage(named: "animated_\(i)")!) }
-        igniteGreenhouseAnimation.animationDuration = 3
+        igniteGreenhouseAnimation.animationDuration = 4
         igniteGreenhouseAnimation.animationRepeatCount = 1
         igniteGreenhouseAnimation.startAnimating()
         iotIgniteAnimation.animationImages = [UIImage]()
