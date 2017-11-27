@@ -20,7 +20,6 @@ class AddNodeVC: UIViewController {
 //        let node = Node(nodeId: "Deneme", things: [thing])
 //        let msg = Message(nodes: [node])
 ////        IgniteAPI.sendSensorAgentMessage(deviceCode: device.code, nodeId: sensor.nodeId, sensorId: sensor.sensorId, message: msg.json) { (response) in
-////            print(response)
 ////        }
     }
 

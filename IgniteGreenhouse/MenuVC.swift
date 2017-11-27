@@ -52,7 +52,7 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,12 +63,10 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         case 1:
             identifier = "DevicesMenu"
         case 2:
-            identifier = "NodesMenu"
-        case 3:
             identifier = "SensorsMenu"
-        case 4:
+        case 3:
             identifier = "AddMenu"
-        case 5:
+        case 4:
             identifier = "LogoutMenu"
         default:
             identifier = "HomeMenu"
@@ -86,12 +84,10 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         case 1:
             identifier = "DevicesVC"
         case 2:
-            identifier = "NodesVC"
-        case 3:
             identifier = "SensorsVC"
-        case 4:
+        case 3:
             identifier = "QRScannerVC"
-        case 5:
+        case 4:
             identifier = "Login"
         default:
             identifier = "HomeVC"

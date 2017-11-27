@@ -26,7 +26,6 @@ class AddVC: UIViewController {
         let node = Node(nodeId: nodeId, things: [thing])
         let message = Message(nodes: [node])
         IgniteAPI.sendSensorAgentMessage(deviceCode: "d49ffa4e10f1457996d0ae5826fe3cb9", nodeId: "Configurator", sensorId: "Configurator Thing", message: message.json.description) { (messageId) in
-            print(messageId)
         }
     }
     

@@ -13,6 +13,7 @@ import NVActivityIndicatorView
 class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIPopoverPresentationControllerDelegate, UIAdaptivePresentationControllerDelegate, NVActivityIndicatorViewable {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var addDeviceButton: UIBarButtonItem!
     var devices = [IGDevice]()
     var selectedDevice: IGDevice!
     
@@ -46,6 +47,13 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         startAnimating(message: "Loading devices...", type: NVActivityIndicatorType.ballTrianglePath)
         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
             self.stopAnimating()
+            if self.devices.count == 0 {
+                let frame = CGRect(x: self.collectionView.frame.midX - 50, y: self.collectionView.frame.midY - 100, width: 100, height: 100)
+                _ = UIBezierPath.arrow(from: self.collectionView.bounds.origin, to: self.navigationItem.rightBarButtonItem!.accessibilityFrame.origin, tailWidth: 1, headWidth: 2, headLength: 5)
+                let label = UILabel(frame: frame)
+                label.text = "Add new sensor"
+                self.collectionView.addSubview(label)
+            }
         }
         //refreshControl.beginRefreshing()
         IgniteAPI.getDevices { (devices) in
@@ -118,8 +126,9 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
             guard let destVC = segue.destination as? QRScannerVC else { return }
             destVC.mode = .device
         case "toGateway":
-            guard let destVC = segue.destination as? GatewayVC else { return }
+            guard let destVC = segue.destination as? DetailsVC else { return }
             guard let maskView = sender as? UIView else { return }
+            destVC.mode = .gateway
             destVC.maskView = maskView
             destVC.device = selectedDevice
             destVC.popoverPresentationController!.delegate = self

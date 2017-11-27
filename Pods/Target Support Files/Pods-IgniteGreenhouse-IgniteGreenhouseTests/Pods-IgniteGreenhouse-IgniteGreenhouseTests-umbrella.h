@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_IgniteGreenhouseTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_IgniteGreenhouseTestsVersionString[];
+FOUNDATION_EXPORT double Pods_IgniteGreenhouse_IgniteGreenhouseTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_IgniteGreenhouse_IgniteGreenhouseTestsVersionString[];
 

@@ -10,10 +10,11 @@ import UIKit
 import IgniteAPI
 import NVActivityIndicatorView
 
-class SensorsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, NVActivityIndicatorViewable {
+class SensorsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIPopoverPresentationControllerDelegate, UIAdaptivePresentationControllerDelegate, NVActivityIndicatorViewable {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var sensors = [IGSensor]()
+    var selectedSensor: IGSensor!
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -70,7 +71,13 @@ class SensorsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         IgniteAPI.currentSensor = sensors[indexPath.row]
-        changeVC(withIdentifier: "HomeVC")
+        let maskView = UIView(frame: view.frame)
+        maskView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        view.addSubview(maskView)
+        let vc = ChartVC(nibName: "ChartVC", bundle: Bundle.main)
+        vc.modalPresentationStyle = .popover
+        present(vc, animated: true, completion: nil)
+        //changeVC(withIdentifier: "HomeVC")
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -80,6 +87,29 @@ class SensorsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 24
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        switch identifier {
+        case "toSensor":
+            guard let destVC = segue.destination as? DetailsVC else { return }
+            guard let maskView = sender as? UIView else { return }
+            destVC.mode = .sensor
+            destVC.maskView = maskView
+            destVC.sensor = selectedSensor
+            destVC.popoverPresentationController!.delegate = self
+            destVC.popoverPresentationController?.sourceView = view
+            destVC.popoverPresentationController?.sourceRect = CGRect(x: view.frame.midX, y: collectionView.frame.minY, width: 0, height: 0)
+            destVC.preferredContentSize = CGSize(width: view.bounds.width * 0.8, height: collectionView.bounds.height * 0.8)
+        default:
+            break
+        }
+        
     }
     
 }

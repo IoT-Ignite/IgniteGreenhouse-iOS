@@ -17,6 +17,7 @@ class SensorCell: UICollectionViewCell {
     @IBOutlet weak var deviceImage: UIImageView!
     @IBOutlet weak var dataLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var statusImage: UIImageView!
     var sensor: IGSensor!
     var vc: SensorsVC!
     
@@ -39,25 +40,26 @@ class SensorCell: UICollectionViewCell {
         self.vc = vc
         nodeLabel.text = sensor.nodeId
         nameLabel.text = sensor.sensorId
-        switch sensor.sensorId {
-        case "Temperature":
+        switch sensor.sensorType {
+        case "GHT-Temperature":
             deviceImage.image = UIImage(named: "thermometer")
-        case "Humidity":
+        case "GHT-Humidity":
             deviceImage.image = UIImage(named: "humidity")
         default:
             break
         }
         IgniteAPI.getSensorData(deviceId: IgniteAPI.currentDevice!.deviceId, nodeId: "IgniteGreenhouse", sensorId: sensor.sensorId) { (data) in
             vc.stopAnimating()
+            self.statusImage.image = UIImage(named: "online")
             self.dataLabel.text = data.data
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
             let date = Date(timeIntervalSince1970: TimeInterval(data.cloudDate))
             self.dateLabel.text = dateFormatter.string(from: date)
-            switch sensor.sensorId {
-            case "Temperature":
-                self.dataLabel.text! += " C"
-            case "Humidity":
+            switch sensor.sensorType {
+            case "GHT-Temperature":
+                self.dataLabel.text! += " °C"
+            case "GHT-Humidity":
                 self.dataLabel.text! += " %"
             default:
                 break
@@ -65,12 +67,12 @@ class SensorCell: UICollectionViewCell {
         }
     }
     
-//    @IBAction func infoPressed(sender: UIButton) {
-//        vc.selectedDevice = device
-//        let maskView = UIView(frame: vc.view.frame)
-//        maskView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
-//        vc.view.addSubview(maskView)
-//        vc.performSegue(withIdentifier: "toGateway", sender: maskView)
-//    }
+    @IBAction func infoPressed(sender: UIButton) {
+        vc.selectedSensor = sensor
+        let maskView = UIView(frame: vc.view.frame)
+        maskView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        vc.view.addSubview(maskView)
+        vc.performSegue(withIdentifier: "toSensor", sender: maskView)
+    }
 
 }

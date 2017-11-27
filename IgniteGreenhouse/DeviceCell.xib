@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="340" height="40"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihQ-SG-8Yf" userLabel="Info">
-                                <rect key="frame" x="284" y="8" width="40" height="24"/>
+                                <rect key="frame" x="300" y="8" width="40" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="B14-c5-4pP"/>
                                 </constraints>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpz-DL-zcR">
-                                <rect key="frame" x="8" y="8" width="276" height="24"/>
+                                <rect key="frame" x="8" y="8" width="292" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                             <constraint firstItem="ihQ-SG-8Yf" firstAttribute="centerY" secondItem="4vd-t1-JaD" secondAttribute="centerY" id="fq0-tb-RZ4"/>
                             <constraint firstItem="ihQ-SG-8Yf" firstAttribute="leading" secondItem="hpz-DL-zcR" secondAttribute="trailing" id="sr1-8d-ica"/>
                             <constraint firstItem="ihQ-SG-8Yf" firstAttribute="top" secondItem="4vd-t1-JaD" secondAttribute="topMargin" id="wwR-ef-eir"/>
-                            <constraint firstAttribute="trailing" secondItem="ihQ-SG-8Yf" secondAttribute="trailing" constant="16" id="z2c-dd-nYn"/>
+                            <constraint firstAttribute="trailing" secondItem="ihQ-SG-8Yf" secondAttribute="trailing" id="z2c-dd-nYn"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wP-fy-9ks" userLabel="Id">
