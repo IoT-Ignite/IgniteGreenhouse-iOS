@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="340" height="182"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vd-t1-JaD" userLabel="Window">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vd-t1-JaD" userLabel="Window">
                         <rect key="frame" x="0.0" y="0.0" width="340" height="40"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihQ-SG-8Yf" userLabel="Info">

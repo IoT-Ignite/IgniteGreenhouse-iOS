@@ -366,11 +366,11 @@
 		000FF30551758244C2D88095296DD061 /* BarLineScatterCandleBubbleRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarLineScatterCandleBubbleRenderer.swift; path = Source/Charts/Renderers/BarLineScatterCandleBubbleRenderer.swift; sourceTree = "<group>"; };
 		00AB02341673C682C86667CEEDACDA4A /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallZigZagDeflect.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallZigZagDeflect.swift; sourceTree = "<group>"; };
 		00FC71D28532D99B7BC95EEBFF5AD514 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		0300F7BB71BE39A81EA1735816975914 /* IIViewDeckDefaultTransitionAnimator.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IIViewDeckDefaultTransitionAnimator.mm; path = ViewDeck/Private/IIViewDeckDefaultTransitionAnimator.mm; sourceTree = "<group>"; };
+		0300F7BB71BE39A81EA1735816975914 /* IIViewDeckDefaultTransitionAnimator.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = IIViewDeckDefaultTransitionAnimator.mm; path = ViewDeck/Private/IIViewDeckDefaultTransitionAnimator.mm; sourceTree = "<group>"; };
 		0371C6AF3CCC162B8B517973388194F7 /* RadarChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartView.swift; path = Source/Charts/Charts/RadarChartView.swift; sourceTree = "<group>"; };
 		037AC1C85BAC95533A2910767AB48E14 /* IPieChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IPieChartDataSet.swift; path = Source/Charts/Data/Interfaces/IPieChartDataSet.swift; sourceTree = "<group>"; };
 		0544566162282705DCD2F40EFFCA4E14 /* NVActivityIndicatorAnimationBallBeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallBeat.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallBeat.swift; sourceTree = "<group>"; };
-		07816881DB840D8255D8DDDE6DD71A0A /* Pods-IgniteGreenhouse-IgniteGreenhouseTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-IgniteGreenhouse-IgniteGreenhouseTests.modulemap"; sourceTree = "<group>"; };
+		07816881DB840D8255D8DDDE6DD71A0A /* Pods-IgniteGreenhouse-IgniteGreenhouseTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-IgniteGreenhouse-IgniteGreenhouseTests.modulemap"; sourceTree = "<group>"; };
 		07B9B9BC712541BF7E3CF72C96B7BBA9 /* IIDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IIDelegateProxy.m; path = ViewDeck/Private/IIDelegateProxy.m; sourceTree = "<group>"; };
 		08C0B1E6DA088D44E211B9B7DDB3932D /* NVActivityIndicatorAnimationBallScaleMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleMultiple.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleMultiple.swift; sourceTree = "<group>"; };
 		097800E09481D458359562357792802D /* BubbleChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleChartData.swift; path = Source/Charts/Data/Implementations/Standard/BubbleChartData.swift; sourceTree = "<group>"; };
@@ -403,7 +403,7 @@
 		225CDF1B6C1D7F9E5D56B5CCD51DA19F /* DefaultAxisValueFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultAxisValueFormatter.swift; path = Source/Charts/Formatters/DefaultAxisValueFormatter.swift; sourceTree = "<group>"; };
 		2299F16762904E69C7D5CA1E35DDFCB2 /* ChevronDownShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChevronDownShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/ChevronDownShapeRenderer.swift; sourceTree = "<group>"; };
 		24F1F8C033FED6E385BE23C4F578265B /* ViewDeck.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ViewDeck.h; path = ViewDeck/ViewDeck.h; sourceTree = "<group>"; };
-		25A499A6641F710CB68B5D5285CAF9DC /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A499A6641F710CB68B5D5285CAF9DC /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		265C9774BE60EB97407BEECA7FE7AAA4 /* NVActivityIndicatorAnimationBallScale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScale.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScale.swift; sourceTree = "<group>"; };
 		268057DE01BD8C55152C947DB463FF91 /* CombinedChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedChartView.swift; path = Source/Charts/Charts/CombinedChartView.swift; sourceTree = "<group>"; };
 		26C99B9500CDD11681998876D17C49DF /* IIViewDeckTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IIViewDeckTransitioning.h; path = ViewDeck/IIViewDeckTransitioning.h; sourceTree = "<group>"; };
@@ -431,7 +431,7 @@
 		3C4DE945904BB91B290813D38F3E5F2A /* NVActivityIndicatorAnimationBallPulseSync.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulseSync.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulseSync.swift; sourceTree = "<group>"; };
 		3D5A3EBEF1853D72144E56604EB410B9 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		3E05DF68B2C155F39FD24A37334B430A /* Pods-IgniteGreenhouse-IgniteGreenhouseTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IgniteGreenhouse-IgniteGreenhouseTests-umbrella.h"; sourceTree = "<group>"; };
-		3EC291AE8A2898131A994CAC1F8FBA47 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		3EC291AE8A2898131A994CAC1F8FBA47 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		3EC73DFAFBB053B8E95141AB757CEB8B /* IIViewDeckDefaultTransitionAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IIViewDeckDefaultTransitionAnimator.h; path = ViewDeck/Private/IIViewDeckDefaultTransitionAnimator.h; sourceTree = "<group>"; };
 		3EC7ED4B9AB7ECD8C51E333263F038D1 /* NVActivityIndicatorAnimationBallGridBeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallGridBeat.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallGridBeat.swift; sourceTree = "<group>"; };
 		3FF8C1B96185DC8B88EAA0A6D4416866 /* NVActivityIndicatorAnimationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationDelegate.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorAnimationDelegate.swift; sourceTree = "<group>"; };
@@ -444,7 +444,7 @@
 		46D7996063B5949FA2010A5703105A89 /* Renderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Renderer.swift; path = Source/Charts/Renderers/Renderer.swift; sourceTree = "<group>"; };
 		49094B1DE0845B197F5A434F95395666 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		4BCA4A8E7568100FBE75C9B82D190B92 /* IGNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IGNode.swift; path = IgniteAPI/Classes/Model/IGNode.swift; sourceTree = "<group>"; };
-		4BD060F5E010DC7B1D5080469E4A7496 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BD060F5E010DC7B1D5080469E4A7496 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3A71C7754B888782963A013D0ACC53 /* IFillFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IFillFormatter.swift; path = Source/Charts/Formatters/IFillFormatter.swift; sourceTree = "<group>"; };
 		4C7811026FB29BA0D7641FF2C1438009 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		4D62E34127CB5B7D6D71DA5BA5A99AF5 /* DefaultFillFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultFillFormatter.swift; path = Source/Charts/Formatters/DefaultFillFormatter.swift; sourceTree = "<group>"; };
@@ -457,7 +457,7 @@
 		55E4E7BF51437AFB35A19B43EA632768 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5625A81CFC77D6BFE23E728A1FEFF147 /* NVActivityIndicatorAnimationBallRotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallRotate.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallRotate.swift; sourceTree = "<group>"; };
 		5744A1A3191E8B8A56FEE7BF06358889 /* IGSensorData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IGSensorData.swift; path = IgniteAPI/Classes/Model/IGSensorData.swift; sourceTree = "<group>"; };
-		586D900F969308CA5B7C0C4293D465E1 /* Pods-IgniteGreenhouse.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-IgniteGreenhouse.modulemap"; sourceTree = "<group>"; };
+		586D900F969308CA5B7C0C4293D465E1 /* Pods-IgniteGreenhouse.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-IgniteGreenhouse.modulemap"; sourceTree = "<group>"; };
 		58A0371A7610C39AEC9E9ED4BA2266B9 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		5906A01EEBD5A1126BCF6E97363B01B6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		594F486A5F09647C0C0F15C610DC171B /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = IgniteAPI/Classes/Utilities/Constants.swift; sourceTree = "<group>"; };
@@ -480,7 +480,7 @@
 		67F30A778503CEFCC1E23545BEA4074D /* NVActivityIndicatorView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NVActivityIndicatorView-dummy.m"; sourceTree = "<group>"; };
 		684CB641F40478FC761D5D05F76121B6 /* UIViewController+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Private.h"; path = "ViewDeck/Private/UIViewController+Private.h"; sourceTree = "<group>"; };
 		6930EC96AB1D2B918FD12BAC1F8B34A7 /* MarkerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkerView.swift; path = Source/Charts/Components/MarkerView.swift; sourceTree = "<group>"; };
-		6957E5234E15D3A85F47F94EB0C3DDB1 /* ViewDeck.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ViewDeck.modulemap; sourceTree = "<group>"; };
+		6957E5234E15D3A85F47F94EB0C3DDB1 /* ViewDeck.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ViewDeck.modulemap; sourceTree = "<group>"; };
 		69A5ED4846BCD80208110D34FC42EAC3 /* IGUser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IGUser.swift; path = IgniteAPI/Classes/Model/IGUser.swift; sourceTree = "<group>"; };
 		6BA5E33957CC1AC7A5A98614B83133DF /* NVActivityIndicatorView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NVActivityIndicatorView.xcconfig; sourceTree = "<group>"; };
 		6BF2279122139C21BAAA0CBA79370CB2 /* IgniteAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IgniteAPI-dummy.m"; sourceTree = "<group>"; };
@@ -510,7 +510,7 @@
 		7EB123D62D7CE276AD53D7230A657F17 /* ChartDataEntryBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartDataEntryBase.swift; path = Source/Charts/Data/Implementations/Standard/ChartDataEntryBase.swift; sourceTree = "<group>"; };
 		7F3C62EF60206729013A35E9A2588005 /* IIViewDeckController+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IIViewDeckController+Private.h"; path = "ViewDeck/IIViewDeckController+Private.h"; sourceTree = "<group>"; };
 		80A4A94168DAF254F1499B77C1868B67 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallClipRotatePulse.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotatePulse.swift; sourceTree = "<group>"; };
-		80F2512CA0AAA33279A72A6332488FDE /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		80F2512CA0AAA33279A72A6332488FDE /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		8225BF1E47BE00CD359E3830678E95D4 /* CandleChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleChartDataProvider.swift; path = Source/Charts/Interfaces/CandleChartDataProvider.swift; sourceTree = "<group>"; };
 		826438A3E172CA9A99537477D8F9B4DF /* UIViewController+IIViewDeckAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+IIViewDeckAdditions.m"; path = "ViewDeck/UIViewController+IIViewDeckAdditions.m"; sourceTree = "<group>"; };
 		82CB41743DABE2A28429301B6390D592 /* ChartBaseDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartBaseDataSet.swift; path = Source/Charts/Data/Implementations/ChartBaseDataSet.swift; sourceTree = "<group>"; };
@@ -524,16 +524,16 @@
 		8A2DD2E49ED6A64377B848379C648005 /* PieHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieHighlighter.swift; path = Source/Charts/Highlight/PieHighlighter.swift; sourceTree = "<group>"; };
 		8B003C759FB581E6733D29AB937D17E3 /* NVActivityIndicatorAnimationBlank.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBlank.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBlank.swift; sourceTree = "<group>"; };
 		8C46B991C9CF21F533B806D01BDE647F /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Source/Charts/Animation/Animator.swift; sourceTree = "<group>"; };
-		8CF2E8A180FE865208C71D3289B4B77F /* Pods_IgniteGreenhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IgniteGreenhouse.framework; path = "Pods-IgniteGreenhouse.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CF2E8A180FE865208C71D3289B4B77F /* Pods_IgniteGreenhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IgniteGreenhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90491DBBC66C9E177BCA06DC0BB5B829 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationSemiCircleSpin.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationSemiCircleSpin.swift; sourceTree = "<group>"; };
 		91ACFD74E32B86D4F1A1673846CB9ECC /* NVActivityIndicatorAnimationBallGridPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallGridPulse.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallGridPulse.swift; sourceTree = "<group>"; };
 		930EC0A2A2242A0813EB042C00E8D295 /* NVActivityIndicatorAnimationLineScalePulseOut.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScalePulseOut.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScalePulseOut.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94D8A89E2E6246149B9B4BCE28128B0C /* IgniteAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IgniteAPI.framework; path = IgniteAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		954C3B2B7E48CA41A537C6543BE028E5 /* Charts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Charts.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94D8A89E2E6246149B9B4BCE28128B0C /* IgniteAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IgniteAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		954C3B2B7E48CA41A537C6543BE028E5 /* Charts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Charts.modulemap; sourceTree = "<group>"; };
 		96337FB7351B7D55694F09F4606F4EE8 /* NVActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorPresenter.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Presenter/NVActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
 		969505CA8FC6285FB492C35C3DD372ED /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		986E2AF31E1F24E494EE442F69792E30 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Charts.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		986E2AF31E1F24E494EE442F69792E30 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAADA3D97ABDB3494041CA7E4549044 /* Charts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Charts-umbrella.h"; sourceTree = "<group>"; };
 		9D7B4C7AF37DF170C33328DAC42FAE55 /* Pods-IgniteGreenhouse-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IgniteGreenhouse-acknowledgements.plist"; sourceTree = "<group>"; };
 		9DF4D1E1E781D917A7042587B154465F /* Pods-IgniteGreenhouse-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IgniteGreenhouse-dummy.m"; sourceTree = "<group>"; };
@@ -571,10 +571,10 @@
 		BF37245458C9D36E105D629DE7D8FF53 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		BFFA21ECD1DA7BD569C705923F8EF008 /* NVActivityIndicatorView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NVActivityIndicatorView-umbrella.h"; sourceTree = "<group>"; };
 		C00686D08218A889EC061872927882FF /* ILineScatterCandleRadarChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ILineScatterCandleRadarChartDataSet.swift; path = Source/Charts/Data/Interfaces/ILineScatterCandleRadarChartDataSet.swift; sourceTree = "<group>"; };
-		C1A00FF046F6B10CFD3813BA9D54AE50 /* IIViewDeckController.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IIViewDeckController.mm; path = ViewDeck/IIViewDeckController.mm; sourceTree = "<group>"; };
+		C1A00FF046F6B10CFD3813BA9D54AE50 /* IIViewDeckController.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = IIViewDeckController.mm; path = ViewDeck/IIViewDeckController.mm; sourceTree = "<group>"; };
 		C1D5326B326B30915DD560B7723F676D /* NVActivityIndicatorAnimationBallPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulse.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulse.swift; sourceTree = "<group>"; };
 		C22D0CFA22F775B0A273D5008D371769 /* IGEnduser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IGEnduser.swift; path = IgniteAPI/Classes/Model/IGEnduser.swift; sourceTree = "<group>"; };
-		C27E8F6F25E49C0655630E797FE6A5F4 /* Pods_IgniteGreenhouse_IgniteGreenhouseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IgniteGreenhouse_IgniteGreenhouseTests.framework; path = "Pods-IgniteGreenhouse-IgniteGreenhouseTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C27E8F6F25E49C0655630E797FE6A5F4 /* Pods_IgniteGreenhouse_IgniteGreenhouseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IgniteGreenhouse_IgniteGreenhouseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C417747722A1CC5556DA38BFBC4790B5 /* NVActivityIndicatorAnimationBallRotateChase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallRotateChase.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallRotateChase.swift; sourceTree = "<group>"; };
 		C56B16DE56509DBDB73A378107F2AEA7 /* RadarChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartData.swift; path = Source/Charts/Data/Implementations/Standard/RadarChartData.swift; sourceTree = "<group>"; };
 		C624D6AB6DE05C53AA0469168D4A7C5B /* Legend.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Legend.swift; path = Source/Charts/Components/Legend.swift; sourceTree = "<group>"; };
@@ -586,13 +586,13 @@
 		CB5BD9F9E73CC6B2021330D0A9E07A96 /* ScatterChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterChartData.swift; path = Source/Charts/Data/Implementations/Standard/ScatterChartData.swift; sourceTree = "<group>"; };
 		CC44ABFC3C27A0A0846400A0C8CF7D3C /* LineScatterCandleRadarRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineScatterCandleRadarRenderer.swift; path = Source/Charts/Renderers/LineScatterCandleRadarRenderer.swift; sourceTree = "<group>"; };
 		CC80E22C8371C81BEAE7B5E480D153A3 /* IgniteAPI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IgniteAPI-prefix.pch"; sourceTree = "<group>"; };
-		CD86F6CB210CFBDE23A3703B796E54A4 /* IIViewDeckTransition.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IIViewDeckTransition.mm; path = ViewDeck/Private/IIViewDeckTransition.mm; sourceTree = "<group>"; };
-		CDCB10D785C991CF59448738DA482339 /* NVActivityIndicatorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = NVActivityIndicatorView.modulemap; sourceTree = "<group>"; };
+		CD86F6CB210CFBDE23A3703B796E54A4 /* IIViewDeckTransition.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = IIViewDeckTransition.mm; path = ViewDeck/Private/IIViewDeckTransition.mm; sourceTree = "<group>"; };
+		CDCB10D785C991CF59448738DA482339 /* NVActivityIndicatorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NVActivityIndicatorView.modulemap; sourceTree = "<group>"; };
 		CE84637691B4908CCDBA7104B2A3005C /* ILineChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ILineChartDataSet.swift; path = Source/Charts/Data/Interfaces/ILineChartDataSet.swift; sourceTree = "<group>"; };
 		CFB9DC8EEE38CB4F0562505B67A8BAB8 /* IBarLineScatterCandleBubbleChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IBarLineScatterCandleBubbleChartDataSet.swift; path = Source/Charts/Data/Interfaces/IBarLineScatterCandleBubbleChartDataSet.swift; sourceTree = "<group>"; };
 		D21563C57CA21B28B35A0750F614DFDA /* IShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/IShapeRenderer.swift; sourceTree = "<group>"; };
 		D22AB92CB012E85CCF1CB4402B81B72E /* ViewDeck-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ViewDeck-umbrella.h"; sourceTree = "<group>"; };
-		D23F780CB7F30147D283D68ED12B63A1 /* ViewDeck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ViewDeck.framework; path = ViewDeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D23F780CB7F30147D283D68ED12B63A1 /* ViewDeck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewDeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2999D0F20935EA41453A03F99F0D542 /* IValueFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IValueFormatter.swift; path = Source/Charts/Formatters/IValueFormatter.swift; sourceTree = "<group>"; };
 		D31C8C01718D48862EDE6289AB08681A /* ChartColorTemplates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartColorTemplates.swift; path = Source/Charts/Utils/ChartColorTemplates.swift; sourceTree = "<group>"; };
 		D4DA32045D6E909D0F618418EFEA8C79 /* CandleStickChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleStickChartRenderer.swift; path = Source/Charts/Renderers/CandleStickChartRenderer.swift; sourceTree = "<group>"; };
@@ -625,7 +625,7 @@
 		E8A1897BE3F4838A3FD48A423CEB40B6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA2FA0F458BBA8ACB54DF8D7F8F59B51 /* ChartAnimationEasing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartAnimationEasing.swift; path = Source/Charts/Animation/ChartAnimationEasing.swift; sourceTree = "<group>"; };
 		EB2D5E967E0B64325AD27093C2108F0A /* ILineRadarChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ILineRadarChartDataSet.swift; path = Source/Charts/Data/Interfaces/ILineRadarChartDataSet.swift; sourceTree = "<group>"; };
-		EBF8D6E0840B362BC0BD0ABE8B71BD13 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NVActivityIndicatorView.framework; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBF8D6E0840B362BC0BD0ABE8B71BD13 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFB9AA00CC2B925BF6B513AE3FACED3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EC219018BACF328908FBEE80A98820F2 /* CircleShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/CircleShapeRenderer.swift; sourceTree = "<group>"; };
 		EC81E960CB402F2A4E23F11808991C54 /* IgniteAPI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IgniteAPI.xcconfig; sourceTree = "<group>"; };
@@ -647,7 +647,7 @@
 		F955495AF75E850F624C9E0B727D7DC5 /* IGLink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IGLink.swift; path = IgniteAPI/Classes/Model/IGLink.swift; sourceTree = "<group>"; };
 		F96BB930C4D6BA15C4C323AEA8C864DB /* BubbleChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleChartRenderer.swift; path = Source/Charts/Renderers/BubbleChartRenderer.swift; sourceTree = "<group>"; };
 		F9F91F31FC25760B081ED1813AA1DBCA /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		FA3041514313A60CC0F56FCE6E15C77A /* IgniteAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = IgniteAPI.modulemap; sourceTree = "<group>"; };
+		FA3041514313A60CC0F56FCE6E15C77A /* IgniteAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = IgniteAPI.modulemap; sourceTree = "<group>"; };
 		FABD4017EA148D35EC2F205339035D55 /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorViewable.swift; path = NVActivityIndicatorView/NVActivityIndicatorView/Presenter/NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
 		FAFE045DF18C509E59E3E5E0B74199DC /* ChartUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartUtils.swift; path = Source/Charts/Utils/ChartUtils.swift; sourceTree = "<group>"; };
 		FB81E6638C925918846B195771399C54 /* ChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/ChartDataSet.swift; sourceTree = "<group>"; };
@@ -753,7 +753,6 @@
 				6D2E12CBAD2CE5D4A9E4A0BBD44D6BF8 /* Validation.swift */,
 				4D06473B02628A11C7A00935FAA9D4A4 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1015,7 +1014,6 @@
 				C9757C91946A52CF6ED894741BE75E7A /* Presenter */,
 				F473BD7803844BEAEC339F681245F172 /* Support Files */,
 			);
-			name = NVActivityIndicatorView;
 			path = NVActivityIndicatorView;
 			sourceTree = "<group>";
 		};
@@ -1126,7 +1124,6 @@
 				24F1F8C033FED6E385BE23C4F578265B /* ViewDeck.h */,
 				45C2185DDA1FBEAC4AEEBE1C401B9E02 /* Support Files */,
 			);
-			name = ViewDeck;
 			path = ViewDeck;
 			sourceTree = "<group>";
 		};
@@ -1136,7 +1133,6 @@
 				6964F956F0D47F0694BC2FCEB03D769B /* Core */,
 				F2EAC253BE9D591179C2C1EFFF20DB3E /* Support Files */,
 			);
-			name = Charts;
 			path = Charts;
 			sourceTree = "<group>";
 		};
@@ -1146,7 +1142,6 @@
 				4C7811026FB29BA0D7641FF2C1438009 /* SwiftyJSON.swift */,
 				CB4BB14E1EB926110C576F9D40EA6464 /* Support Files */,
 			);
-			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
@@ -1169,7 +1164,6 @@
 				69A5ED4846BCD80208110D34FC42EAC3 /* IGUser.swift */,
 				24D87E4E745CD8724A669A1ACC4E5C50 /* Support Files */,
 			);
-			name = IgniteAPI;
 			path = IgniteAPI;
 			sourceTree = "<group>";
 		};
@@ -1450,7 +1444,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0910;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2171,7 +2165,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -2179,14 +2175,20 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -2200,6 +2202,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2467,7 +2470,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -2475,15 +2480,21 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
