@@ -33,6 +33,15 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         }
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIDevice.current.orientation.isLandscape {
+            print("Landscape")
+            refreshData(self.refreshControl)
+        } else {
+            print("Portrait")
+        }
+    }
+    
     func registerNibs() {
         let nib = UINib(nibName: "GraphCell", bundle: nil)
         let nib2 = UINib(nibName: "TableCell", bundle: nil)

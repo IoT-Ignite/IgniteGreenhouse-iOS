@@ -71,8 +71,8 @@ class SensorsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         IgniteAPI.currentSensor = sensors[indexPath.row]
-        changeVC(withIdentifier: "HomeVC")
-        return
+        //changeVC(withIdentifier: "HomeVC")
+        //return
         let maskView = UIView(frame: view.frame)
         maskView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         view.addSubview(maskView)

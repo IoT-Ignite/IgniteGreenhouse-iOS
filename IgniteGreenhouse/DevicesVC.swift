@@ -88,7 +88,7 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         IgniteAPI.currentDevice = devices[indexPath.row]
         IgniteAPI.getDeviceNodes(deviceId: IgniteAPI.currentDevice!.deviceId, pageSize: 1) { (nodes) in
             self.stopAnimating()
-            let i = nodes.index { $0.nodeId == "IgniteGreenhouse" }
+            let i = nodes.index { $0.nodeId == BRAND }
             if let i = i {
                 IgniteAPI.currrentNode = nodes[i]
                 self.changeVC(withIdentifier: "SensorsVC")
@@ -118,7 +118,7 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         case "toSensors":
             guard let destVC = segue.destination as? SensorsVC,
                 let deviceId = IgniteAPI.currentDevice?.deviceId else { return }
-            IgniteAPI.getDeviceSensors(deviceId: deviceId, nodeId: "IgniteGreenhouse", pageSize: 1, completion: { (sensors) in
+            IgniteAPI.getDeviceSensors(deviceId: deviceId, nodeId: BRAND, pageSize: 1, completion: { (sensors) in
                 destVC.sensors = sensors
                 destVC.refreshData(destVC.refreshControl)
             })

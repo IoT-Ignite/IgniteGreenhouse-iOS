@@ -48,7 +48,7 @@ class SensorCell: UICollectionViewCell {
         default:
             break
         }
-        IgniteAPI.getSensorData(deviceId: IgniteAPI.currentDevice!.deviceId, nodeId: "IgniteGreenhouse", sensorId: sensor.sensorId) { (data) in
+        IgniteAPI.getSensorData(deviceId: IgniteAPI.currentDevice!.deviceId, nodeId: BRAND, sensorId: sensor.sensorId) { (data) in
             vc.stopAnimating()
             self.statusImage.image = UIImage(named: "online")
             self.dataLabel.text = data.data

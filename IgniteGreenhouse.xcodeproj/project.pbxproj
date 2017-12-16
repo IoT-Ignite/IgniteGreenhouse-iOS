@@ -23,7 +23,7 @@
 		813BA71C1F0685F000F25EC0 /* SensorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813BA71B1F0685F000F25EC0 /* SensorsVC.swift */; };
 		81444B3B1FA4FEC80057E049 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81444B3A1FA4FEC80057E049 /* SplashVC.swift */; };
 		816ED1431F16440E00D43718 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816ED1421F16440E00D43718 /* Extensions.swift */; };
-		816ED1481F1644C700D43718 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816ED1471F1644C700D43718 /* Constants.swift */; };
+		816ED1481F1644C700D43718 /* SecretConstants.swift.template in Sources */ = {isa = PBXBuildFile; fileRef = 816ED1471F1644C700D43718 /* SecretConstants.swift.template */; };
 		816ED14A1F1644F000D43718 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816ED1491F1644F000D43718 /* RoundedButton.swift */; };
 		8173C8F61F04F62400C0175F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173C8F51F04F62400C0175F /* AppDelegate.swift */; };
 		8173C8F81F04F62400C0175F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173C8F71F04F62400C0175F /* LoginVC.swift */; };
@@ -43,6 +43,8 @@
 		819018EA1F105450002BB3A1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819018E91F105450002BB3A1 /* RegisterVC.swift */; };
 		81A0148C1FA9DBDD005F37FB /* SensorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0148A1FA9DBDD005F37FB /* SensorCell.swift */; };
 		81A0148D1FA9DBDD005F37FB /* SensorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A0148B1FA9DBDD005F37FB /* SensorCell.xib */; };
+		81A20A101FE58D760004C5E1 /* SecretConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A20A0F1FE58D760004C5E1 /* SecretConstants.swift */; };
+		81A20A121FE58E9B0004C5E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A20A111FE58E9B0004C5E1 /* Constants.swift */; };
 		81BA1BE21F13AC4B00A54321 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */; };
 		81BA1BE41F13B5E800A54321 /* QRScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */; };
 		81CCBB481F91825E00F0B7EE /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CCBB471F91825E00F0B7EE /* Details.swift */; };
@@ -83,7 +85,7 @@
 		813BA71B1F0685F000F25EC0 /* SensorsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorsVC.swift; sourceTree = "<group>"; };
 		81444B3A1FA4FEC80057E049 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		816ED1421F16440E00D43718 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		816ED1471F1644C700D43718 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		816ED1471F1644C700D43718 /* SecretConstants.swift.template */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SecretConstants.swift.template; sourceTree = "<group>"; };
 		816ED1491F1644F000D43718 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		8173C8F21F04F62400C0175F /* IgniteGreenhouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IgniteGreenhouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8173C8F51F04F62400C0175F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,8 @@
 		819018E91F105450002BB3A1 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		81A0148A1FA9DBDD005F37FB /* SensorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorCell.swift; sourceTree = "<group>"; };
 		81A0148B1FA9DBDD005F37FB /* SensorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SensorCell.xib; sourceTree = "<group>"; };
+		81A20A0F1FE58D760004C5E1 /* SecretConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretConstants.swift; sourceTree = "<group>"; };
+		81A20A111FE58E9B0004C5E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerVC.swift; sourceTree = "<group>"; };
 		81CCBB471F91825E00F0B7EE /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
@@ -246,12 +250,14 @@
 			isa = PBXGroup;
 			children = (
 				811B99C11F18B173001BE70B /* Utilities.swift */,
-				816ED1471F1644C700D43718 /* Constants.swift */,
+				816ED1471F1644C700D43718 /* SecretConstants.swift.template */,
 				816ED1421F16440E00D43718 /* Extensions.swift */,
 				8173C8F51F04F62400C0175F /* AppDelegate.swift */,
 				8173C8FC1F04F62400C0175F /* Assets.xcassets */,
 				8173C8FE1F04F62400C0175F /* Launch.storyboard */,
 				8173C9011F04F62400C0175F /* Info.plist */,
+				81A20A0F1FE58D760004C5E1 /* SecretConstants.swift */,
+				81A20A111FE58E9B0004C5E1 /* Constants.swift */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -509,9 +515,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				81D8BF141F1F506C004F016B /* AddVC.swift in Sources */,
+				81A20A101FE58D760004C5E1 /* SecretConstants.swift in Sources */,
 				817D79D01F190F120040EF88 /* Thing.swift in Sources */,
 				8115FB0F1F19358B003FE91D /* AddNodeVC.swift in Sources */,
 				8173C8F81F04F62400C0175F /* LoginVC.swift in Sources */,
+				81A20A121FE58E9B0004C5E1 /* Constants.swift in Sources */,
 				813544C31FCB7ABD00A2FC5C /* ChartVC.swift in Sources */,
 				816ED14A1F1644F000D43718 /* RoundedButton.swift in Sources */,
 				81A0148C1FA9DBDD005F37FB /* SensorCell.swift in Sources */,
@@ -530,7 +538,7 @@
 				81F24CB31F06323D00F09EB3 /* NodesVC.swift in Sources */,
 				812F6C2C1F1E2A7000540F61 /* TableCell.swift in Sources */,
 				812F6C261F1E25F600540F61 /* GraphCell.swift in Sources */,
-				816ED1481F1644C700D43718 /* Constants.swift in Sources */,
+				816ED1481F1644C700D43718 /* SecretConstants.swift.template in Sources */,
 				81444B3B1FA4FEC80057E049 /* SplashVC.swift in Sources */,
 				81CCBB481F91825E00F0B7EE /* Details.swift in Sources */,
 				812F6C221F1E244C00540F61 /* HomeVC.swift in Sources */,
