@@ -50,11 +50,15 @@ class SensorCell: UICollectionViewCell {
         }
         IgniteAPI.getSensorData(deviceId: IgniteAPI.currentDevice!.deviceId, nodeId: BRAND, sensorId: sensor.sensorId) { (data) in
             vc.stopAnimating()
-            self.statusImage.image = UIImage(named: "online")
             self.dataLabel.text = data.data
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
             let date = Date(timeIntervalSince1970: TimeInterval(data.cloudDate))
+            if abs(date.timeIntervalSinceNow) < 300 { // Less than 5 minutes
+                self.statusImage.image = UIImage(named: "online")
+            } else {
+                self.statusImage.image = UIImage(named: "offline")
+            }
             self.dateLabel.text = dateFormatter.string(from: date)
             switch sensor.sensorType {
             case "GHT-Temperature":

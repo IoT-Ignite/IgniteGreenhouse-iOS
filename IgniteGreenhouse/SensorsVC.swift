@@ -71,13 +71,10 @@ class SensorsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         IgniteAPI.currentSensor = sensors[indexPath.row]
-        //changeVC(withIdentifier: "HomeVC")
-        //return
-        let maskView = UIView(frame: view.frame)
-        maskView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
-        view.addSubview(maskView)
         let vc = ChartVC(nibName: "ChartVC", bundle: Bundle.main)
-        vc.modalPresentationStyle = .popover
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.view.backgroundColor = vc.view.backgroundColor?.withAlphaComponent(0.4)
+        vc.rootVC = self
         present(vc, animated: true, completion: nil)
     }
     

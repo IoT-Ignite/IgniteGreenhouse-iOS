@@ -13,37 +13,53 @@ import IgniteAPI
 class ChartVC: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var lineChartView: LineChartView!
-    var reading_a = Array(0...99)
-    var reading_b = Array(0...99)
+    @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var homeButton: UIButton!
+    weak var rootVC: SensorsVC!
+    var i = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        lineChartView.delegate = self
+        closeButton.layer.cornerRadius = 40
+        homeButton.layer.cornerRadius = 40
+        bgView.layer.cornerRadius = 15
         
-        //charts
-        self.lineChartView.delegate = self
-        let set_a: LineChartDataSet = LineChartDataSet(values: [ChartDataEntry](), label: "a")
-        set_a.drawCirclesEnabled = false
-        set_a.setColor(UIColor.blue)
+        lineChartView.tintColor = UIColor.flatWhite
+        lineChartView.chartDescription?.enabled = false
+        lineChartView.legend.enabled = false
+        lineChartView.xAxis.enabled = false
+        lineChartView.rightAxis.enabled = false
+        lineChartView.leftAxis.labelTextColor = UIColor.flatWhite
         
-        let set_b: LineChartDataSet = LineChartDataSet(values: [ChartDataEntry](), label: "b")
-        set_b.drawCirclesEnabled = false
-        set_b.setColor(UIColor.green)
+        let set_a = LineChartDataSet(values: [ChartDataEntry](), label: "a")
+        set_a.setColor(UIColor.flatWhite)
+        _ = set_a.addEntry(ChartDataEntry(x: 1.0, y: 1.0))
         
-        self.lineChartView.data = LineChartData(dataSets: [set_a, set_b])
         
-        _ = Timer.scheduledTimer(timeInterval: 0.010, target:self, selector: #selector(ChartVC.updateCounter), userInfo: nil, repeats: true)
+        let data = LineChartData(dataSet: set_a)
+        lineChartView.data = data
+        
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+            self.addData()
+        }
     }
     
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
-    // add point
-    var i = 0
-    @objc func updateCounter() {
-        self.lineChartView.data?.addEntry(ChartDataEntry(x: Double(reading_a[i]), y: Double(i)), dataSetIndex: 0)
-        self.lineChartView.data?.addEntry(ChartDataEntry(x: Double(reading_b[i]), y: Double(i)), dataSetIndex: 1)
-//        self.lineChartView.data?.addXValue(String(i))
-        self.lineChartView.setVisibleXRange(minXRange: Double(CGFloat(1)), maxXRange: Double(CGFloat(50)))
-        self.lineChartView.notifyDataSetChanged()
-        self.lineChartView.moveViewToX(Double(i))
+    @IBAction func homeButtonPressed(_ sender: Any) {
+        rootVC.changeVC(withIdentifier: "HomeVC")
+    }
+    
+    @objc func addData() {
+        let entry = ChartDataEntry(x: Double(i), y: Double(i))
+        lineChartView.lineData?.addEntry(entry, dataSetIndex: 0)
+        lineChartView.setVisibleXRange(minXRange: 1.0, maxXRange: 50.0)
+        lineChartView.moveViewToX(Double(i))
+        lineChartView.notifyDataSetChanged()
         i = i + 1
     }
 

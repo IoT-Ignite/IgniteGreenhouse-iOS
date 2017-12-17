@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChartVC" customModule="IgniteGreenhouse" customModuleProvider="target">
             <connections>
-                <outlet property="lineChartView" destination="j6z-82-gcK" id="qTC-Nx-Aif"/>
+                <outlet property="bgView" destination="j6z-82-gcK" id="8xB-tE-cGh"/>
+                <outlet property="closeButton" destination="5uL-AZ-69u" id="J0C-xG-sq5"/>
+                <outlet property="homeButton" destination="iZa-gf-xkF" id="8b6-rP-GZp"/>
+                <outlet property="lineChartView" destination="Z1a-Av-Du9" id="4uh-4m-r2I"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,14 +25,75 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6z-82-gcK" customClass="LineChartView" customModule="Charts">
-                    <rect key="frame" x="33" y="202" width="308" height="200.5"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6z-82-gcK" userLabel="Background">
+                    <rect key="frame" x="16" y="200" width="343" height="343"/>
                     <color key="backgroundColor" red="0.0" green="0.1472256482" blue="0.34682643410000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="j6z-82-gcK" secondAttribute="height" multiplier="1:1" id="69k-f8-uWa"/>
+                    </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1a-Av-Du9" customClass="LineChartView" customModule="Charts">
+                    <rect key="frame" x="16" y="200" width="343" height="343"/>
+                    <color key="backgroundColor" red="0.0" green="0.1472256482" blue="0.34682643410000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Z1a-Av-Du9" secondAttribute="height" multiplier="1:1" id="P1T-zx-HL8"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="aBQ-qs-DSr">
+                    <rect key="frame" x="87.5" y="60" width="200" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZa-gf-xkF" userLabel="Home Button">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                            <color key="backgroundColor" red="0.0" green="0.1472256482" blue="0.34682643410000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="ask-zz-XCb"/>
+                                <constraint firstAttribute="width" secondItem="iZa-gf-xkF" secondAttribute="height" multiplier="1:1" id="ph0-KD-Se1"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                            <state key="normal" title="H" image="info">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="djh-Xw-2Tq"/>
+                                <action selector="homeButtonPressed:" destination="-1" eventType="touchUpInside" id="iVj-LZ-o0w"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uL-AZ-69u">
+                            <rect key="frame" x="120" y="0.0" width="80" height="80"/>
+                            <color key="backgroundColor" red="0.0" green="0.1472256482" blue="0.34682643410000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="5uL-AZ-69u" secondAttribute="height" multiplier="1:1" id="33l-ga-WMn"/>
+                                <constraint firstAttribute="width" constant="80" id="HQA-nl-efi"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                            <state key="normal" title="X">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="3gP-sj-Qrz"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Z1a-Av-Du9" firstAttribute="height" secondItem="j6z-82-gcK" secondAttribute="height" id="T5T-Xp-XjJ"/>
+                <constraint firstItem="Z1a-Av-Du9" firstAttribute="width" secondItem="Z1a-Av-Du9" secondAttribute="height" multiplier="1:1" id="Va8-kU-VE1"/>
+                <constraint firstItem="Z1a-Av-Du9" firstAttribute="centerY" secondItem="j6z-82-gcK" secondAttribute="centerY" id="c3u-CN-85Y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j6z-82-gcK" secondAttribute="trailing" constant="16" id="cno-pe-p5K"/>
+                <constraint firstItem="Z1a-Av-Du9" firstAttribute="width" secondItem="j6z-82-gcK" secondAttribute="width" id="hGg-Q1-T2p"/>
+                <constraint firstItem="aBQ-qs-DSr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nmr-9T-Ogp"/>
+                <constraint firstItem="Z1a-Av-Du9" firstAttribute="centerX" secondItem="j6z-82-gcK" secondAttribute="centerX" id="okC-YD-C1n"/>
+                <constraint firstItem="Z1a-Av-Du9" firstAttribute="top" secondItem="aBQ-qs-DSr" secondAttribute="bottom" constant="60" id="sFE-AG-byQ"/>
+                <constraint firstItem="j6z-82-gcK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="urw-1v-RhY"/>
+                <constraint firstItem="aBQ-qs-DSr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="xse-kr-XeU"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="info" width="256" height="256"/>
+    </resources>
 </document>
