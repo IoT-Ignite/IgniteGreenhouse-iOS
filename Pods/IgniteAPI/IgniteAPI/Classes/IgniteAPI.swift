@@ -79,12 +79,21 @@ public class IgniteAPI {
             }
         }
     }
-    public static var appKey: String {
+    public static var appKey: String? {
         get {
-            guard let str = UserDefaults.standard.string(forKey: "appKey") else { return "2bb69ddce24f4021a1c6b77f1ab9302c" }
+            guard let str = UserDefaults.standard.string(forKey: "appKey") else { return nil }
             return str
         } set {
             UserDefaults.standard.set(newValue, forKey: "appKey")
+        }
+    }
+    
+    public static var brand: String? {
+        get {
+            guard let str = UserDefaults.standard.string(forKey: "brand") else { return nil }
+            return str
+        } set {
+            UserDefaults.standard.set(newValue, forKey: "brand")
         }
     }
     
@@ -149,7 +158,7 @@ public class IgniteAPI {
         }
     }
     
-    public static func createRestrictedUser(firstName: String, lastName: String, mail: String, password: String, appKey: String = IgniteAPI.appKey, brand: String = BRAND, profileName: String = DEVICE_MODE, completion: @escaping (_ newUser: IGUser?, _ error: String?) -> ()) {
+    public static func createRestrictedUser(firstName: String, lastName: String, mail: String, password: String, appKey: String = IgniteAPI.appKey!, brand: String = IgniteAPI.brand!, profileName: String = DEVICE_MODE, completion: @escaping (_ newUser: IGUser?, _ error: String?) -> ()) {
         let parameters: Parameters = [
             "appKey": appKey,
             "brand": brand,
@@ -183,7 +192,7 @@ public class IgniteAPI {
             "fromAlias": alias,
             "mail": mail,
             "mailSender": mailSender,
-            "url": "https://iot-ignite.com"
+            "url": "https://devzone.iot-ignite.com/dpanel/forgot-password.php"
         ]
         Alamofire.request(endpoints.forgotPassword, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { (response) in
             switch response.result {

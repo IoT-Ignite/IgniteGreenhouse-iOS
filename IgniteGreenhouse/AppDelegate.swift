@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        IgniteAPI.appKey = "2bb69ddce24f4021a1c6b77f1ab9302c"
+        IgniteAPI.brand = "IgniteGreenhouse"
         NVActivityIndicatorView.DEFAULT_TYPE = NVActivityIndicatorType.ballTrianglePath
         NVActivityIndicatorView.DEFAULT_BLOCKER_MESSAGE = "Loading..."
         guard let _ = IgniteAPI.currentUser, let window = window else { return true }
