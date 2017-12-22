@@ -50,7 +50,7 @@
                                 <constraint firstAttribute="width" secondItem="iZa-gf-xkF" secondAttribute="height" multiplier="1:1" id="ph0-KD-Se1"/>
                             </constraints>
                             <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
-                            <state key="normal" title="H" image="info">
+                            <state key="normal" title="H" image="home">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
@@ -94,6 +94,6 @@
         </view>
     </objects>
     <resources>
-        <image name="info" width="256" height="256"/>
+        <image name="home" width="256" height="256"/>
     </resources>
 </document>

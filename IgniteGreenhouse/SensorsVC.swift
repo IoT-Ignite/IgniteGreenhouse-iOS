@@ -76,8 +76,10 @@ class SensorsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         vc.modalPresentationStyle = .overCurrentContext
         vc.view.backgroundColor = vc.view.backgroundColor?.withAlphaComponent(0.4)
         vc.rootVC = self
-        vc.configureView(sensor: selectedSensor)
-        present(vc, animated: true, completion: nil)
+        IgniteAPI.getSensorData(deviceId: IgniteAPI.currentDevice!.deviceId, nodeId: IgniteAPI.currrentNode!.nodeId, sensorId: selectedSensor.sensorId) { (data) in
+            vc.configureView(sensor: self.selectedSensor, lastData: data)
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -106,6 +108,9 @@ class SensorsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
             destVC.popoverPresentationController?.sourceView = view
             destVC.popoverPresentationController?.sourceRect = CGRect(x: view.frame.midX, y: collectionView.frame.minY, width: 0, height: 0)
             destVC.preferredContentSize = CGSize(width: view.bounds.width * 0.8, height: collectionView.bounds.height * 0.8)
+        case "toQRScanner":
+            guard let destVC = segue.destination as? QRScannerVC else { return }
+            destVC.mode = .sensor
         default:
             break
         }

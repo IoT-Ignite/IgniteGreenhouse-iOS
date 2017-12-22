@@ -18,6 +18,7 @@ class ChartVC: UIViewController, ChartViewDelegate {
     @IBOutlet weak var homeButton: UIButton!
     weak var rootVC: SensorsVC!
     var sensor: IGSensor!
+    var lastData: IGSensorData!
     var i = 0
 
     override func viewDidLoad() {
@@ -41,13 +42,13 @@ class ChartVC: UIViewController, ChartViewDelegate {
         }
     }
     
-    func configureView(sensor: IGSensor) {
+    func configureView(sensor: IGSensor, lastData: IGSensorData) {
         self.sensor = sensor
         lineChartView.chartDescription?.text = "Live Data: \(sensor.sensorId!)"
         let set_a = LineChartDataSet(values: [ChartDataEntry](), label: sensor.sensorType)
         set_a.setColor(UIColor.flatWhite)
         set_a.valueTextColor = UIColor.flatWhite
-        _ = set_a.addEntry(ChartDataEntry(x: 0.0, y: 25.0))
+        _ = set_a.addEntry(ChartDataEntry(x: 0.0, y: Double(lastData.data)!))
         let data = LineChartData(dataSet: set_a)
         lineChartView.data = data
     }
@@ -66,7 +67,7 @@ class ChartVC: UIViewController, ChartViewDelegate {
             let entry = ChartDataEntry(x: Double(self.i), y: data)
             self.lineChartView.lineData?.addEntry(entry, dataSetIndex: 0)
             self.lineChartView.setVisibleXRange(minXRange: 0.0, maxXRange: 2.0)
-            self.lineChartView.leftAxis.axisMaximum = data + 20
+//            self.lineChartView.leftAxis.axisMaximum = data + 20
             self.lineChartView.centerViewToAnimated(xValue: Double(self.i), yValue: data, axis: YAxis.AxisDependency.left, duration: 1)
             self.lineChartView.notifyDataSetChanged()
             self.i = self.i + 1

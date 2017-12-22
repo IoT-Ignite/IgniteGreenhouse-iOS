@@ -19,9 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        IQKeyboardManager.sharedManager().enable = true
+        
         IgniteAPI.appKey = "2bb69ddce24f4021a1c6b77f1ab9302c"
         IgniteAPI.brand = "IgniteGreenhouse"
+        IgniteAPI.login(username: MASTER_MAIL, password: MASTER_PASS) { (master, error) in
+            Utilities.masterUser = master
+            if let error = error { print(error) }
+        }
+        
+        IQKeyboardManager.sharedManager().enable = true
         NVActivityIndicatorView.DEFAULT_TYPE = NVActivityIndicatorType.ballTrianglePath
         NVActivityIndicatorView.DEFAULT_BLOCKER_MESSAGE = "Loading..."
         guard let _ = IgniteAPI.currentUser, let window = window else { return true }

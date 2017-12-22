@@ -65,7 +65,7 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         case 2:
             identifier = "SensorsMenu"
         case 3:
-            identifier = "AddMenu"
+            identifier = "AboutMenu"
         case 4:
             identifier = "LogoutMenu"
         default:
@@ -86,7 +86,7 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         case 2:
             identifier = "SensorsVC"
         case 3:
-            identifier = "QRScannerVC"
+            identifier = "HomeVC"
         case 4:
             identifier = "Login"
         default:
@@ -118,10 +118,7 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destVC = segue.destination as? QRScannerVC {
-            IgniteAPI.login(username: MASTER_MAIL, password: MASTER_PASS) { (master, error) in
-                Utilities.masterUser = master
-                destVC.mode = .sensor
-            }
+            destVC.mode = .sensor
         }
     }
     

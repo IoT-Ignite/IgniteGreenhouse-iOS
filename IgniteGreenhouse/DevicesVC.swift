@@ -36,10 +36,7 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     }
     
     @IBAction func addPressed(_ sender: Any) {
-        IgniteAPI.login(username: MASTER_MAIL, password: MASTER_PASS, completion: { (master, error) in
-            Utilities.masterUser = master
-            self.performSegue(withIdentifier: "toQRScanner", sender: nil)
-        })
+        self.performSegue(withIdentifier: "toQRScanner", sender: nil)
     }
     
     @objc func refreshData(_ refreshControl: UIRefreshControl) {
@@ -95,7 +92,14 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                 IgniteAPI.currrentNode = nodes[i]
                 self.changeVC(withIdentifier: "SensorsVC")
             } else {
-                self.showAlert(title: "Error", message: "This device doesn't have an IgniteGreenhouse node. Please contact support.")
+                let alert = UIAlertController(title: "Node not found!", message: "This device doesn't have an IgniteGreenhouse node.", preferredStyle: .actionSheet)
+                let action = UIAlertAction(title: "Add Sensor", style: .default, handler: { (action) in
+                    self.changeVC(withIdentifier: "QRScannerVC")
+                })
+                let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                alert.addAction(action)
+                alert.addAction(cancel)
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
