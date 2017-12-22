@@ -265,6 +265,9 @@
                                         <state key="normal" title="Terms of Use">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="termsPressed:" destination="fnD-tD-WGn" eventType="touchUpInside" id="Whk-W5-8BZ"/>
+                                        </connections>
                                     </button>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwa-kz-eY6">
                                         <rect key="frame" x="101" y="0.0" width="51" height="31"/>

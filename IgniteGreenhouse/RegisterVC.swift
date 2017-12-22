@@ -24,8 +24,19 @@ class RegisterVC: UIViewController, NVActivityIndicatorViewable {
         super.viewDidLoad()
         dismissKeyboardWhenTapped()
         dismissButton.layer.cornerRadius = 32
+        if navigationController != nil {
+            dismissButton.isHidden = true
+        } else {
+            dismissButton.isHidden = false
+        }
     }
 
+    @IBAction func termsPressed(_ sender: Any) {
+        if let url = URL(string: "https://www.iot-ignite.com/terms-of-use/") {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+    
     @IBAction func dismissPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
