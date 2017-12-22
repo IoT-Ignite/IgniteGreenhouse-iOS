@@ -18,6 +18,7 @@ class SensorCell: UICollectionViewCell {
     @IBOutlet weak var dataLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var statusImage: UIImageView!
+    @IBOutlet weak var windowView: UIView!
     var sensor: IGSensor!
     var vc: SensorsVC!
     
@@ -30,11 +31,17 @@ class SensorCell: UICollectionViewCell {
         dateLabel.text = ""
         clipsToBounds = false
         layer.cornerRadius = 6
+        let maskPath = UIBezierPath(roundedRect: windowView.bounds, byRoundingCorners: UIRectCorner.topLeft.union(.topRight), cornerRadii: CGSize(width: 6, height: 6))
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = self.bounds
+        maskLayer.path  = maskPath.cgPath
+        windowView.layer.mask = maskLayer
         layer.borderColor = UIColor.lightGray.cgColor
         layer.borderWidth = 1
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.8
         layer.shadowRadius = 3
+        windowView.layer.shadowRadius = 3
         layer.shadowOffset = CGSize(width: 1, height: 1)
         self.sensor = sensor
         self.vc = vc

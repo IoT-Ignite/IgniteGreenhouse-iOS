@@ -22,8 +22,8 @@ class DeviceCell: UICollectionViewCell {
     func configureCell(device: IGDevice, vc: DevicesVC) {
         clipsToBounds = false
         layer.cornerRadius = 6
-        var maskPath = UIBezierPath(roundedRect: windowView.bounds, byRoundingCorners: UIRectCorner.topLeft.union(.topRight), cornerRadii: CGSize(width: 6, height: 6))
-        var maskLayer = CAShapeLayer()
+        let maskPath = UIBezierPath(roundedRect: windowView.bounds, byRoundingCorners: UIRectCorner.topLeft.union(.topRight), cornerRadii: CGSize(width: 6, height: 6))
+        let maskLayer = CAShapeLayer()
         maskLayer.frame = self.bounds
         maskLayer.path  = maskPath.cgPath
         windowView.layer.mask = maskLayer

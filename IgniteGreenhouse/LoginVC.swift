@@ -43,8 +43,9 @@ class LoginVC: UIViewController, NVActivityIndicatorViewable {
     @IBAction func loginPressed(_ sender: Any) {
         guard let username = usernameField.text, let password = passwordField.text else { return }
         self.startAnimating(message: "Logging in...", type: NVActivityIndicatorType.ballTrianglePath)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             self.stopAnimating()
+            self.showAlert(title: "Error", message: UNKNOWN_ERROR)
         }
         if username != "" && password != "" {
             IgniteAPI.login(username: username, password: password) { (user, error) in

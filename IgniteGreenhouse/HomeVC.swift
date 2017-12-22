@@ -68,7 +68,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
                 self.stopAnimating()
                 if self.sensorData.count == 0 {
                     let label = UILabel(frame: self.collectionView.frame)
-                    label.text = "Select/Add device from menu (top left corner)."
+                    label.text = "Select device from menu (top left corner)."
                     label.textAlignment = .center
                     self.collectionView.addSubview(label)
                     label.translatesAutoresizingMaskIntoConstraints = false
