@@ -15,17 +15,24 @@ class DeviceCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var deviceImage: UIImageView!
     @IBOutlet weak var statusImage: UIImageView!
+    @IBOutlet weak var windowView: UIView!
     var device: IGDevice!
     var vc: DevicesVC!
     
     func configureCell(device: IGDevice, vc: DevicesVC) {
         clipsToBounds = false
         layer.cornerRadius = 6
+        var maskPath = UIBezierPath(roundedRect: windowView.bounds, byRoundingCorners: UIRectCorner.topLeft.union(.topRight), cornerRadii: CGSize(width: 6, height: 6))
+        var maskLayer = CAShapeLayer()
+        maskLayer.frame = self.bounds
+        maskLayer.path  = maskPath.cgPath
+        windowView.layer.mask = maskLayer
         layer.borderColor = UIColor.lightGray.cgColor
         layer.borderWidth = 1
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.8
         layer.shadowRadius = 3
+        windowView.layer.shadowRadius = 3
         layer.shadowOffset = CGSize(width: 1, height: 1)
         self.device = device
         self.vc = vc

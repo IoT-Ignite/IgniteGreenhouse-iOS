@@ -6,6 +6,7 @@ PODS:
   - IgniteAPI (0.9.6):
     - Alamofire
     - SwiftyJSON
+  - IQKeyboardManagerSwift (5.0.7)
   - NVActivityIndicatorView (4.1.0):
     - NVActivityIndicatorView/Presenter (= 4.1.0)
   - NVActivityIndicatorView/Presenter (4.1.0)
@@ -15,6 +16,7 @@ PODS:
 DEPENDENCIES:
   - Charts
   - IgniteAPI
+  - IQKeyboardManagerSwift
   - NVActivityIndicatorView
   - ViewDeck
 
@@ -22,10 +24,11 @@ SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   Charts: 0705898046257443f0afbbc3179f4b67507b6e48
   IgniteAPI: b244c92c5de3c5a90ddebbf0efa42d44a44826f8
+  IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
   NVActivityIndicatorView: dc4726052dc24e89fa8576d43acf9e96f61d49db
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   ViewDeck: 942d90dd23c9f97cc8038be352255378167edcca
 
-PODFILE CHECKSUM: f892ea1546d5778ed4924701f94778b30ad72182
+PODFILE CHECKSUM: fa0ba15359ced0629da7b390b5d455e3d220351b
 
 COCOAPODS: 1.3.1

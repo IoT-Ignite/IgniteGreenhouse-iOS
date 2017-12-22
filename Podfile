@@ -6,6 +6,7 @@ target 'IgniteGreenhouse' do
 	pod 'ViewDeck'
 	pod 'Charts'
 	pod 'NVActivityIndicatorView'
+    pod 'IQKeyboardManagerSwift'
 
 	target 'IgniteGreenhouseTests' do
   		pod 'IgniteAPI'

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -105,6 +105,7 @@
                 <outlet property="idLabel" destination="GbC-6O-Dy6" id="QXh-qJ-uEZ"/>
                 <outlet property="nameLabel" destination="hpz-DL-zcR" id="Qvz-uX-psT"/>
                 <outlet property="statusImage" destination="0Ya-rR-Dcd" id="l1j-wU-QUS"/>
+                <outlet property="windowView" destination="4vd-t1-JaD" id="M1i-3c-2R4"/>
             </connections>
             <point key="canvasLocation" x="34" y="-102"/>
         </collectionViewCell>

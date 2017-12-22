@@ -48,11 +48,13 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
             self.stopAnimating()
             if self.devices.count == 0 {
-                let frame = CGRect(x: self.collectionView.frame.midX - 50, y: self.collectionView.frame.midY - 100, width: 100, height: 100)
-                _ = UIBezierPath.arrow(from: self.collectionView.bounds.origin, to: self.navigationItem.rightBarButtonItem!.accessibilityFrame.origin, tailWidth: 1, headWidth: 2, headLength: 5)
-                let label = UILabel(frame: frame)
-                label.text = "Add new sensor"
+                let label = UILabel(frame: self.collectionView.frame)
+                label.text = "Add from top right corner (+)."
+                label.textAlignment = .center
                 self.collectionView.addSubview(label)
+                label.translatesAutoresizingMaskIntoConstraints = false
+                label.centerXAnchor.constraint(equalTo: self.collectionView.centerXAnchor).isActive = true
+                label.centerYAnchor.constraint(equalTo: self.collectionView.centerYAnchor).isActive = true
             }
         }
         //refreshControl.beginRefreshing()
@@ -92,7 +94,6 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
             if let i = i {
                 IgniteAPI.currrentNode = nodes[i]
                 self.changeVC(withIdentifier: "SensorsVC")
-                //self.performSegue(withIdentifier: "toSensors", sender: nil)
             } else {
                 self.showAlert(title: "Error", message: "This device doesn't have an IgniteGreenhouse node. Please contact support.")
             }

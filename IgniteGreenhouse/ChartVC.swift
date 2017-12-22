@@ -17,6 +17,7 @@ class ChartVC: UIViewController, ChartViewDelegate {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var homeButton: UIButton!
     weak var rootVC: SensorsVC!
+    var sensor: IGSensor!
     var i = 0
 
     override func viewDidLoad() {
@@ -27,23 +28,28 @@ class ChartVC: UIViewController, ChartViewDelegate {
         bgView.layer.cornerRadius = 15
         
         lineChartView.tintColor = UIColor.flatWhite
-        lineChartView.chartDescription?.enabled = false
         lineChartView.legend.enabled = false
         lineChartView.xAxis.enabled = false
         lineChartView.rightAxis.enabled = false
         lineChartView.leftAxis.labelTextColor = UIColor.flatWhite
+        lineChartView.chartDescription?.textColor = UIColor.flatWhite
+        lineChartView.chartDescription?.text = "Live Data"
+        lineChartView.autoScaleMinMaxEnabled = false
         
-        let set_a = LineChartDataSet(values: [ChartDataEntry](), label: "a")
-        set_a.setColor(UIColor.flatWhite)
-        _ = set_a.addEntry(ChartDataEntry(x: 1.0, y: 1.0))
-        
-        
-        let data = LineChartData(dataSet: set_a)
-        lineChartView.data = data
-        
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             self.addData()
         }
+    }
+    
+    func configureView(sensor: IGSensor) {
+        self.sensor = sensor
+        lineChartView.chartDescription?.text = "Live Data: \(sensor.sensorId!)"
+        let set_a = LineChartDataSet(values: [ChartDataEntry](), label: sensor.sensorType)
+        set_a.setColor(UIColor.flatWhite)
+        set_a.valueTextColor = UIColor.flatWhite
+        _ = set_a.addEntry(ChartDataEntry(x: 0.0, y: 25.0))
+        let data = LineChartData(dataSet: set_a)
+        lineChartView.data = data
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
@@ -55,12 +61,16 @@ class ChartVC: UIViewController, ChartViewDelegate {
     }
     
     @objc func addData() {
-        let entry = ChartDataEntry(x: Double(i), y: Double(i))
-        lineChartView.lineData?.addEntry(entry, dataSetIndex: 0)
-        lineChartView.setVisibleXRange(minXRange: 1.0, maxXRange: 50.0)
-        lineChartView.moveViewToX(Double(i))
-        lineChartView.notifyDataSetChanged()
-        i = i + 1
+        IgniteAPI.getSensorData(deviceId: IgniteAPI.currentDevice!.deviceId, nodeId: IgniteAPI.currrentNode!.nodeId, sensorId: sensor.sensorId) { (sensorData) in
+            guard let data = Double(sensorData.data) else { return }
+            let entry = ChartDataEntry(x: Double(self.i), y: data)
+            self.lineChartView.lineData?.addEntry(entry, dataSetIndex: 0)
+            self.lineChartView.setVisibleXRange(minXRange: 0.0, maxXRange: 2.0)
+            self.lineChartView.leftAxis.axisMaximum = data + 20
+            self.lineChartView.centerViewToAnimated(xValue: Double(self.i), yValue: data, axis: YAxis.AxisDependency.left, duration: 1)
+            self.lineChartView.notifyDataSetChanged()
+            self.i = self.i + 1
+        }
     }
 
 }

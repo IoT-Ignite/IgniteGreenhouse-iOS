@@ -70,11 +70,13 @@ class SensorsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        IgniteAPI.currentSensor = sensors[indexPath.row]
+        selectedSensor = sensors[indexPath.row]
+        IgniteAPI.currentSensor = selectedSensor
         let vc = ChartVC(nibName: "ChartVC", bundle: Bundle.main)
         vc.modalPresentationStyle = .overCurrentContext
         vc.view.backgroundColor = vc.view.backgroundColor?.withAlphaComponent(0.4)
         vc.rootVC = self
+        vc.configureView(sensor: selectedSensor)
         present(vc, animated: true, completion: nil)
     }
     

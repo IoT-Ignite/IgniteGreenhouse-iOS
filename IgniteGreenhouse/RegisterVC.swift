@@ -35,7 +35,7 @@ class RegisterVC: UIViewController, NVActivityIndicatorViewable {
             showAlert(title: "Terms of Use", message: "You need to accept the terms of use in order to register.")
             return
         }
-        guard let first = firstName.text, let last = lastName.text, let mail = mail.text, let brand = brand.text, let password = password.text else { return }
+        guard let first = firstName.text, let last = lastName.text, let mail = mail.text, let brand = IgniteAPI.brand, let password = password.text else { return }
         if [first, last, mail, brand, password].contains("") {
             showAlert(title: "Alert", message: "Please enter the required information first.")
             return

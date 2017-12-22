@@ -66,6 +66,15 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             startAnimating(message: "Loading...", type: NVActivityIndicatorType.ballTrianglePath)
             DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
                 self.stopAnimating()
+                if self.sensorData.count == 0 {
+                    let label = UILabel(frame: self.collectionView.frame)
+                    label.text = "Select/Add device from menu (top left corner)."
+                    label.textAlignment = .center
+                    self.collectionView.addSubview(label)
+                    label.translatesAutoresizingMaskIntoConstraints = false
+                    label.centerXAnchor.constraint(equalTo: self.collectionView.centerXAnchor).isActive = true
+                    label.centerYAnchor.constraint(equalTo: self.collectionView.centerYAnchor).isActive = true
+                }
             }
             IgniteAPI.getSensorDataHistory(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId, startDate: startDate, endDate: endDate, pageSize: 10) { (sensorData) in
                 self.sensorData = sensorData
