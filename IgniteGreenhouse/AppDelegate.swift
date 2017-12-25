@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         IgniteAPI.appKey = APP_KEY
-        IgniteAPI.brand = BRAND
+        IgniteAPI.brand = TENANT_BRAND
         IgniteAPI.login(username: MASTER_MAIL, password: MASTER_PASS) { (master, error) in
             Utilities.masterUser = master
             if let error = error { print(error) }
