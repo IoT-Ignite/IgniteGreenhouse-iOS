@@ -13,8 +13,9 @@ class Message {
     
     let json: JSON!
     
-    init(nodes: [Node]) {
+    init(messageId: String, nodes: [Node]) {
         json = [
+            "messageId": messageId,
             "addDevice": nodes.map { $0.json! }
         ]
     }

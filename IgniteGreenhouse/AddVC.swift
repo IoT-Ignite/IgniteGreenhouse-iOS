@@ -22,18 +22,15 @@ class AddVC: UIViewController {
         guard let sensorId = sensorName.text else { return }
         let thing = Thing(thingCode: thingCode, thingId: sensorId)
         let node = Node(nodeId: MAIN_NODE, things: [thing])
-        let message = Message(nodes: [node])
-        
+        let message = Message(messageId: "12345", nodes: [node])
         IgniteAPI.sendSensorAgentMessage(deviceCode: IgniteAPI.currentDevice!.code, nodeId: "Configurator", sensorId: "Configurator Thing", message: message.json.description) { (messageId) in
-            IgniteAPI.getActionSummary(responseId: messageId, completion: { (json) in
-                print(json.description)
-                let alert = UIAlertController(title: "Sensor Status", message: json["appliedStatus"].stringValue, preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    self.changeVC(withIdentifier: "SensorsVC")
-                })
-                alert.addAction(action)
-                self.present(alert, animated: true, completion: nil)
+            print(message.json.description)
+            let alert = UIAlertController(title: "Sensor Message", message: messageId, preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                self.changeVC(withIdentifier: "SensorsVC")
             })
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
