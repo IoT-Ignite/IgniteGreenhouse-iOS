@@ -33,7 +33,7 @@ class SensorsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     @objc func refreshData(_ refreshControl: UIRefreshControl) {
         refreshControl.endRefreshing()
         //refreshControl.beginRefreshing()
-        startAnimating(message: "Loading sensors...", type: NVActivityIndicatorType.ballTrianglePath)
+        startAnimating(message: "Loading sensors...", type: NVActivityIndicatorType.ballTrianglePath, displayTimeThreshold: 1)
         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
             self.stopAnimating()
         }
@@ -74,9 +74,9 @@ class SensorsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         IgniteAPI.currentSensor = selectedSensor
         let vc = ChartVC(nibName: "ChartVC", bundle: Bundle.main)
         vc.modalPresentationStyle = .overCurrentContext
-        vc.view.backgroundColor = vc.view.backgroundColor?.withAlphaComponent(0.4)
+        vc.view.backgroundColor = vc.view.backgroundColor?.withAlphaComponent(0.7)
         vc.rootVC = self
-        IgniteAPI.getSensorData(deviceId: IgniteAPI.currentDevice!.deviceId, nodeId: IgniteAPI.currrentNode!.nodeId, sensorId: selectedSensor.sensorId) { (data) in
+        IgniteAPI.getSensorDataHistory(deviceId: IgniteAPI.currentDevice!.deviceId, nodeId: IgniteAPI.currrentNode!.nodeId, sensorId: selectedSensor.sensorId, pageSize: 1) { (data) in
             vc.configureView(sensor: self.selectedSensor, lastData: data)
             self.present(vc, animated: true, completion: nil)
         }

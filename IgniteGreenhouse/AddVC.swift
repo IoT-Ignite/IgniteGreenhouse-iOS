@@ -11,7 +11,6 @@ import IgniteAPI
 
 class AddVC: UIViewController {
 
-    @IBOutlet weak var nodeName: UITextField!
     @IBOutlet weak var sensorName: UITextField!
     var thingCode: String!
     
@@ -20,12 +19,21 @@ class AddVC: UIViewController {
     }
     
     @IBAction func addPressed(_ sender: Any) {
-        guard let nodeId = nodeName.text, let sensorId = sensorName.text else { return }
+        guard let sensorId = sensorName.text else { return }
         let thing = Thing(thingCode: thingCode, thingId: sensorId)
-        let node = Node(nodeId: nodeId, things: [thing])
+        let node = Node(nodeId: "IgniteGreenhouse", things: [thing])
         let message = Message(nodes: [node])
-//        deviceCode: "d49ffa4e10f1457996d0ae5826fe3cb9"
-        IgniteAPI.sendSensorAgentMessage(deviceCode: "d49ffa4e10f1457996d0ae5826fe3cb9", nodeId: "Configurator", sensorId: "Configurator Thing", message: message.json.description) { (messageId) in
+        
+        IgniteAPI.sendSensorAgentMessage(deviceCode: IgniteAPI.currentDevice!.code, nodeId: "Configurator", sensorId: "Configurator Thing", message: message.json.description) { (messageId) in
+            IgniteAPI.getActionSummary(responseId: messageId, completion: { (json) in
+                print(json.description)
+                let alert = UIAlertController(title: "Sensor Status", message: json["appliedStatus"].stringValue, preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    self.changeVC(withIdentifier: "SensorsVC")
+                })
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+            })
         }
     }
     

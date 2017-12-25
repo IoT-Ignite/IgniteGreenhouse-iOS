@@ -16,11 +16,12 @@ class IgniteGreenhouseTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         let ex = expectation(description: "Logging in")
-        IgniteAPI.login(username: "greenhouse@iot-ignite.com", password: "gr33nhous3") { (user, arg)  in
+        IgniteAPI.login(username: "mert@aceltest.com", password: "mert12345") { (user, arg)  in
             IgniteAPI.currentUser = user
             IgniteAPI.getDevices { (devices) in
                 guard let device = devices.first else { return }
                 IgniteAPI.currentDevice = device
+                print(device.code)
                 IgniteAPI.getDeviceNodes(deviceId: device.deviceId, pageSize: 10) { (nodes) in
                     guard let node = nodes.first else { return }
                     IgniteAPI.currrentNode = nodes.first
@@ -38,6 +39,12 @@ class IgniteGreenhouseTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         IgniteAPI.logout()
         super.tearDown()
+    }
+    
+    func testNothing() {
+        let ex = expectation(description: "Test nothing.")
+        ex.fulfill()
+        waitForExpectations(timeout: 10, handler: nil)
     }
     
     func testMessageModel() {

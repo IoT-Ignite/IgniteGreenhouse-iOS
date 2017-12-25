@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2844985BDE92F2D32D426882 /* Pods_IgniteGreenhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C07879BCE09CE6531D54593A /* Pods_IgniteGreenhouse.framework */; };
 		466B57158A06A27CC5823FA2 /* Pods_IgniteGreenhouse_IgniteGreenhouseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055E06155F8D0FE948D4932C /* Pods_IgniteGreenhouse_IgniteGreenhouseTests.framework */; };
-		8115FB0F1F19358B003FE91D /* AddNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8115FB0E1F19358B003FE91D /* AddNodeVC.swift */; };
 		811B99C21F18B173001BE70B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B99C11F18B173001BE70B /* Utilities.swift */; };
 		811B99C41F18B1A0001BE70B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B99C31F18B1A0001BE70B /* User.swift */; };
 		812DB21A1F0B83BE002A4F09 /* DevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DB2191F0B83BE002A4F09 /* DevicesVC.swift */; };
@@ -22,8 +21,8 @@
 		813544C41FCB7ABD00A2FC5C /* ChartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 813544C21FCB7ABD00A2FC5C /* ChartVC.xib */; };
 		813BA71C1F0685F000F25EC0 /* SensorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813BA71B1F0685F000F25EC0 /* SensorsVC.swift */; };
 		81444B3B1FA4FEC80057E049 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81444B3A1FA4FEC80057E049 /* SplashVC.swift */; };
+		8147AB461FF0534200ACFE51 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147AB451FF0534200ACFE51 /* AboutVC.swift */; };
 		816ED1431F16440E00D43718 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816ED1421F16440E00D43718 /* Extensions.swift */; };
-		816ED1481F1644C700D43718 /* SecretConstants.swift.txt in Sources */ = {isa = PBXBuildFile; fileRef = 816ED1471F1644C700D43718 /* SecretConstants.swift.txt */; };
 		816ED14A1F1644F000D43718 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816ED1491F1644F000D43718 /* RoundedButton.swift */; };
 		8173C8F61F04F62400C0175F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173C8F51F04F62400C0175F /* AppDelegate.swift */; };
 		8173C8F81F04F62400C0175F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173C8F71F04F62400C0175F /* LoginVC.swift */; };
@@ -47,7 +46,7 @@
 		81A20A121FE58E9B0004C5E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A20A111FE58E9B0004C5E1 /* Constants.swift */; };
 		81BA1BE21F13AC4B00A54321 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */; };
 		81BA1BE41F13B5E800A54321 /* QRScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */; };
-		81CCBB481F91825E00F0B7EE /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CCBB471F91825E00F0B7EE /* Details.swift */; };
+		81CCBB481F91825E00F0B7EE /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CCBB471F91825E00F0B7EE /* DetailsVC.swift */; };
 		81D8BF141F1F506C004F016B /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8BF131F1F506C004F016B /* AddVC.swift */; };
 		81E103091F05A148003907F8 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E103071F05A148003907F8 /* DeviceCell.swift */; };
 		81E1030A1F05A148003907F8 /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E103081F05A148003907F8 /* DeviceCell.xib */; };
@@ -71,7 +70,6 @@
 		27BFCD535AB96595BDDF6569 /* Pods-IgniteGreenhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouse/Pods-IgniteGreenhouse.debug.xcconfig"; sourceTree = "<group>"; };
 		2DC4AE99631850CE4373944F /* Pods-IgniteGreenhouseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouseTests/Pods-IgniteGreenhouseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61BBA962281FC07ECD3BB6B2 /* Pods-IgniteGreenhouse-IgniteGreenhouseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteGreenhouse-IgniteGreenhouseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IgniteGreenhouse-IgniteGreenhouseTests/Pods-IgniteGreenhouse-IgniteGreenhouseTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8115FB0E1F19358B003FE91D /* AddNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNodeVC.swift; sourceTree = "<group>"; };
 		811B99C11F18B173001BE70B /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		811B99C31F18B1A0001BE70B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		812DB2191F0B83BE002A4F09 /* DevicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesVC.swift; sourceTree = "<group>"; };
@@ -84,6 +82,7 @@
 		813544C21FCB7ABD00A2FC5C /* ChartVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartVC.xib; sourceTree = "<group>"; };
 		813BA71B1F0685F000F25EC0 /* SensorsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorsVC.swift; sourceTree = "<group>"; };
 		81444B3A1FA4FEC80057E049 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		8147AB451FF0534200ACFE51 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		816ED1421F16440E00D43718 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		816ED1471F1644C700D43718 /* SecretConstants.swift.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SecretConstants.swift.txt; sourceTree = "<group>"; };
 		816ED1491F1644F000D43718 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -109,7 +108,7 @@
 		81A20A111FE58E9B0004C5E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerVC.swift; sourceTree = "<group>"; };
-		81CCBB471F91825E00F0B7EE /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
+		81CCBB471F91825E00F0B7EE /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		81D8BF131F1F506C004F016B /* AddVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
 		81E103071F05A148003907F8 /* DeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 		81E103081F05A148003907F8 /* DeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
@@ -216,14 +215,14 @@
 				812F6C211F1E244C00540F61 /* HomeVC.swift */,
 				81BA1BE11F13AC4B00A54321 /* OptionsVC.swift */,
 				812DB2191F0B83BE002A4F09 /* DevicesVC.swift */,
-				81CCBB471F91825E00F0B7EE /* Details.swift */,
+				81CCBB471F91825E00F0B7EE /* DetailsVC.swift */,
 				81BA1BE31F13B5E800A54321 /* QRScannerVC.swift */,
 				81D8BF131F1F506C004F016B /* AddVC.swift */,
-				8115FB0E1F19358B003FE91D /* AddNodeVC.swift */,
 				81F24CB21F06323D00F09EB3 /* NodesVC.swift */,
 				813BA71B1F0685F000F25EC0 /* SensorsVC.swift */,
 				813544C11FCB7ABD00A2FC5C /* ChartVC.swift */,
 				813544C21FCB7ABD00A2FC5C /* ChartVC.xib */,
+				8147AB451FF0534200ACFE51 /* AboutVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -521,7 +520,6 @@
 				81D8BF141F1F506C004F016B /* AddVC.swift in Sources */,
 				81A20A101FE58D760004C5E1 /* SecretConstants.swift in Sources */,
 				817D79D01F190F120040EF88 /* Thing.swift in Sources */,
-				8115FB0F1F19358B003FE91D /* AddNodeVC.swift in Sources */,
 				8173C8F81F04F62400C0175F /* LoginVC.swift in Sources */,
 				81A20A121FE58E9B0004C5E1 /* Constants.swift in Sources */,
 				813544C31FCB7ABD00A2FC5C /* ChartVC.swift in Sources */,
@@ -542,9 +540,9 @@
 				81F24CB31F06323D00F09EB3 /* NodesVC.swift in Sources */,
 				812F6C2C1F1E2A7000540F61 /* TableCell.swift in Sources */,
 				812F6C261F1E25F600540F61 /* GraphCell.swift in Sources */,
-				816ED1481F1644C700D43718 /* SecretConstants.swift.txt in Sources */,
 				81444B3B1FA4FEC80057E049 /* SplashVC.swift in Sources */,
-				81CCBB481F91825E00F0B7EE /* Details.swift in Sources */,
+				81CCBB481F91825E00F0B7EE /* DetailsVC.swift in Sources */,
+				8147AB461FF0534200ACFE51 /* AboutVC.swift in Sources */,
 				812F6C221F1E244C00540F61 /* HomeVC.swift in Sources */,
 				81807E4A1F0AE21E007F9424 /* MenuCell.swift in Sources */,
 				816ED1431F16440E00D43718 /* Extensions.swift in Sources */,

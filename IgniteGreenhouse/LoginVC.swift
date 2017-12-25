@@ -20,6 +20,7 @@ class LoginVC: UIViewController, NVActivityIndicatorViewable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.dismiss(animated: false, completion: nil)
         if let username = UserDefaults.standard.string(forKey: "username"),
             let pass = UserDefaults.standard.string(forKey: "password") {
             usernameField.text = username
@@ -45,9 +46,6 @@ class LoginVC: UIViewController, NVActivityIndicatorViewable {
         self.startAnimating(message: "Logging in...", type: NVActivityIndicatorType.ballTrianglePath)
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             self.stopAnimating()
-            if !self.isBeingDismissed {
-                self.showAlert(title: "Error", message: UNKNOWN_ERROR)
-            }
         }
         if username != "" && password != "" {
             IgniteAPI.login(username: username, password: password) { (user, error) in

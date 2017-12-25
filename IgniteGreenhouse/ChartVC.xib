@@ -26,27 +26,36 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6z-82-gcK" userLabel="Background">
-                    <rect key="frame" x="16" y="200" width="343" height="343"/>
+                    <rect key="frame" x="16" y="160" width="343" height="343"/>
                     <color key="backgroundColor" red="0.0" green="0.1472256482" blue="0.34682643410000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="j6z-82-gcK" secondAttribute="height" multiplier="1:1" id="69k-f8-uWa"/>
                     </constraints>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <exclude reference="69k-f8-uWa"/>
+                        </mask>
+                    </variation>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1a-Av-Du9" customClass="LineChartView" customModule="Charts">
-                    <rect key="frame" x="16" y="200" width="343" height="343"/>
+                    <rect key="frame" x="16" y="160" width="343" height="343"/>
                     <color key="backgroundColor" red="0.0" green="0.1472256482" blue="0.34682643410000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Z1a-Av-Du9" secondAttribute="height" multiplier="1:1" id="P1T-zx-HL8"/>
                     </constraints>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <exclude reference="P1T-zx-HL8"/>
+                        </mask>
+                    </variation>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="aBQ-qs-DSr">
-                    <rect key="frame" x="87.5" y="60" width="200" height="80"/>
+                    <rect key="frame" x="87.5" y="70" width="200" height="80"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZa-gf-xkF" userLabel="Home Button">
                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                             <color key="backgroundColor" red="0.0" green="0.1472256482" blue="0.34682643410000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="80" id="ask-zz-XCb"/>
                                 <constraint firstAttribute="width" secondItem="iZa-gf-xkF" secondAttribute="height" multiplier="1:1" id="ph0-KD-Se1"/>
                             </constraints>
                             <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
@@ -63,7 +72,6 @@
                             <color key="backgroundColor" red="0.0" green="0.1472256482" blue="0.34682643410000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="5uL-AZ-69u" secondAttribute="height" multiplier="1:1" id="33l-ga-WMn"/>
-                                <constraint firstAttribute="width" constant="80" id="HQA-nl-efi"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="40"/>
                             <state key="normal" title="X">
@@ -74,6 +82,9 @@
                             </connections>
                         </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="9hw-hd-Mel"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,14 +93,35 @@
                 <constraint firstItem="Z1a-Av-Du9" firstAttribute="width" secondItem="Z1a-Av-Du9" secondAttribute="height" multiplier="1:1" id="Va8-kU-VE1"/>
                 <constraint firstItem="Z1a-Av-Du9" firstAttribute="centerY" secondItem="j6z-82-gcK" secondAttribute="centerY" id="c3u-CN-85Y"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j6z-82-gcK" secondAttribute="trailing" constant="16" id="cno-pe-p5K"/>
+                <constraint firstItem="Z1a-Av-Du9" firstAttribute="height" secondItem="j6z-82-gcK" secondAttribute="height" id="gjM-ww-sUI"/>
                 <constraint firstItem="Z1a-Av-Du9" firstAttribute="width" secondItem="j6z-82-gcK" secondAttribute="width" id="hGg-Q1-T2p"/>
                 <constraint firstItem="aBQ-qs-DSr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nmr-9T-Ogp"/>
+                <constraint firstAttribute="bottom" secondItem="j6z-82-gcK" secondAttribute="bottom" id="o07-wm-UfO"/>
                 <constraint firstItem="Z1a-Av-Du9" firstAttribute="centerX" secondItem="j6z-82-gcK" secondAttribute="centerX" id="okC-YD-C1n"/>
-                <constraint firstItem="Z1a-Av-Du9" firstAttribute="top" secondItem="aBQ-qs-DSr" secondAttribute="bottom" constant="60" id="sFE-AG-byQ"/>
+                <constraint firstItem="Z1a-Av-Du9" firstAttribute="top" secondItem="aBQ-qs-DSr" secondAttribute="bottom" constant="60" id="sFE-AG-byQ">
+                    <variation key="widthClass=compact" constant="10"/>
+                </constraint>
                 <constraint firstItem="j6z-82-gcK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="urw-1v-RhY"/>
-                <constraint firstItem="aBQ-qs-DSr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="xse-kr-XeU"/>
+                <constraint firstItem="aBQ-qs-DSr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="xse-kr-XeU">
+                    <variation key="widthClass=compact" constant="10"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                </constraint>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="gjM-ww-sUI"/>
+                    <exclude reference="o07-wm-UfO"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact">
+                <mask key="constraints">
+                    <exclude reference="T5T-Xp-XjJ"/>
+                    <exclude reference="Va8-kU-VE1"/>
+                    <include reference="gjM-ww-sUI"/>
+                    <include reference="o07-wm-UfO"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>

@@ -19,6 +19,7 @@ class ChartVC: UIViewController, ChartViewDelegate {
     weak var rootVC: SensorsVC!
     var sensor: IGSensor!
     var lastData: IGSensorData!
+    var set_a: LineChartDataSet!
     var i = 0
 
     override func viewDidLoad() {
@@ -28,6 +29,7 @@ class ChartVC: UIViewController, ChartViewDelegate {
         homeButton.layer.cornerRadius = 40
         bgView.layer.cornerRadius = 15
         
+        lineChartView.noDataText = "Sensor doesn't have live data."
         lineChartView.tintColor = UIColor.flatWhite
         lineChartView.legend.enabled = false
         lineChartView.xAxis.enabled = false
@@ -42,13 +44,16 @@ class ChartVC: UIViewController, ChartViewDelegate {
         }
     }
     
-    func configureView(sensor: IGSensor, lastData: IGSensorData) {
+    func configureView(sensor: IGSensor, lastData: [IGSensorData]) {
         self.sensor = sensor
         lineChartView.chartDescription?.text = "Live Data: \(sensor.sensorId!)"
-        let set_a = LineChartDataSet(values: [ChartDataEntry](), label: sensor.sensorType)
+        var entries = [ChartDataEntry]()
+        for last in lastData {
+            entries.append(ChartDataEntry(x: 0.0, y: Double(last.data)!))
+        }
+        set_a = LineChartDataSet(values: entries, label: sensor.sensorType)
         set_a.setColor(UIColor.flatWhite)
         set_a.valueTextColor = UIColor.flatWhite
-        _ = set_a.addEntry(ChartDataEntry(x: 0.0, y: Double(lastData.data)!))
         let data = LineChartData(dataSet: set_a)
         lineChartView.data = data
     }
@@ -66,9 +71,8 @@ class ChartVC: UIViewController, ChartViewDelegate {
             guard let data = Double(sensorData.data) else { return }
             let entry = ChartDataEntry(x: Double(self.i), y: data)
             self.lineChartView.lineData?.addEntry(entry, dataSetIndex: 0)
-            self.lineChartView.setVisibleXRange(minXRange: 0.0, maxXRange: 2.0)
-//            self.lineChartView.leftAxis.axisMaximum = data + 20
             self.lineChartView.centerViewToAnimated(xValue: Double(self.i), yValue: data, axis: YAxis.AxisDependency.left, duration: 1)
+            self.lineChartView.setVisibleXRange(minXRange: 0.0, maxXRange: 2.0)
             self.lineChartView.notifyDataSetChanged()
             self.i = self.i + 1
         }

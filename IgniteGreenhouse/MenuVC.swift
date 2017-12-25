@@ -86,9 +86,13 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         case 2:
             identifier = "SensorsVC"
         case 3:
-            identifier = "HomeVC"
+            identifier = "AboutVC"
         case 4:
-            identifier = "Login"
+            identifier = "LoginVC"
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let loginVC = sb.instantiateViewController(withIdentifier: "LoginVC")
+            UIApplication.shared.keyWindow?.rootViewController = loginVC
+            return
         default:
             identifier = "HomeVC"
         }
@@ -113,12 +117,6 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         if let img = info[UIImagePickerControllerOriginalImage] as? UIImage {
             Utilities.user?.profileImg = img
             profileImg.image = img
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destVC = segue.destination as? QRScannerVC {
-            destVC.mode = .sensor
         }
     }
     

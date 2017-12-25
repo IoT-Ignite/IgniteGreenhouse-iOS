@@ -29,7 +29,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-9S-Ri0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-9S-Ri0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenhouse-logo" translatesAutoresizingMaskIntoConstraints="NO" id="b0C-uq-zFu">
@@ -201,7 +201,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="1Zn-BZ-l4T">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="1Zn-BZ-l4T">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenhouse-logo" translatesAutoresizingMaskIntoConstraints="NO" id="owA-7g-PP3">
@@ -364,7 +364,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="PVN-R3-RJc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="PVN-R3-RJc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UN4-oW-5fW">
@@ -455,7 +455,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Cm0-MQ-8bz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Cm0-MQ-8bz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                             </imageView>
                         </subviews>
@@ -544,7 +544,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="2Rh-9Q-ZIR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="2Rh-9Q-ZIR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qob-0g-IJE">
@@ -627,7 +627,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="cEc-aA-hfB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="cEc-aA-hfB">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c8f-Il-ssh">
@@ -696,7 +696,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="aZp-C6-idD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="aZp-C6-idD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uXn-KO-w1D">
@@ -747,7 +747,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="uXn-KO-w1D" id="YWL-Vy-chC"/>
                         <segue destination="GKt-XK-liP" kind="popoverPresentation" identifier="toSensor" popoverAnchorView="uXn-KO-w1D" id="JA7-CJ-0yp">
@@ -798,7 +797,7 @@
                                             <constraint firstAttribute="height" constant="65" id="ZsG-VK-3JL"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oth-Qx-ezn">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oth-Qx-ezn">
                                         <rect key="frame" x="24.5" y="55.5" width="65" height="65"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
@@ -996,6 +995,65 @@
             </objects>
             <point key="canvasLocation" x="10288.799999999999" y="-706.59670164917543"/>
         </scene>
+        <!--About-->
+        <scene sceneID="CdO-CX-Ur8">
+            <objects>
+                <viewController storyboardIdentifier="AboutVC" id="vcy-xh-tHY" customClass="AboutVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b39-dM-Uh6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nxm-yH-uJ2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Laz-0k-g5k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="boH-zY-YdB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iot_ignite_logo" translatesAutoresizingMaskIntoConstraints="NO" id="rnX-5a-16y">
+                                <rect key="frame" x="38" y="164" width="299" height="138"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEd-g9-wND" customClass="RoundedButton" customModule="IgniteGreenhouse" customModuleProvider="target">
+                                <rect key="frame" x="99" y="352" width="176" height="50"/>
+                                <color key="backgroundColor" red="0.20505201819999999" green="0.30198770759999999" blue="0.68478322030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZB9-UC-V7b"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="60" minY="0.0" maxX="60" maxY="0.0"/>
+                                <state key="normal" title="Website">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="websiteButtonPressed:" destination="vcy-xh-tHY" eventType="touchUpInside" id="vtv-x9-82E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="boH-zY-YdB" secondAttribute="trailing" id="2tl-Ql-itP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rnX-5a-16y" secondAttribute="trailing" constant="22" id="Fnb-6h-U2L"/>
+                            <constraint firstItem="rnX-5a-16y" firstAttribute="centerX" secondItem="Laz-0k-g5k" secondAttribute="centerX" id="JcQ-Mu-nhJ"/>
+                            <constraint firstItem="rnX-5a-16y" firstAttribute="leading" secondItem="Laz-0k-g5k" secondAttribute="leadingMargin" constant="22" id="U3R-9R-I9S"/>
+                            <constraint firstItem="XEd-g9-wND" firstAttribute="centerX" secondItem="Laz-0k-g5k" secondAttribute="centerX" id="V8B-yl-88K"/>
+                            <constraint firstItem="boH-zY-YdB" firstAttribute="leading" secondItem="Laz-0k-g5k" secondAttribute="leading" id="aml-2G-TeQ"/>
+                            <constraint firstItem="rnX-5a-16y" firstAttribute="top" secondItem="b39-dM-Uh6" secondAttribute="bottom" constant="100" id="ce1-Os-BhK"/>
+                            <constraint firstItem="XEd-g9-wND" firstAttribute="top" secondItem="rnX-5a-16y" secondAttribute="bottom" constant="50" id="f0c-WI-f7r"/>
+                            <constraint firstItem="Nxm-yH-uJ2" firstAttribute="top" secondItem="boH-zY-YdB" secondAttribute="bottom" id="hmO-nU-rau"/>
+                            <constraint firstItem="boH-zY-YdB" firstAttribute="top" secondItem="Laz-0k-g5k" secondAttribute="top" id="yCj-0A-wlP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="XNT-EC-gST"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ivl-6K-mKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11066" y="-705"/>
+        </scene>
         <!--Devices-->
         <scene sceneID="OhM-vt-TgO">
             <objects>
@@ -1008,7 +1066,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="bXJ-3v-8GN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="bXJ-3v-8GN">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZCn-tK-aQx">
@@ -1100,7 +1158,7 @@
             </objects>
             <point key="canvasLocation" x="8001" y="-705"/>
         </scene>
-        <!--Add Sensors-->
+        <!--Add Sensor-->
         <scene sceneID="yPS-8n-9kU">
             <objects>
                 <viewController storyboardIdentifier="AddVC" id="XBN-xM-6n3" customClass="AddVC" customModule="IgniteGreenhouse" customModuleProvider="target" sceneMemberID="viewController">
@@ -1112,29 +1170,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="cY3-QW-qX8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="cY3-QW-qX8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                             </imageView>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="IgniteGreenhouse" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5G-pZ-VW1">
-                                <rect key="frame" x="16" y="145" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1E1-2g-eOz">
-                                <rect key="frame" x="16" y="236" width="343" height="30"/>
+                                <rect key="frame" x="16" y="165" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Node Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpb-Fv-GIN">
-                                <rect key="frame" x="142" y="104" width="91" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZE-pq-EjL" customClass="RoundedButton" customModule="IgniteGreenhouse" customModuleProvider="target">
-                                <rect key="frame" x="123.5" y="296" width="128" height="38"/>
+                                <rect key="frame" x="123.5" y="225" width="128" height="38"/>
                                 <color key="backgroundColor" red="0.20505201819999999" green="0.30099825860000001" blue="0.68478322030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="50" minY="10" maxX="50" maxY="10"/>
                                 <state key="normal" title="Add">
@@ -1150,7 +1196,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzN-XT-qbV">
-                                <rect key="frame" x="136" y="195" width="103" height="21"/>
+                                <rect key="frame" x="136" y="124" width="103" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1159,27 +1205,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7ZE-pq-EjL" firstAttribute="centerX" secondItem="7nW-Ug-y0e" secondAttribute="centerX" id="0Ar-0e-hAZ"/>
-                            <constraint firstItem="y5G-pZ-VW1" firstAttribute="trailing" secondItem="7nW-Ug-y0e" secondAttribute="trailingMargin" id="D8r-Mt-76d"/>
                             <constraint firstAttribute="trailing" secondItem="cY3-QW-qX8" secondAttribute="trailing" id="KhO-LU-ALN"/>
                             <constraint firstItem="1E1-2g-eOz" firstAttribute="leading" secondItem="7nW-Ug-y0e" secondAttribute="leadingMargin" id="OkB-SF-D9T"/>
                             <constraint firstItem="1E1-2g-eOz" firstAttribute="top" secondItem="HzN-XT-qbV" secondAttribute="bottom" constant="20" id="PRO-1E-YYo"/>
-                            <constraint firstItem="y5G-pZ-VW1" firstAttribute="top" secondItem="Lpb-Fv-GIN" secondAttribute="bottom" constant="20" id="Py5-fX-cOg"/>
                             <constraint firstItem="cY3-QW-qX8" firstAttribute="top" secondItem="7nW-Ug-y0e" secondAttribute="top" id="Rc4-9y-s4b"/>
-                            <constraint firstItem="Lpb-Fv-GIN" firstAttribute="top" secondItem="6w3-I9-V14" secondAttribute="bottom" constant="40" id="UVP-CE-HnQ"/>
                             <constraint firstItem="7ZE-pq-EjL" firstAttribute="top" secondItem="1E1-2g-eOz" secondAttribute="bottom" constant="30" id="ZCr-bD-RCG"/>
-                            <constraint firstItem="Lpb-Fv-GIN" firstAttribute="centerX" secondItem="7nW-Ug-y0e" secondAttribute="centerX" id="cM1-Kd-YIE"/>
+                            <constraint firstItem="HzN-XT-qbV" firstAttribute="top" secondItem="6w3-I9-V14" secondAttribute="bottom" constant="60" id="Zuv-Jp-pbl"/>
                             <constraint firstItem="e6g-zv-z96" firstAttribute="top" secondItem="cY3-QW-qX8" secondAttribute="bottom" id="fpm-3w-ikJ"/>
                             <constraint firstItem="1E1-2g-eOz" firstAttribute="trailing" secondItem="7nW-Ug-y0e" secondAttribute="trailingMargin" id="iHV-uw-91z"/>
-                            <constraint firstItem="y5G-pZ-VW1" firstAttribute="leading" secondItem="7nW-Ug-y0e" secondAttribute="leadingMargin" id="kf9-bg-Owj"/>
                             <constraint firstItem="HzN-XT-qbV" firstAttribute="centerX" secondItem="7nW-Ug-y0e" secondAttribute="centerX" id="oTS-Pb-6xj"/>
-                            <constraint firstItem="HzN-XT-qbV" firstAttribute="top" secondItem="y5G-pZ-VW1" secondAttribute="bottom" constant="20" id="pB8-FE-2kT"/>
                             <constraint firstItem="cY3-QW-qX8" firstAttribute="leading" secondItem="7nW-Ug-y0e" secondAttribute="leading" id="sqz-5X-I3p"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Sensors" id="6Cl-cZ-j9o"/>
+                    <navigationItem key="navigationItem" title="Add Sensor" id="6Cl-cZ-j9o"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="nodeName" destination="y5G-pZ-VW1" id="zMg-y3-MvI"/>
                         <outlet property="sensorName" destination="1E1-2g-eOz" id="iRh-qN-zac"/>
                     </connections>
                 </viewController>
@@ -1267,6 +1307,7 @@
         <image name="greenhouse-logo" width="512" height="512"/>
         <image name="home" width="256" height="256"/>
         <image name="info" width="256" height="256"/>
+        <image name="iot_ignite_logo" width="300" height="138"/>
         <image name="iot_logo_4" width="300" height="138"/>
         <image name="logout" width="15" height="15"/>
         <image name="menubutton" width="15" height="17"/>
@@ -1279,6 +1320,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="H4p-9w-2NJ"/>
         <segue reference="JA7-CJ-0yp"/>
-        <segue reference="zUe-oV-O53"/>
+        <segue reference="W8G-8T-sV2"/>
     </inferredMetricsTieBreakers>
 </document>

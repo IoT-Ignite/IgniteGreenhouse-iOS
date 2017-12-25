@@ -8,6 +8,7 @@
 
 import UIKit
 import IgniteAPI
+import SwiftyJSON
 import NVActivityIndicatorView
 
 class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIPopoverPresentationControllerDelegate, UIAdaptivePresentationControllerDelegate, NVActivityIndicatorViewable {
@@ -92,8 +93,11 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                 IgniteAPI.currrentNode = nodes[i]
                 self.changeVC(withIdentifier: "SensorsVC")
             } else {
+                let json = JSON(["nodeId": "IgniteGreenhouse"])
+                let node = IGNode(json: json)
                 let alert = UIAlertController(title: "Node not found!", message: "This device doesn't have an IgniteGreenhouse node.", preferredStyle: .actionSheet)
                 let action = UIAlertAction(title: "Add Sensor", style: .default, handler: { (action) in
+                    IgniteAPI.currrentNode = node
                     self.changeVC(withIdentifier: "QRScannerVC")
                 })
                 let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

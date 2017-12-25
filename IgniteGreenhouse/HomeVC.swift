@@ -68,7 +68,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
                 self.stopAnimating()
                 if self.sensorData.count == 0 {
                     let label = UILabel(frame: self.collectionView.frame)
-                    label.text = "Select device from menu (top left corner)."
+                    label.text = "Select Devices from menu (top left corner)."
                     label.textAlignment = .center
                     self.collectionView.addSubview(label)
                     label.translatesAutoresizingMaskIntoConstraints = false
@@ -84,14 +84,11 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             }
         } else {
             print("Select Device, Node and Sensor first!.")
-            let alert = UIAlertController(title: "Alert", message: "Select Device, Node and Sensor first!", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                self.performSegue(withIdentifier: "toDevices", sender: nil)
-            })
-            alert.addAction(action)
-            parent?.present(alert, animated: true) {
+            self.startAnimating(message: "Select/Add Device first")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 self.stopAnimating()
                 //refreshControl.endRefreshing()
+                self.performSegue(withIdentifier: "toDevices", sender: nil)
             }
         }
     }
