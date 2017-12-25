@@ -55,7 +55,7 @@ class SensorCell: UICollectionViewCell {
         default:
             break
         }
-        IgniteAPI.getSensorData(deviceId: IgniteAPI.currentDevice!.deviceId, nodeId: BRAND, sensorId: sensor.sensorId) { (data) in
+        IgniteAPI.getSensorData(deviceId: IgniteAPI.currentDevice!.deviceId, nodeId: MAIN_NODE, sensorId: sensor.sensorId) { (data) in
             vc.stopAnimating()
             self.dataLabel.text = data.data
             let dateFormatter = DateFormatter()

@@ -67,7 +67,9 @@ class ChartVC: UIViewController, ChartViewDelegate {
     }
     
     @objc func addData() {
-        IgniteAPI.getSensorData(deviceId: IgniteAPI.currentDevice!.deviceId, nodeId: IgniteAPI.currrentNode!.nodeId, sensorId: sensor.sensorId) { (sensorData) in
+        guard let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode else { return }
+        if node.nodeId != MAIN_NODE { return }
+        IgniteAPI.getSensorData(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: sensor.sensorId) { (sensorData) in
             guard let data = Double(sensorData.data) else { return }
             let entry = ChartDataEntry(x: Double(self.i), y: data)
             self.lineChartView.lineData?.addEntry(entry, dataSetIndex: 0)

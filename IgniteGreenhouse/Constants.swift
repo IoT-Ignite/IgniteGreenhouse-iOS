@@ -10,4 +10,4 @@ import Foundation
 
 public let UNKNOWN_ERROR = "Oops... Something went wrong."
 public let MODE = "Default"
-public let BRAND = "IgniteGreenhouse" // Also Main NodeId
+public let MAIN_NODE = "IgniteGreenhouse"

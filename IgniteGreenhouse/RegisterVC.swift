@@ -16,7 +16,6 @@ class RegisterVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var mail: UITextField!
     @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var brand: UITextField!
     @IBOutlet weak var termsSwitch: UISwitch!
     @IBOutlet weak var dismissButton: UIButton!
     

@@ -337,7 +337,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Ignite Greenhouse" id="Lxb-Qk-qTy"/>
                     <connections>
-                        <outlet property="brand" destination="NlQ-kN-Lgn" id="okn-ni-Ajg"/>
                         <outlet property="dismissButton" destination="mhn-7x-CEk" id="it2-bq-Vpf"/>
                         <outlet property="firstName" destination="rBf-jh-Jzr" id="kQa-ei-Qhv"/>
                         <outlet property="lastName" destination="Drh-4C-0VL" id="SlH-4C-acO"/>
@@ -456,7 +455,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Cm0-MQ-8bz">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -628,10 +627,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="cEc-aA-hfB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c8f-Il-ssh">
-                                <rect key="frame" x="16" y="64" width="343" height="559"/>
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -677,12 +676,11 @@
                     <connections>
                         <outlet property="tableView" destination="c8f-Il-ssh" id="7B3-Ir-CGn"/>
                         <segue destination="0eV-Wt-hEr" kind="show" identifier="toSensors" id="oqk-Xw-flK"/>
-                        <segue destination="tsp-qq-msy" kind="show" identifier="toQRScanner" id="CnJ-St-Bsf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DYf-ay-W7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9524" y="89"/>
+            <point key="canvasLocation" x="10289" y="88"/>
         </scene>
         <!--Sensors-->
         <scene sceneID="NR4-Ru-sX3">
@@ -697,10 +695,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="aZp-C6-idD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uXn-KO-w1D">
-                                <rect key="frame" x="16" y="64" width="343" height="559"/>
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HJh-dN-OSW">
                                     <size key="itemSize" width="340" height="200"/>
@@ -759,7 +757,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVT-tv-ypP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10290" y="89"/>
+            <point key="canvasLocation" x="9522" y="89"/>
         </scene>
         <!--MenuVC-->
         <scene sceneID="p7c-8L-f4m">
@@ -1011,10 +1009,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iot_ignite_logo" translatesAutoresizingMaskIntoConstraints="NO" id="rnX-5a-16y">
-                                <rect key="frame" x="38" y="164" width="299" height="138"/>
+                                <rect key="frame" x="46" y="124" width="283" height="138"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEd-g9-wND" customClass="RoundedButton" customModule="IgniteGreenhouse" customModuleProvider="target">
-                                <rect key="frame" x="99" y="352" width="176" height="50"/>
+                                <rect key="frame" x="99" y="312" width="176" height="50"/>
                                 <color key="backgroundColor" red="0.20505201819999999" green="0.30198770759999999" blue="0.68478322030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ZB9-UC-V7b"/>
@@ -1032,18 +1030,39 @@
                                     <action selector="websiteButtonPressed:" destination="vcy-xh-tHY" eventType="touchUpInside" id="vtv-x9-82E"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otA-uy-Y50" customClass="RoundedButton" customModule="IgniteGreenhouse" customModuleProvider="target">
+                                <rect key="frame" x="89" y="406" width="197" height="50"/>
+                                <color key="backgroundColor" red="0.20505201819999999" green="0.30198770759999999" blue="0.68478322030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dfT-G1-oft"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                <state key="normal" title="Node Selector / Debug">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="jj7-DP-vLh" kind="show" identifier="toNodes" id="5XT-IK-FZh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="boH-zY-YdB" secondAttribute="trailing" id="2tl-Ql-itP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rnX-5a-16y" secondAttribute="trailing" constant="22" id="Fnb-6h-U2L"/>
+                            <constraint firstItem="otA-uy-Y50" firstAttribute="centerX" secondItem="Laz-0k-g5k" secondAttribute="centerX" id="3ne-Au-OQl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rnX-5a-16y" secondAttribute="trailing" constant="30" id="Fnb-6h-U2L"/>
                             <constraint firstItem="rnX-5a-16y" firstAttribute="centerX" secondItem="Laz-0k-g5k" secondAttribute="centerX" id="JcQ-Mu-nhJ"/>
-                            <constraint firstItem="rnX-5a-16y" firstAttribute="leading" secondItem="Laz-0k-g5k" secondAttribute="leadingMargin" constant="22" id="U3R-9R-I9S"/>
+                            <constraint firstItem="rnX-5a-16y" firstAttribute="leading" secondItem="Laz-0k-g5k" secondAttribute="leadingMargin" constant="30" id="U3R-9R-I9S"/>
                             <constraint firstItem="XEd-g9-wND" firstAttribute="centerX" secondItem="Laz-0k-g5k" secondAttribute="centerX" id="V8B-yl-88K"/>
                             <constraint firstItem="boH-zY-YdB" firstAttribute="leading" secondItem="Laz-0k-g5k" secondAttribute="leading" id="aml-2G-TeQ"/>
-                            <constraint firstItem="rnX-5a-16y" firstAttribute="top" secondItem="b39-dM-Uh6" secondAttribute="bottom" constant="100" id="ce1-Os-BhK"/>
+                            <constraint firstItem="rnX-5a-16y" firstAttribute="top" secondItem="b39-dM-Uh6" secondAttribute="bottom" constant="60" id="ce1-Os-BhK"/>
                             <constraint firstItem="XEd-g9-wND" firstAttribute="top" secondItem="rnX-5a-16y" secondAttribute="bottom" constant="50" id="f0c-WI-f7r"/>
                             <constraint firstItem="Nxm-yH-uJ2" firstAttribute="top" secondItem="boH-zY-YdB" secondAttribute="bottom" id="hmO-nU-rau"/>
+                            <constraint firstItem="otA-uy-Y50" firstAttribute="top" secondItem="XEd-g9-wND" secondAttribute="bottom" constant="44" id="oCR-Q8-MWn"/>
                             <constraint firstItem="boH-zY-YdB" firstAttribute="top" secondItem="Laz-0k-g5k" secondAttribute="top" id="yCj-0A-wlP"/>
                         </constraints>
                     </view>
@@ -1125,7 +1144,6 @@
                     <connections>
                         <outlet property="addDeviceButton" destination="L6c-vy-hju" id="3JN-he-xyR"/>
                         <outlet property="collectionView" destination="ZCn-tK-aQx" id="nvU-MW-6GH"/>
-                        <segue destination="jj7-DP-vLh" kind="show" identifier="toNodes" id="9zf-bj-0Z5"/>
                         <segue destination="tsp-qq-msy" kind="show" identifier="toQRScanner" id="zUe-oV-O53"/>
                         <segue destination="GKt-XK-liP" kind="popoverPresentation" identifier="toGateway" popoverAnchorView="ZCn-tK-aQx" id="hAM-pf-sH1">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -1171,7 +1189,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="cY3-QW-qX8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1E1-2g-eOz">
                                 <rect key="frame" x="16" y="165" width="343" height="30"/>
@@ -1318,7 +1336,7 @@
         <image name="show_password" width="165" height="165"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="H4p-9w-2NJ"/>
+        <segue reference="oqk-Xw-flK"/>
         <segue reference="JA7-CJ-0yp"/>
         <segue reference="W8G-8T-sV2"/>
     </inferredMetricsTieBreakers>

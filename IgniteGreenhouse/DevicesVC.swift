@@ -88,12 +88,12 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         IgniteAPI.currentDevice = devices[indexPath.row]
         IgniteAPI.getDeviceNodes(deviceId: IgniteAPI.currentDevice!.deviceId, pageSize: 1) { (nodes) in
             self.stopAnimating()
-            let i = nodes.index { $0.nodeId == BRAND }
+            let i = nodes.index { $0.nodeId == MAIN_NODE }
             if let i = i {
                 IgniteAPI.currrentNode = nodes[i]
                 self.changeVC(withIdentifier: "SensorsVC")
             } else {
-                let json = JSON(["nodeId": "IgniteGreenhouse"])
+                let json = JSON(["nodeId": MAIN_NODE])
                 let node = IGNode(json: json)
                 let alert = UIAlertController(title: "Node not found!", message: "This device doesn't have an IgniteGreenhouse node.", preferredStyle: .actionSheet)
                 let action = UIAlertAction(title: "Add Sensor", style: .default, handler: { (action) in
@@ -127,7 +127,7 @@ class DevicesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         case "toSensors":
             guard let destVC = segue.destination as? SensorsVC,
                 let deviceId = IgniteAPI.currentDevice?.deviceId else { return }
-            IgniteAPI.getDeviceSensors(deviceId: deviceId, nodeId: BRAND, pageSize: 1, completion: { (sensors) in
+            IgniteAPI.getDeviceSensors(deviceId: deviceId, nodeId: MAIN_NODE, pageSize: 1, completion: { (sensors) in
                 destVC.sensors = sensors
                 destVC.refreshData(destVC.refreshControl)
             })

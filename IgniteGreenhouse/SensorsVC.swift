@@ -72,13 +72,17 @@ class SensorsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedSensor = sensors[indexPath.row]
         IgniteAPI.currentSensor = selectedSensor
-        let vc = ChartVC(nibName: "ChartVC", bundle: Bundle.main)
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.view.backgroundColor = vc.view.backgroundColor?.withAlphaComponent(0.7)
-        vc.rootVC = self
-        IgniteAPI.getSensorDataHistory(deviceId: IgniteAPI.currentDevice!.deviceId, nodeId: IgniteAPI.currrentNode!.nodeId, sensorId: selectedSensor.sensorId, pageSize: 1) { (data) in
-            vc.configureView(sensor: self.selectedSensor, lastData: data)
-            self.present(vc, animated: true, completion: nil)
+        guard let device = IgniteAPI.currentDevice, let node = IgniteAPI.currrentNode else { return }
+        if node.nodeId != MAIN_NODE { changeVC(withIdentifier: "HomeVC") }
+        else {
+            let vc = ChartVC(nibName: "ChartVC", bundle: Bundle.main)
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.view.backgroundColor = vc.view.backgroundColor?.withAlphaComponent(0.7)
+            vc.rootVC = self
+            IgniteAPI.getSensorDataHistory(deviceId: device.deviceId, nodeId: node.nodeId, sensorId: selectedSensor.sensorId, pageSize: 1) { (data) in
+                vc.configureView(sensor: self.selectedSensor, lastData: data)
+                self.present(vc, animated: true, completion: nil)
+            }
         }
     }
     
